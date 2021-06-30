@@ -44,7 +44,7 @@ gulp.task("html", function () {
 
 gulp.task("sass", function () {
   return gulp
-    .src(["src/scss/*.scss"])
+    .src(["src/sass/*.sass"])
     .pipe(sourcemaps.init())
     .pipe(
       sass({
@@ -196,7 +196,7 @@ gulp.task("fonts", function () {
 
 gulp.task("watch", function () {
   gulp.watch("src/html/**/*.html", gulp.parallel("html"));
-  gulp.watch("src/scss/**/*.scss", gulp.parallel("sass"));
+  gulp.watch("src/sass/**/*.sass", gulp.parallel("sass"));
   gulp.watch("src/js/script.js", gulp.parallel("js"));
   gulp.watch("src/*.*", gulp.parallel("files"));
   gulp.watch("src/fonts/**/*", gulp.parallel("fonts"));
