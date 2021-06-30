@@ -1,0 +1,257 @@
+// project main styles
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-size: 16px;
+	font-family: "Montserrat", Arial, Helvetica, sans-serif;
+	color: $textColor;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	backface-visibility: hidden;
+	text-rendering: geometricPrecision;
+
+	//style default scrollbar
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: $textColor;
+	}
+
+	&::-webkit-scrollbar-track {
+		-webkit-box-shadow: inset 0 0 4px $textColor;
+		box-shadow: inset 0 0 4px $textColor;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $primary;
+		outline: 1px solid $primary;
+		transition: background-color 0.4s ease;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: 600;
+}
+
+h1,
+h2 {
+	font-size: 30px;
+	line-height: 1.2em;
+	letter-spacing: 0.025em;
+}
+
+h3 {
+	font-size: 28px;
+	letter-spacing: 0.075em;
+}
+
+h4 {
+	font-size: 24px;
+	letter-spacing: 0.025em;
+}
+
+h5 {
+	font-size: 18px;
+	letter-spacing: 0.075em;
+}
+
+.title-1 {
+	@extend h1;
+}
+
+.title-2 {
+	@extend h2;
+}
+
+.title-3 {
+	@extend h3;
+}
+
+.title-4 {
+	@extend h4;
+}
+
+.title-5 {
+	@extend h5;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	line-height: 1.6em;
+	margin: 0;
+}
+
+b,
+strong {
+	font-size: inherit;
+}
+
+img,
+picture,
+source {
+	width: 100%;
+	display: block;
+}
+
+label {
+	cursor: pointer;
+}
+
+// hide custom arrows
+select {
+	-webkit-appearance: none;
+	appearance: none;
+	outline: none;
+}
+
+select::-ms-expand {
+	display: none;
+}
+
+p,
+li {
+	line-height: 1.714em;
+	margin: 0;
+}
+
+ul,
+ol {
+	padding-left: 0;
+	margin: 0;
+
+	li {
+		list-style: none;
+	}
+}
+
+.section {
+	position: relative;
+}
+
+blockquote,
+figure {
+	margin: 0;
+}
+
+button {
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+// hide date navigation in input
+input[type="date"] {
+	display: block;
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+
+	&::-webkit-inner-spin-button {
+		display: none;
+	}
+
+	&::-webkit-calendar-picker-indicator {
+		opacity: 0;
+		position: relative;
+		right: -10px;
+	}
+
+	&::-webkit-inner-spin-button,
+	&::-webkit-calendar-picker-indicator {
+		opacity: 0;
+		-webkit-appearance: none;
+	}
+}
+
+// hide arrows in input type number
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	-webkit-appearance: none;
+}
+
+textarea,
+input {
+	color: $textColor;
+	width: 100%;
+	border: none;
+	transition: border-color $timing $hover-duration,
+		color $timing $hover-duration;
+
+	&:focus {
+		outline: none;
+		border-color: $black;
+	}
+
+	&::-webkit-input-placeholder {
+		font-family: inherit;
+		font-size: 16px;
+		color: $textColor;
+	}
+
+	&::-moz-placeholder {
+		font-family: inherit;
+		font-size: 16px;
+		color: $black;
+	}
+
+	&:-ms-input-placeholder {
+		font-family: inherit;
+		font-size: 16px;
+		color: $black;
+	}
+
+	&::placeholder {
+		font-family: inherit;
+		font-size: 16px;
+		color: $black;
+	}
+}
+
+textarea {
+	resize: none;
+	outline: none;
+	line-height: 1.2em;
+	height: 100%;
+}
+
+.main-wrapper {
+	position: relative;
+	overflow: hidden;
+	opacity: 1;
+	transition: opacity $duration $timing;
+}

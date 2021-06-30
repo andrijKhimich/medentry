@@ -1,0 +1,21 @@
+@import "base/mixins";
+@import "base/variables";
+
+// libs using in project, uncoment what you need
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/bootstrap-4-grid/css/grid.min.css";
+// @import "../../node_modules/jquery-nice-select/scss/nice-select.scss";
+// @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+
+// base styles for project
+@import "base/fonts";
+@import "base/base";
+@import "base/animations";
+
+// project components
+@import "components/header";
+@import "components/slick";
+@import "components/footer";
+
+// project pages
+@import "pages/index";
