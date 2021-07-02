@@ -1,7 +1,51 @@
 .navbar
   padding: 30px 45px
-
+  &-nav 
+    margin: 0 auto
+    
 .link
   color: $primary
   font-size: 14px
   font-weight: 600
+  &:hover
+    color: $primary
+
+.btn
+  // border-radius: 10px
+  font-weight: 500
+  padding: .775rem 3.5rem
+  &-primary
+    &:hover
+      background-color: $black
+      border-color: $black
+      
+  &-outline-primary
+    color: $black
+  &-sm
+    padding: .775rem 2.8rem
+
+.nav-item
+  &:not(:last-child)
+    margin-right: 22px
+    
+.nav-link
+  font-weight: 600
+  
+  @include d(991)
+    font-size: 22px
+    line-height: 26px
+
+.header
+  position: absolute
+  width: 100%
+  left: 0
+  top: 0
+
+  &__link
+    margin-right: 26px
+
+.logo
+  max-width: 135px
+
+  @include d(991)
+    max-width: 120px

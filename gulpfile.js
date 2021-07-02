@@ -89,7 +89,7 @@ gulp.task("js", function () {
       // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
       // "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
       // "src/libs/datepicker/dist/js/datepicker-full.min.js",
-      "src/libs/bootstrap4/dist/js/bootstrap.min.js",
+      "src/libs/bootstrap-4.6.0/dist/js/bootstrap.min.js",
 
       "src/js/script.js",
     ])
@@ -199,11 +199,14 @@ gulp.task("fonts", function () {
 gulp.task("watch", function () {
   gulp.watch("src/html/**/*.html", gulp.parallel("html"));
   gulp.watch("src/sass/**/*.sass", gulp.parallel("sass"));
+  gulp.watch("src/libs/bootstrap-4.6.0/scss/*.scss", gulp.parallel("sass"));
+
   gulp.watch("src/js/script.js", gulp.parallel("js"));
   gulp.watch("src/*.*", gulp.parallel("files"));
   gulp.watch("src/fonts/**/*", gulp.parallel("fonts"));
   gulp.watch("src/img/**/*", gulp.parallel("images"));
   gulp.watch("src/img/svg/*.svg", gulp.parallel("svgSprite"));
+
 });
 
 gulp.task("clear", function () {
