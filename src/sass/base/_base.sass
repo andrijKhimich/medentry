@@ -9,7 +9,7 @@ html
 
 body
 	font-size: 16px
-	font-family: "Montserrat", Arial, Helvetica, sans-serif
+	font-family: $textFont
 	color: $textColor
 	-webkit-font-smoothing: antialiased
 	-webkit-backface-visibility: hidden
@@ -28,7 +28,8 @@ h5,
 h6
 	margin: 0
 	font-weight: 600
-	font-family: 'Playfair Display', 'Times New Roman', Times, serif
+	font-family: $titleFont
+
 
 h1
 	font-size: 96px
@@ -36,17 +37,21 @@ h1
 	color: $black
 	margin: 20px 0 35px
 	font-weight: 900
-
 	span
 		color: $primary
 
 h2
 	font-size: 64px
 	line-height: 1.250em
+	span
+		color: $primary
 
 h3
 	font-size: 48px
-	line-height: 1.034em
+	line-height: 1.25em
+	margin-bottom: 40px
+	span
+		color: $primary
 
 h4
 	font-size: 32px
@@ -109,7 +114,7 @@ select::-ms-expand
 
 p,
 li
-	line-height: 1.714em
+	line-height: 1.625em
 	margin: 0
 
 ul,
@@ -119,9 +124,6 @@ ol
 
 	li
 		list-style: none
-
-.section
-	position: relative
 
 blockquote,
 figure
@@ -205,6 +207,10 @@ textarea
 	line-height: 1.2em
 	height: 100%
 
+// .odometer-inside
+// 	display: flex
+// 	align-items: center
+
 .main-wrapper
 	position: relative
 	overflow: hidden
@@ -216,6 +222,9 @@ textarea
 
 .main
 	padding-top: 128px
+
+.section
+	position: relative
 
 .subtitle
 	text-transform: uppercase
@@ -252,7 +261,7 @@ textarea
 	border-radius: 50%
 	margin-right: 16px
 	transition: background-color .4s ease
-	
+
 	&::after
 		content: ""
 		width: 100%

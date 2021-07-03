@@ -2,7 +2,7 @@
   padding-top: 66px
 
   &__title
-    padding-left: 16px
+    padding-left: 60px
 
   &__img
     margin-top: 19px
@@ -16,5 +16,92 @@
     right: 60px
 
 .statistic
+
   &__container
     background-color: $grey
+    padding: 70px 90px 90px 90px
+    border-radius: 10px
+    margin-top: -70px
+    display: flex
+    justify-content: space-between
+
+  &__box
+
+    span, i
+      font-family: $titleFont
+      font-size: 64px
+      line-height: 1.250em
+      color: $primary
+      display: block
+      font-style: normal
+
+    i
+      margin-left: 20px
+
+    p
+      font-size: 18px
+      font-weight: 600
+  
+  &__number
+    display: flex
+    margin-bottom: 10px
+
+.benefits
+  padding: 160px 0 59px 0
+
+  &__title
+    max-width: 500px
+  
+  &__content
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin: 19px 25px 0 -17px
+
+  &-box
+    flex: 0 0 50%
+    max-width: 240px
+    margin-bottom: 120px
+
+    &__header 
+      position: relative
+      margin-bottom: 21px
+
+      &::before
+        content: ""
+        background-image: url(../img/svg/ellipse.svg)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: top right
+        position: absolute
+        top: 0
+        left: 0
+      img
+        height: 44px
+        width: auto
+    
+    .title-5, & h5
+      color: $primary
+      margin-bottom: 6px
+
+.devices
+  padding-bottom: 190px
+  &::before
+    content: ""
+    position: absolute
+    bottom: 0
+    left: 0
+    background-color: $black
+    height: 38vw
+    width: 100%
+
+  img
+    width: 92vw
+    margin: 0 auto
+    position: relative
+  &__btn 
+    position: absolute
+    bottom: 80px
+    left: 50%
+    transform: translate(-50%, 0)
+

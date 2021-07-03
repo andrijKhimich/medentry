@@ -11,27 +11,16 @@ function setHomeHeader() {
   logoImg.attr("src", logoMainUrl);
   header.removeClass("header_inner");
 }
-// function showOnScroll(scrollValue) {
-//   $('.js-scroll').each(function () {
-//     let elem = $(this);
-//     let sectionPos = elem.offset().top;
-//     let windowPos = $(window).scrollTop() + $(window).height() / 1.2;
-//     if (sectionPos < windowPos) {
-//       elem.removeClass('js-fadeIn js-slideLeft js-slideRight js-slideTop');
-//     }
-//   });
-
-//   $('.js-active').each(function () {
-//     let item = $(this);
-//     let sectionPos = item.offset().top;
-//     let windowPos = $(window).scrollTop() + $(window).height() / 2.8;
-//     if (sectionPos < windowPos) {
-//       item.addClass('active');
-//     } else {
-//       item.removeClass('active');
-//     }
-//   });
-// }
+function showOnScroll(scrollValue) {
+  $('.js-scroll').each(function () {
+    let elem = $(this);
+    let sectionPos = elem.offset().top;
+    let windowPos = $(window).scrollTop() + $(window).height() / 1.2;
+    if (sectionPos < windowPos) {
+      elem.removeClass('js-fadeIn js-slideLeft js-slideRight js-slideTop');
+    }
+  });
+}
 
 // const humburger = $(".js-humburger");
 // const headerMenu = $(".menu");
@@ -51,12 +40,43 @@ function showContent() {
 }
 
 $(document).ready(function () {
+
+  // show all content when dociment ready
+  showContent();
+
+  // init odometer numbers on scroll
+
+  function numbersInit() {
+    $('.odometer').each(function () {
+      var counter = $(this);
+      var num = counter.attr('data-num');
+      counter.html(num);
+      if (counter.offset().top - $(window).scrollTop() < $(window).height() / 1.2) {
+        counter.html(num);
+      } else {
+        return false
+      }
+    });
+  }
+
+  $(window).scroll(function () {
+    const scrollValue = $(this).scrollTop();
+    showOnScroll(scrollValue);
+    // scrollValue >= 1 ? closeMenu() : null;
+
+    // if (scrollValue > 1) {
+    //   header.addClass('sticky');
+    // } else {
+    //   header.removeClass('sticky');
+    //   // logoImg.attr("src", logoColorUrl);
+    // }
+    numbersInit();
+  });
   // if ($('.inner-page').length > 0) {
   //   setInnerHeader();
   // } else {
   //   setHomeHeader();
   // }
-  showContent();
 
   // humburger.click(function () {
   //   if ($(this).hasClass('open')) {
@@ -79,39 +99,25 @@ $(document).ready(function () {
 
 // slow scroll to id (vanila JS)
 
-  // const menuLinks = document.querySelectorAll('.nav-menu__link[data-goto]');
-  // if (menuLinks.length > 0) {
-  //   menuLinks.forEach(function (menuLink) {
-  //   menuLink.addEventListener('click', onMenuLinkClick)
-  //   })
-  //   function onMenuLinkClick(e) {
-  //     const menuLink = e.target;
-  //     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-  //       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-  //       const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.js-header').offsetHeight;
-  //       window.scrollTo({
-  //         top: gotoBlockValue,
-  //         behavior: "smooth"
-  //       });
-  //       e.preventDefault()
-  //     }
-  //   }
-  // }
-
-//   showOnScroll($(window).scrollTop());
-
-//   $(window).scroll(function () {
-//     const scrollValue = $(this).scrollTop();
-//     showOnScroll(scrollValue);
-//     scrollValue >= 1 ? closeMenu() : null;
-
-//     if (scrollValue > 1) {
-//       header.addClass('sticky');
-//     } else {
-//       header.removeClass('sticky');
-//       // logoImg.attr("src", logoColorUrl);
+// const menuLinks = document.querySelectorAll('.nav-menu__link[data-goto]');
+// if (menuLinks.length > 0) {
+//   menuLinks.forEach(function (menuLink) {
+//   menuLink.addEventListener('click', onMenuLinkClick)
+//   })
+//   function onMenuLinkClick(e) {
+//     const menuLink = e.target;
+//     if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+//       const gotoBlock = document.querySelector(menuLink.dataset.goto);
+//       const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.js-header').offsetHeight;
+//       window.scrollTo({
+//         top: gotoBlockValue,
+//         behavior: "smooth"
+//       });
+//       e.preventDefault()
 //     }
-//   });
+//   }
+// }
+
 
 // $('.home-slider').slick({
 //   slidesToShow: 1,

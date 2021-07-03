@@ -87,6 +87,8 @@ gulp.task("js", function () {
       // "node_modules/slick-carousel/slick/slick.min.js",
       "node_modules/svg4everybody/dist/svg4everybody.min.js",
       // "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
+      "node_modules/odometer/odometer.min.js",
+
       // "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
       // "src/libs/datepicker/dist/js/datepicker-full.min.js",
       "src/libs/bootstrap-4.6.0/dist/js/bootstrap.min.js",
