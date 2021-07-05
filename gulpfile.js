@@ -1,6 +1,6 @@
 const gulp = require("gulp"),
   fileInclude = require("gulp-file-include"),
-  sass = require('gulp-sass')(require('sass')),
+  sass = require('gulp-sass'),
   autoprefixer = require("gulp-autoprefixer"),
   notify = require("gulp-notify"),
   concat = require("gulp-concat"),
@@ -46,11 +46,7 @@ gulp.task("sass", function () {
   return gulp
     .src(["src/sass/*.sass"])
     .pipe(sourcemaps.init())
-    .pipe(
-      sass({
-        outputStyle: "compressed",
-      }).on("error", notify.onError())
-    )
+    .pipe(sass().on('error', sass.logError))
     .pipe(
       autoprefixer(["last 5 versions"], {
         cascade: true,

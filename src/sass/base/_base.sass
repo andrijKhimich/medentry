@@ -1,11 +1,4 @@
 // project main styles
-html
-	box-sizing: border-box
-
-*,
-*:before,
-*:after
-	box-sizing: inherit
 
 body
 	font-size: 16px
@@ -62,8 +55,8 @@ h5
 	line-height: 1.375em
 
 h6
-	font-size: 20px
-	line-height: 1em
+	font-size: 18px
+	line-height: 1.444em
 
 .title-1
 	@extend h1
@@ -207,10 +200,6 @@ textarea
 	line-height: 1.2em
 	height: 100%
 
-// .odometer-inside
-// 	display: flex
-// 	align-items: center
-
 .main-wrapper
 	position: relative
 	overflow: hidden
@@ -226,6 +215,13 @@ textarea
 .section
 	position: relative
 
+.section__title
+  h2, .title-2
+    margin-bottom: 20px
+  
+  p
+    margin: 20px 0
+
 .subtitle
 	text-transform: uppercase
 	font-weight: 600
@@ -234,6 +230,12 @@ textarea
 	letter-spacing: 0.03em
 	span
 		color: $primary
+
+.svg-icon
+  height: 44px
+  width: 44px
+  fill: $primary
+  transition: fill .4s ease
 
 .play
 	display: inline-flex
@@ -286,3 +288,66 @@ textarea
 		border-top: 6px solid transparent
 		border-bottom: 6px solid transparent 
 		border-left: 9px solid $primary
+
+.play_white
+  background-color: $white
+  border-radius: 50%
+
+  .play-btn
+    margin-right: 0
+    border: none
+
+    &::after
+      display: none
+
+.navbar
+  padding: 30px 45px
+  &-nav 
+    margin: 0 auto
+    
+.link
+  color: $primary
+  font-size: 14px
+  font-weight: 600
+  &:hover
+    color: $primary
+
+.btn
+  font-weight: 500
+  padding: .775rem 3.5rem
+  white-space: nowrap
+
+  &-primary
+    &:hover
+      background-color: $black
+      border-color: $black
+      
+  &-outline-primary
+    color: $black
+
+  &-sm
+    padding: .775rem 2.8rem
+
+  &-social
+    display: inline-flex
+    align-items: center
+    font-size: 16px
+    color: $black
+    text-decoration: underline
+    padding: 0
+
+    img, picture
+      flex: 0 0 20px
+      max-width: 20px
+      margin-right: 10px
+
+.nav-item
+  &:not(:last-child)
+    margin-right: 22px
+    
+.nav-link
+  font-weight: 600
+  
+  @include d(991)
+    font-size: 22px
+    line-height: 26px
