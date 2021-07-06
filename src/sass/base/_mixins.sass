@@ -10,15 +10,13 @@
 
 
 //width
-@mixin d($width) 
-  @media only screen and (max-width: $width + "px") 
-    @content
-  
-
-
-@mixin m($width) 
-  @media only screen and (min-width: $width + "px") 
-    @content
+=d($width)
+	@media only screen and (max-width: $width+ "px")
+		@content
+    
+=m($width) 
+	@media only screen and (min-width: $width + "px") 
+		@content
   
 
 
@@ -32,29 +30,6 @@
 @mixin mh($height) 
   @media only screen and (min-height: $height + "px") 
     @content
-  
-
-
-//width min-max
-// @mixin mdw($width-min $width-max) 
-//   @media only screen and (min-width: $width-min + "px") and (max-width: $width-max + "px") 
-//     @content
-  
-
-
-//height min-max
-// @mixin mdh($height-min $height-max) 
-//   @media only screen and (min-height: $height-min + "px") and (max-height: $height-max + "px") 
-//     @content
-  
-
-
-//retina
-// @mixin retina 
-//   @media only screen and (-webkit-min-device-pixel-ratio: 2)
-//   only screen and (min-device-pixel-ratio: 2) 
-//     @content
-  
 
 
 //iPhone landscape
@@ -125,9 +100,4 @@
   -webkit-overflow-scrolling: touch
 
 
-@mixin borderRadius 
-  border-radius: 3px
-
-
-@mixin timing 
-  transition: .3s
+      

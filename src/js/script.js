@@ -11,6 +11,17 @@ function setHomeHeader() {
   logoImg.attr("src", logoMainUrl);
   header.removeClass("header_inner");
 }
+// const showOnLoadEl = $('.js-show-on-load');
+
+function showHero() {
+  $('.js-show-banner').removeClass('js-slide-top');
+  setTimeout(function () {
+    $('.js-show-title').removeClass('js-slide-top');
+  }, 400);
+  setTimeout(function () {
+    $('.js-show-header').removeClass('js-slide-down');
+  }, 800);
+}
 
 function showOnScroll(scrollValue) {
   $('.js-scroll').each(function () {
@@ -44,7 +55,9 @@ $(document).ready(function () {
 
   // show all content when dociment ready
   showContent();
-
+  setTimeout(function () {
+    showHero();
+  }, 400);
   // init odometer numbers on scroll
 
   function numbersInit() {
@@ -320,17 +333,40 @@ $(document).ready(function () {
 // }
 
 
-// $('.home-slider').slick({
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   dots: true,
-//   arrows: false,
-//   infinite: true,
-//   fade: true,
-//   speed: 1000,
-//   cssEase: 'linear',
-//   autoplaySpeed: 10000
+$('#testimonialsSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  // autoplay: false,
+  // dots: false,
+  arrows: true,
+  prevArrow: $('#testimonialsPrev'),
+  nextArrow: $('#testimonialsNext'),
+  // infinite: true,
+  // fade: true,
+  verticalSwiping: true,
+  // speed: 1000,
+  // cssEase: 'linear',
+  // autoplaySpeed: 10000,
+  // dots: false,
+  vertical: true,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+  verticalSwiping: true,
+});
+
+// Calculate the heighest slide and set a top/bottom margin for other children.
+// As variableHeight is not supported yet: https://github.com/kenwheeler/slick/issues/1803
+// var maxHeight = -1;
+// $('.slick-slide').each(function () {
+//   if ($(this).height() > maxHeight) {
+//     maxHeight = $(this).height();
+//   }
+// });
+// $('.slick-slide').each(function () {
+//   if ($(this).height() < maxHeight) {
+//     $(this).css('margin', Math.ceil((maxHeight - $(this).height()) / 2) + 'px 0');
+//   }
 // });
 // $('.testimonials-slider__wrapper').slick({
 //   slidesToShow: 1,

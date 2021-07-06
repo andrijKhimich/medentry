@@ -1,57 +1,24 @@
-@keyframes scrollBtnBefore
-  0%
-    opacity: 0
-    top: 0
-
-  50%
-    opacity: 1
-
-  100%
-    opacity: 0
-    top: 8px
-
-@keyframes scrollBtnAfter
-  0%
-    opacity: 0
-
-  50%
-    opacity: 1
-
-  100%
-    opacity: 0
-
-.show-on-load
-  opacity: 1
-  transform: matrix(1, 0, 0, 1, 0, 0)
-  transition: opacity $duration $timing, transform $duration $timing
-
 // classes for animation
 .js-show
   transform: translate(0, 0) rotate(0)
   opacity: 1
   transition: transform .8s cubic-bezier(0.6, 0, 0.41, 1), opacity .8s cubic-bezier(0.6, 0, 0.41, 1)
 
-.js-show-on-scroll
+.js-show-on-scroll, .js-show-on-load, .js-show-title, .js-show-banner, .js-show-header
   transform: translate(0, 0) rotate(0)
   opacity: 1
   transition: transform .8s cubic-bezier(0.6, 0, 0.41, 1), opacity .8s cubic-bezier(0.6, 0, 0.41, 1)
+
 .js-fadeIn
   opacity: 0
 
 .js-slideRight
   opacity: 0
-  transform: translate(50px, 0)
+  transform: translate(30px, 0)
 
 .js-slideLeft
   opacity: 0
-  transform: translate(-50px, 0)
-
-.js-show-on-load
-  transform: translate(0, 0) rotate(0)
-  opacity: 1
-  transition: transform .8s cubic-bezier(0.6, 0, 0.41, 1), opacity .8s cubic-bezier(0.6, 0, 0.41, 1)
-  
-
+  transform: translate(-30px, 0)
 
 .show-words
   opacity: 1
@@ -61,6 +28,10 @@
 .hide-content
   opacity: 0
 
-.js-slideTop
+.js-slideTop, .js-slide-top
   opacity: 0
-  transform: translate(0, 50px)
+  transform: translate(0, 30px)
+
+.js-slideDown, .js-slide-down
+  opacity: 0
+  transform: translate(0, -30px)

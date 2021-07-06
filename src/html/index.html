@@ -14,21 +14,23 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-10">
-              <div class="hero__title">
+              <div class="hero__title js-show-title js-slide-top">
                 <p class="subtitle"><span>The #1 UCAT</span> Training Program</p>
                 <h1 class="title-1">We help <span>the doctors
                     of tomorrow,</span> today.</h1>
-                <a href="#" class="btn btn-sm btn-primary">Try demo</a>
+                <div class="btn-row">
+                  <a href="#" class="btn btn-sm btn-primary">Try demo</a>
+                  <a href="#" class="play hero__play">
+                    <span class="play-btn"></span>
+                    Our story
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="hero__img">
+        <div class="hero__img js-show-banner js-slide-top">
           <img src="img/home/hero.png" alt="We help the doctors">
-          <a href="#" class="play hero__play">
-            <span class="play-btn"></span>
-            Our story
-          </a>
         </div>
       </section>
       <section class="section js-scroll js-show-on-scroll js-fadeIn statistic">
@@ -59,18 +61,18 @@
           </div>
         </div>
       </section>
-      <section class="section js-scroll js-show-on-scroll js-fadeIn benefits">
+      <section class="section benefits">
         <div class="container">
           <div class="row">
             <div class="col-lg-6">
-              <div class="section__title benefits__title">
+              <div class="section__title benefits__title js-scroll js-show-on-scroll js-slideLeft">
                 <h3 class="title-3">MedEntry has helped <span>20,000</span> students
                   over <span> 20 years</span> become doctors</h3>
                 <a href="#" class="btn btn-sm btn-primary">Join Them</a>
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="benefits__content">
+              <div class="benefits__content js-scroll js-show-on-scroll js-slideRight">
                 <div class="benefits-box">
                   <div class="benefits-box__header">
                     <img src="img/svg/expert.svg" alt="Trusted Experts">
@@ -121,10 +123,7 @@
               </div>
             </div>
             <div class="col-12">
-              <div class="training__wrapper">
-                <div class="training__img">
-                  <img src="img/home/training.png" alt="medidcne">
-                </div>
+              <div class="training__wrapper js-scroll js-show-on-scroll js-slideRight">
                 <div class="training__content">
                   <div class="training-box">
                     <div class="training-box__content">
@@ -158,17 +157,20 @@
                     </div>
                   </div>
                 </div>
+                <div class="training__img">
+                  <img src="img/home/training.png" alt="medidcne" class="hide-on-mobile">
+                  <img src="img/home/training-mob.png" alt="medidcne" class="show-on-mobile">
+                </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
-      <section class="section js-scroll js-show-on-scroll js-fadeIn testimonials">
+      <section class="section testimonials">
         <div class="container">
           <div class="row">
             <div class="col">
-              <div class="testimonials__wrapper">
+              <div class="testimonials__wrapper js-scroll js-show-on-scroll js-slideLeft">
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="section__title testimonials__title">
@@ -191,56 +193,97 @@
                     </div>
                   </div>
                   <div class="col-lg-6">
-                    <div class="testimonials-slider">
-                      <div class="testimonials-item">
-                        <div class="testimonials-item__social">
-                          <img src="img/svg/facebook-fill.svg" alt="facebook">
-                        </div>
-                        <div class="testimonials-item__wrapper">
-                          <div class="testimonials-item__header">
-                            <p><strong>John</strong></p>
-                            <div class="testimonials-item__row">
-                              <div class="testimonials-item__details">
-                                <img src="img/svg/map-pin.svg" alt="pin">
-                                <p>Los Angeles</p>
-                              </div>
-                              <div class="testimonials-item__details">
-                                <img src="img/svg/clock.svg" alt="clock">
-                                <p>07 March at 22:03</p>
+                    <div class="testimonials-slide__wrap">
+                      <div class="testimonials-slider" id="testimonialsSlider">
+                        <div class="testimonials-item">
+                          <div class="testimonials-item__social">
+                            <img src="img/svg/facebook-fill.svg" alt="facebook">
+                          </div>
+                          <div class="testimonials-item__wrapper">
+                            <div class="testimonials-item__header">
+                              <p><strong>John</strong></p>
+                              <div class="testimonials-item__row">
+                                <div class="testimonials-item__details">
+                                  <img src="img/svg/map-pin.svg" alt="pin">
+                                  <p>Los Angeles</p>
+                                </div>
+                                <div class="testimonials-item__details">
+                                  <img src="img/svg/clock.svg" alt="clock">
+                                  <p>07 March at 22:03</p>
+                                </div>
                               </div>
                             </div>
+                            <p>No matter where you go, Medentry is the coolest, most happening thing around! We're
+                              loving
+                              it.</p>
                           </div>
-                          <p>No matter where you go, Medentry is the coolest, most happening thing around! We're loving
-                            it.</p>
                         </div>
-                      </div>
-                      <div class="testimonials-item">
-                        <div class="testimonials-item__social">
-                          <img src="img/svg/google.svg" alt="google">
-                        </div>
-                        <div class="testimonials-item__wrapper">
-                          <div class="testimonials-item__header">
-                            <p><strong>John</strong></p>
-                            <div class="testimonials-item__row">
-                              <div class="testimonials-item__details">
-                                <img src="img/svg/map-pin.svg" alt="pin">
-                                <p>Los Angeles</p>
-                              </div>
-                              <div class="testimonials-item__details">
-                                <img src="img/svg/clock.svg" alt="clock">
-                                <p>07 March at 22:03</p>
+                        <div class="testimonials-item">
+                          <div class="testimonials-item__social">
+                            <img src="img/svg/google.svg" alt="google">
+                          </div>
+                          <div class="testimonials-item__wrapper">
+                            <div class="testimonials-item__header">
+                              <p><strong>John</strong></p>
+                              <div class="testimonials-item__row">
+                                <div class="testimonials-item__details">
+                                  <img src="img/svg/map-pin.svg" alt="pin">
+                                  <p>Los Angeles</p>
+                                </div>
+                                <div class="testimonials-item__details">
+                                  <img src="img/svg/clock.svg" alt="clock">
+                                  <p>07 March at 22:03</p>
+                                </div>
                               </div>
                             </div>
+                            <p>No matter where you go, Medentry is the coolest, most happening thing around! We're
+                              loving
+                              it.</p>
                           </div>
-                          <p>No matter where you go, Medentry is the coolest, most happening thing around! We're loving
-                            it.</p>
+                        </div>
+                        <div class="testimonials-item testimonials-item_video"
+                          style="background-image: url(img/home/testimonials-video.jpg);">
+                          <a href="#" class="play play_white testimonials__play">
+                            <span class="play-btn"></span>
+                          </a>
+                        </div>
+                        <div class="testimonials-item">
+                          <div class="testimonials-item__social">
+                            <img src="img/svg/google.svg" alt="google">
+                          </div>
+                          <div class="testimonials-item__wrapper">
+                            <div class="testimonials-item__header">
+                              <p><strong>John</strong></p>
+                              <div class="testimonials-item__row">
+                                <div class="testimonials-item__details">
+                                  <img src="img/svg/map-pin.svg" alt="pin">
+                                  <p>Los Angeles</p>
+                                </div>
+                                <div class="testimonials-item__details">
+                                  <img src="img/svg/clock.svg" alt="clock">
+                                  <p>07 March at 22:03</p>
+                                </div>
+                              </div>
+                            </div>
+                            <p>No matter where you go, Medentry is the coolest, most happening thing around! We're
+                              loving
+                              it.</p>
+                          </div>
                         </div>
                       </div>
-                      <div class="testimonials-item testimonials-item_video"
-                        style="background-image: url(img/home/testimonials-video.jpg);">
-                        <a href="#" class="play play_white testimonials__play">
-                          <span class="play-btn"></span>
-                        </a>
+                      <div class="testimonials-slider__nav">
+                        <button class="testimonials-slider__btn" id="testimonialsPrev">
+                          <svg class="arrow-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#arrow-left">
+                            </use>
+                          </svg>
+                        </button>
+                        <button class="testimonials-slider__btn" id="testimonialsNext">
+                          <svg class="arrow-icon">
+                            <use xlink:href="img/svg/sprite-svg/sprite.svg#arrow-right">
+                            </use>
+                          </svg>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -250,11 +293,11 @@
           </div>
         </div>
       </section>
-      <section class="section js-scroll js-show-on-scroll js-fadeIn started">
+      <section class="section started">
         <div class="container">
           <div class="row">
             <div class="col-lg-5">
-              <div class="section__title started__title">
+              <div class="section__title started__title js-scroll js-show-on-scroll js-slideLeft">
                 <h2 class="title-2">Get started <span>for free</span></h2>
                 <p>Why wait? Our free tools will help you understand UCAT, assess your skills and start planning a
                   career in medicine.</p>
@@ -262,7 +305,7 @@
               </div>
             </div>
             <div class="col-lg-7">
-              <div class="started__content">
+              <div class="started__content js-scroll js-show-on-scroll js-slideRight">
                 <a href="#" class="started-box">
                   <div class="started-box__content">
                     <div class="started-box__img">
@@ -334,7 +377,8 @@
           </div>
         </div>
       </section>
-      <section class="section js-scroll js-show-on-scroll js-fadeIn cta" style="background-image: url(img/home/cta-buildings.png);">
+      <section class="section js-scroll js-show-on-scroll js-fadeIn cta"
+        style="background-image: url(img/home/cta-buildings.png);">
         <div class="container">
           <div class="row">
             <div class="col-lg-4 offset-lg-4">
