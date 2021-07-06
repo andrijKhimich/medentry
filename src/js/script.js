@@ -47,17 +47,16 @@ function showOnScroll(scrollValue) {
 //   headerMenu.removeClass('open');
 // }
 
-function showContent() {
-  $(".main-wrapper").removeClass("js-fadeIn");
-}
+// function showContent() {
+//   $(".main-wrapper").removeClass("js-fadeIn");
+// }
 
 $(document).ready(function () {
 
   // show all content when dociment ready
-  showContent();
-  setTimeout(function () {
-    showHero();
-  }, 400);
+  // showContent();
+
+  showHero();
   // init odometer numbers on scroll
 
   function numbersInit() {
@@ -343,16 +342,16 @@ $('#testimonialsSlider').slick({
   nextArrow: $('#testimonialsNext'),
   // infinite: true,
   // fade: true,
-  verticalSwiping: true,
+  // verticalSwiping: true,
   // speed: 1000,
   // cssEase: 'linear',
   // autoplaySpeed: 10000,
   // dots: false,
-  vertical: true,
-  slidesToShow: 3,
+  // vertical: true,
+  slidesToShow: 1,
   slidesToScroll: 1,
   adaptiveHeight: true,
-  verticalSwiping: true,
+  // verticalSwiping: true,
 });
 
 // Calculate the heighest slide and set a top/bottom margin for other children.

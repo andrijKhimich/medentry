@@ -20,7 +20,7 @@
   &__play
     position: absolute
     top: 150%
-    right: -22vw
+    right: -24vw
     +m(1921)
       right: -30vw
     +d(1440)
@@ -80,7 +80,8 @@
   padding: 160px 0 59px 0
   +d(991)
     padding: 100px 0 50px
-
+  +d(575)
+    padding: 50px 0
   &__title
     max-width: 500px
     +d(991)
@@ -155,7 +156,8 @@
 
 .training
   padding-top: 145px
-
+  +d(575)
+    padding-top: 50px
   &__title
     max-width: 720px
     margin: 0 auto 80px auto
@@ -241,6 +243,8 @@
     background-color: $grey
     border-radius: 10px
     padding: 72px 120px 55px
+    .col-lg-6
+      padding: 0 15px
     +d(991)
       padding: 40px
     +d(767)
@@ -268,7 +272,8 @@
     +d(991)
       margin-bottom: 30px
       flex-direction: row
-
+    +d(360)
+      flex-direction: column
     .btn
       margin-bottom: 22px
 
@@ -291,6 +296,7 @@
     +d(991)
       max-width: 100%
       margin-left: 0
+
     &__wrap
       position: relative
 
@@ -334,7 +340,8 @@
     display: flex
     margin-bottom: 30px
     overflow: hidden
-
+    +d(575)
+      padding: 10px
     &__social
       flex: 0 0 31px
       margin-right: 16px
@@ -348,7 +355,7 @@
     &__row
       display: flex
       align-items: center
-
+      // +d(575)
     &__details
       display: flex
       align-items: center
@@ -359,13 +366,13 @@
         margin-right: 10px
 
       img, picture
-        width: 10px
-        height: 10px
+        width: 11px
+        height: 11px
         margin-right: 6px
 
     &_video
       position: relative
-      // min-height: 270px
+      min-height: 270px
       // height: 270px
       background-size: cover
       background-repeat: no-repeat
@@ -375,7 +382,8 @@
   padding: 180px 0
   +d(991)
     padding: 100px 0
-
+  +d(575)
+    padding: 50px 0
   &__title
     max-width: 340px
     +d(991)

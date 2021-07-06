@@ -45,7 +45,7 @@ gulp.task("html", function () {
 gulp.task("sass", function () {
   return gulp
     .src(["src/sass/*.sass"])
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(
       autoprefixer(["last 5 versions"], {
@@ -60,7 +60,7 @@ gulp.task("sass", function () {
         compatibility: "ie8",
       })
     )
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(
       webpcss({
         webpClass: ".webp",
@@ -91,11 +91,11 @@ gulp.task("js", function () {
 
       "src/js/script.js",
     ])
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(babel())
     .pipe(uglify())
     .pipe(concat("script.min.js"))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest("dist/js"))
     .pipe(
       browserSync.reload({
