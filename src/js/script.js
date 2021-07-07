@@ -1,6 +1,8 @@
 const scrollBtn = $(".scroll-btn");
-const header = $(".header");
-const logoImg = $(".logo img");
+const header = $("#header");
+const logoImg = $("#logo img");
+const logoSource = $("#logo source");
+
 
 function setInnerHeader() {
   logoImg.attr("src", logoBlackUrl);
@@ -11,6 +13,31 @@ function setHomeHeader() {
   logoImg.attr("src", logoMainUrl);
   header.removeClass("header_inner");
 }
+
+function setStickyHeader() {
+  header.addClass('fixed');
+  logoImg.attr("src", logoSmallUrl);
+  logoSource.attr("srcset", logoSmallUrl);
+  console.log('set');
+}
+
+function showStickyHeader() {
+  header.addClass('show');
+  console.log('show');
+
+}
+
+function hideStickyHeader() {
+  header.removeClass('show');
+}
+
+function destroyStickyHeader() {
+  header.removeClass('fixed');
+  // header.removeClass('show');
+  logoImg.attr("src", logoMainUrl);
+  logoSource.attr("srcset", logoMainUrl);
+}
+
 // const showOnLoadEl = $('.js-show-on-load');
 
 function showHero() {
@@ -34,18 +61,18 @@ function showOnScroll(scrollValue) {
   });
 }
 
-// const humburger = $(".js-humburger");
-// const headerMenu = $(".menu");
+const humburger = $("#burger");
+const headerMenu = $("#navbar");
 
 // function openMenu() {
 //   humburger.addClass('open');
 //   headerMenu.addClass('open');
 // }
 
-// function closeMenu() {
-//   humburger.removeClass('open');
-//   headerMenu.removeClass('open');
-// }
+function closeMenu() {
+  humburger.addClass('collapsed');
+  headerMenu.removeClass('show');
+}
 
 // function showContent() {
 //   $(".main-wrapper").removeClass("js-fadeIn");
@@ -90,12 +117,44 @@ $(document).ready(function () {
   //   })
   // }
   // setZindex();
+  let startPosition = 0;
 
   $(window).scroll(function () {
-    const scrollValue = $(this).scrollTop();
-    showOnScroll(scrollValue);
-    // scrollValue >= 1 ? closeMenu() : null;
+    let scrollValue = $(this).scrollTop();
 
+    showOnScroll(scrollValue);
+
+    scrollValue >= 1 ? closeMenu() : null;
+
+    if (scrollValue > startPosition) {
+      console.log('down');
+      if (scrollValue > 200) {
+        setStickyHeader();
+      }
+
+      if (scrollValue > 400) {
+        showStickyHeader();
+      }
+
+    } else {
+
+      if (scrollValue < 400) {
+        hideStickyHeader();
+      }
+
+      if (scrollValue < 200) {
+        destroyStickyHeader();
+      }
+      console.log('up');
+
+    }
+    startPosition = scrollValue
+
+    console.log(scrollValue);
+
+    // if (scrollValue > 400) {
+    //   showStickyHeader()
+    // }
     // if (scrollValue > 1) {
     //   header.addClass('sticky');
     // } else {

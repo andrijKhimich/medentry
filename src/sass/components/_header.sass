@@ -4,6 +4,27 @@
   left: 0
   top: 0
   z-index: 10
+  background-color: $white
+  transition: transform .8s ease
+
+  &.fixed
+    // padding: 10px
+    position: fixed
+    // background-color: $white
+    transform: translate(0, -70px)
+    // top: -70px
+    top: -70px
+    left: 0
+    width: 100%
+    .navbar
+      padding: 0
+    .navbar-brand
+      max-width: 60px
+    .btn-outline-primary
+      display: none
+  &.show
+    top: 0
+    transform: translate(0,0)
   &__link
     margin-right: 26px
     +d(1280)
