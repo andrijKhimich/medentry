@@ -177,186 +177,186 @@ $(document).ready(function () {
   //   }
   // });
 
-  if ($('#map')[0]) {
-    google.maps.event.addDomListener(window, 'load', initMap);
+  // if ($('#map')[0]) {
+  //   google.maps.event.addDomListener(window, 'load', initMap);
 
-    function initMap() {
-      var myLatLng = {
-        lat: -37.70145430229318,
-        lng: 144.96689211017485
-      };
+  //   function initMap() {
+  //     var myLatLng = {
+  //       lat: -37.70145430229318,
+  //       lng: 144.96689211017485
+  //     };
 
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
-        center: myLatLng,
-        disableDefaultUI: true,
-        styles: [{
-            "featureType": "all",
-            "elementType": "labels.text.fill",
-            "stylers": [{
-                "saturation": 36
-              },
-              {
-                "color": "#000000"
-              },
-              {
-                "lightness": 40
-              }
-            ]
-          },
-          {
-            "featureType": "all",
-            "elementType": "labels.text.stroke",
-            "stylers": [{
-                "visibility": "on"
-              },
-              {
-                "color": "#000000"
-              },
-              {
-                "lightness": 16
-              }
-            ]
-          },
-          {
-            "featureType": "all",
-            "elementType": "labels.icon",
-            "stylers": [{
-              "visibility": "off"
-            }]
-          },
-          {
-            "featureType": "administrative",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 20
-              }
-            ]
-          },
-          {
-            "featureType": "administrative",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 17
-              },
-              {
-                "weight": 1.2
-              }
-            ]
-          },
-          {
-            "featureType": "landscape",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 20
-              }
-            ]
-          },
-          {
-            "featureType": "poi",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 21
-              }
-            ]
-          },
-          {
-            "featureType": "road.highway",
-            "elementType": "geometry.fill",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 17
-              }
-            ]
-          },
-          {
-            "featureType": "road.highway",
-            "elementType": "geometry.stroke",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 29
-              },
-              {
-                "weight": 0.2
-              }
-            ]
-          },
-          {
-            "featureType": "road.arterial",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 18
-              }
-            ]
-          },
-          {
-            "featureType": "road.local",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 16
-              }
-            ]
-          },
-          {
-            "featureType": "transit",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 19
-              }
-            ]
-          },
-          {
-            "featureType": "water",
-            "elementType": "geometry",
-            "stylers": [{
-                "color": "#000000"
-              },
-              {
-                "lightness": 17
-              }
-            ]
-          }
-        ]
-      });
-      var icon = {
-        url: './img/svg/map-point.svg', // url
-        scaledSize: new google.maps.Size(50, 50), // scaled size
-        // origin: new google.maps.Point(0,0), // origin
-        // anchor: new google.maps.Point(0, 0) // anchor
-      };
-      var marker = new google.maps.Marker({
-        position: myLatLng,
-        map: map,
-        title: 'Medentry',
-        icon: icon,
-      });
-    }
-  }
+  //     var map = new google.maps.Map(document.getElementById('map'), {
+  //       zoom: 14,
+  //       center: myLatLng,
+  //       disableDefaultUI: true,
+  //       styles: [{
+  //           "featureType": "all",
+  //           "elementType": "labels.text.fill",
+  //           "stylers": [{
+  //               "saturation": 36
+  //             },
+  //             {
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 40
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "all",
+  //           "elementType": "labels.text.stroke",
+  //           "stylers": [{
+  //               "visibility": "on"
+  //             },
+  //             {
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 16
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "all",
+  //           "elementType": "labels.icon",
+  //           "stylers": [{
+  //             "visibility": "off"
+  //           }]
+  //         },
+  //         {
+  //           "featureType": "administrative",
+  //           "elementType": "geometry.fill",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 20
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "administrative",
+  //           "elementType": "geometry.stroke",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 17
+  //             },
+  //             {
+  //               "weight": 1.2
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "landscape",
+  //           "elementType": "geometry",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 20
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "poi",
+  //           "elementType": "geometry",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 21
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "road.highway",
+  //           "elementType": "geometry.fill",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 17
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "road.highway",
+  //           "elementType": "geometry.stroke",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 29
+  //             },
+  //             {
+  //               "weight": 0.2
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "road.arterial",
+  //           "elementType": "geometry",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 18
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "road.local",
+  //           "elementType": "geometry",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 16
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "transit",
+  //           "elementType": "geometry",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 19
+  //             }
+  //           ]
+  //         },
+  //         {
+  //           "featureType": "water",
+  //           "elementType": "geometry",
+  //           "stylers": [{
+  //               "color": "#000000"
+  //             },
+  //             {
+  //               "lightness": 17
+  //             }
+  //           ]
+  //         }
+  //       ]
+  //     });
+  //     var icon = {
+  //       url: './img/svg/map-point.svg', // url
+  //       scaledSize: new google.maps.Size(50, 50), // scaled size
+  //       // origin: new google.maps.Point(0,0), // origin
+  //       // anchor: new google.maps.Point(0, 0) // anchor
+  //     };
+  //     var marker = new google.maps.Marker({
+  //       position: myLatLng,
+  //       map: map,
+  //       title: 'Medentry',
+  //       icon: icon,
+  //     });
+  //   }
+  // }
 });
 
 // slow scroll to id (jQuery)
