@@ -20,7 +20,7 @@
                     of tomorrow,</span> today.</h1>
                 <div class="btn-row">
                   <a href="#" class="btn btn-sm btn-primary">Try demo</a>
-                  <a href="https://www.youtube.com/watch?v=EljfrBiGElA&t=1317s"  data-fancybox class="play hero__play">
+                  <a href="https://www.youtube.com/watch?v=EljfrBiGElA&t=1317s" data-fancybox class="play hero__play">
                     <span class="play-btn"></span>
                     Our story
                   </a>
@@ -30,7 +30,13 @@
           </div>
         </div>
         <div class="hero__img js-show-banner js-slide-top">
-          <img src="img/home/hero.png" alt="We help the doctors">
+          <!-- <img src="img/home/hero.png" alt="We help the doctors">
+           -->
+          <picture>
+            <source srcset="img/home/hero_mob.webp" media="(max-width: 768px)">
+            <source srcset="img/home/hero.webp" type="image/webp">
+            <img src="img/home/hero.png" alt="We help the doctors">
+          </picture>
         </div>
       </section>
       <section class="section js-scroll js-show-on-scroll js-fadeIn statistic">
@@ -75,28 +81,44 @@
               <div class="benefits__content js-scroll js-show-on-scroll js-slideRight">
                 <div class="benefits-box">
                   <div class="benefits-box__header">
-                    <img src="img/svg/expert.svg" alt="Trusted Experts">
+                    <!-- <img src="img/svg/expert.svg" alt="Trusted Experts"> -->
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#expert">
+                      </use>
+                    </svg>
                   </div>
                   <h5 class="title-5">Trusted Experts</h5>
                   <p>We are the <strong>only</strong> UCAT organisation run by specialist doctors and academics</p>
                 </div>
                 <div class="benefits-box">
                   <div class="benefits-box__header">
-                    <img src="img/svg/mobile-app.svg" alt="UCAT App">
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#mobile-app">
+                      </use>
+                    </svg>
+                    <!-- <img src="img/svg/mobile-app.svg" alt="UCAT App"> -->
                   </div>
                   <h5 class="title-5">UCAT App</h5>
                   <p>Our <strong>exclusive</strong>, custom-built UCAT App allows practice any time, any place</p>
                 </div>
                 <div class="benefits-box">
                   <div class="benefits-box__header">
-                    <img src="img/svg/books.svg" alt="Complete Prep">
+                    <!-- <img src="img/svg/books.svg" alt="Complete Prep"> -->
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#books">
+                      </use>
+                    </svg>
                   </div>
                   <h5 class="title-5">Complete Prep</h5>
                   <p>We provide <strong>everything</strong> you need, guiding you through the whole process</p>
                 </div>
                 <div class="benefits-box">
                   <div class="benefits-box__header">
-                    <img src="img/svg/call-center.svg" alt="24/7 Support">
+                    <!-- <img src="img/svg/call-center.svg" alt="24/7 Support"> -->
+                    <svg class="svg-icon">
+                      <use xlink:href="img/svg/sprite-svg/sprite.svg#call-center">
+                      </use>
+                    </svg>
                   </div>
                   <h5 class="title-5">24/7 Support</h5>
                   <p>Our academic and technical team are <span>always</span> available to help with any issues</p>
@@ -107,7 +129,12 @@
         </div>
       </section>
       <section class="section js-scroll js-show-on-scroll js-fadeIn devices">
-        <img src="img/home/devices.png" alt="devices">
+        <!-- <img src="img/home/devices.png" alt="devices"> -->
+        <picture>
+          <source srcset="img/home/devices_mob.webp " media="(max-width: 768px)">
+          <source srcset="img/home/devices.webp" type="image/webp">
+          <img src="img/home/devices.png" alt="devices">
+        </picture>
         <a href="#" class="btn btn-sm btn-primary devices__btn">Pricing page</a>
       </section>
       <section class="section js-scroll js-show-on-scroll js-fadeIn training">
@@ -158,8 +185,14 @@
                   </div>
                 </div>
                 <div class="training__img">
-                  <img src="img/home/training.png" alt="medidcne" class="hide-on-mobile">
-                  <img src="img/home/training-mob.png" alt="medidcne" class="show-on-mobile">
+                  <!-- <img src="img/home/training.png" alt="medidcne" class="hide-on-mobile">
+                   -->
+                  <picture>
+                    <source srcset="img/home/training_mob.webp " media="(max-width: 768px)">
+                    <source srcset="img/home/training.webp" type="image/webp">
+                    <img src="img/home/training.png" alt="devices">
+                  </picture>
+                  <!-- <img src="img/home/training-mob.png" alt="medidcne" class="show-on-mobile"> -->
                 </div>
               </div>
             </div>
@@ -179,10 +212,18 @@
                     </div>
                     <div class="testimonials__social">
                       <a href="#" class="btn btn-link btn-social">
-                        <img src="img/svg/facebook-fill.svg" alt="facebook">
+                        <!-- <img src="img/svg/facebook-fill.svg" alt="facebook"> -->
+                        <svg class="svg-icon_md">
+                          <use xlink:href="img/svg/sprite-svg/sprite.svg#facebook-fill">
+                          </use>
+                        </svg>
                         See all reviews</a>
                       <a href="#" class="btn btn-link btn-social">
-                        <img src="img/svg/google.svg" alt="google">
+                        <svg class="svg-icon_md">
+                          <use xlink:href="img/svg/sprite-svg/sprite.svg#google">
+                          </use>
+                        </svg>
+                        <!-- <img src="img/svg/google.svg" alt="google"> -->
                         See all reviews</a>
                     </div>
                     <div class="testimonials__guarantee">
@@ -198,18 +239,30 @@
                         <div class="testimonials-col">
                           <div class="testimonials-item">
                             <div class="testimonials-item__social">
-                              <img src="img/svg/facebook-fill.svg" alt="facebook">
+                              <!-- <img src="img/svg/facebook-fill.svg" alt="facebook"> -->
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#facebook-fill">
+                                </use>
+                              </svg>
                             </div>
                             <div class="testimonials-item__wrapper">
                               <div class="testimonials-item__header">
                                 <p><strong>John</strong></p>
                                 <div class="testimonials-item__row">
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/map-pin.svg" alt="pin">
+                                    <!-- <img src="img/svg/map-pin.svg" alt="pin"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#map-pin">
+                                      </use>
+                                    </svg>
                                     <p>Los Angeles</p>
                                   </div>
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/clock.svg" alt="clock">
+                                    <!-- <img src="img/svg/clock.svg" alt="clock"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#clock">
+                                      </use>
+                                    </svg>
                                     <p>07 March at 22:03</p>
                                   </div>
                                 </div>
@@ -221,18 +274,30 @@
                           </div>
                           <div class="testimonials-item">
                             <div class="testimonials-item__social">
-                              <img src="img/svg/google.svg" alt="google">
+                              <!-- <img src="img/svg/google.svg" alt="google"> -->
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#google">
+                                </use>
+                              </svg>
                             </div>
                             <div class="testimonials-item__wrapper">
                               <div class="testimonials-item__header">
                                 <p><strong>John</strong></p>
                                 <div class="testimonials-item__row">
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/map-pin.svg" alt="pin">
+                                    <!-- <img src="img/svg/map-pin.svg" alt="pin"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#map-pin">
+                                      </use>
+                                    </svg>
                                     <p>Los Angeles</p>
                                   </div>
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/clock.svg" alt="clock">
+                                    <!-- <img src="img/svg/clock.svg" alt="clock"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#clock">
+                                      </use>
+                                    </svg>
                                     <p>07 March at 22:03</p>
                                   </div>
                                 </div>
@@ -244,7 +309,8 @@
                           </div>
                           <div class="testimonials-item testimonials-item_video"
                             style="background-image: url(img/home/testimonials-video.jpg);">
-                            <a href="https://www.youtube.com/watch?v=EljfrBiGElA&t=1317s" data-fancybox class="play play_white testimonials__play">
+                            <a href="https://www.youtube.com/watch?v=EljfrBiGElA&t=1317s" data-fancybox
+                              class="play play_white testimonials__play">
                               <span class="play-btn"></span>
                             </a>
                           </div>
@@ -252,18 +318,30 @@
                         <div class="testimonials-col">
                           <div class="testimonials-item">
                             <div class="testimonials-item__social">
-                              <img src="img/svg/facebook-fill.svg" alt="facebook">
+                              <!-- <img src="img/svg/facebook-fill.svg" alt="facebook"> -->
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#facebook-fill">
+                                </use>
+                              </svg>
                             </div>
                             <div class="testimonials-item__wrapper">
                               <div class="testimonials-item__header">
                                 <p><strong>John</strong></p>
                                 <div class="testimonials-item__row">
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/map-pin.svg" alt="pin">
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#map-pin">
+                                      </use>
+                                    </svg>
+                                    <!-- <img src="img/svg/map-pin.svg" alt="pin"> -->
                                     <p>Los Angeles</p>
                                   </div>
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/clock.svg" alt="clock">
+                                    <!-- <img src="img/svg/clock.svg" alt="clock"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#clock">
+                                      </use>
+                                    </svg>
                                     <p>07 March at 22:03</p>
                                   </div>
                                 </div>
@@ -275,18 +353,30 @@
                           </div>
                           <div class="testimonials-item">
                             <div class="testimonials-item__social">
-                              <img src="img/svg/google.svg" alt="google">
+                              <!-- <img src="img/svg/google.svg" alt="google"> -->
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#google">
+                                </use>
+                              </svg>
                             </div>
                             <div class="testimonials-item__wrapper">
                               <div class="testimonials-item__header">
                                 <p><strong>John</strong></p>
                                 <div class="testimonials-item__row">
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/map-pin.svg" alt="pin">
+                                    <!-- <img src="img/svg/map-pin.svg" alt="pin"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#map-pin">
+                                      </use>
+                                    </svg>
                                     <p>Los Angeles</p>
                                   </div>
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/clock.svg" alt="clock">
+                                    <!-- <img src="img/svg/clock.svg" alt="clock"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#clock">
+                                      </use>
+                                    </svg>
                                     <p>07 March at 22:03</p>
                                   </div>
                                 </div>
@@ -306,18 +396,30 @@
                         <div class="testimonials-col">
                           <div class="testimonials-item">
                             <div class="testimonials-item__social">
-                              <img src="img/svg/facebook-fill.svg" alt="facebook">
+                              <!-- <img src="img/svg/facebook-fill.svg" alt="facebook"> -->
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#facebook-fill">
+                                </use>
+                              </svg>
                             </div>
                             <div class="testimonials-item__wrapper">
                               <div class="testimonials-item__header">
                                 <p><strong>John</strong></p>
                                 <div class="testimonials-item__row">
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/map-pin.svg" alt="pin">
+                                    <!-- <img src="img/svg/map-pin.svg" alt="pin"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#map-pin">
+                                      </use>
+                                    </svg>
                                     <p>Los Angeles</p>
                                   </div>
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/clock.svg" alt="clock">
+                                    <!-- <img src="img/svg/clock.svg" alt="clock"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#clock">
+                                      </use>
+                                    </svg>
                                     <p>07 March at 22:03</p>
                                   </div>
                                 </div>
@@ -329,18 +431,30 @@
                           </div>
                           <div class="testimonials-item">
                             <div class="testimonials-item__social">
-                              <img src="img/svg/google.svg" alt="google">
+                              <!-- <img src="img/svg/google.svg" alt="google"> -->
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#google">
+                                </use>
+                              </svg>
                             </div>
                             <div class="testimonials-item__wrapper">
                               <div class="testimonials-item__header">
                                 <p><strong>John</strong></p>
                                 <div class="testimonials-item__row">
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/map-pin.svg" alt="pin">
+                                    <!-- <img src="img/svg/map-pin.svg" alt="pin"> -->
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#map-pin">
+                                      </use>
+                                    </svg>
                                     <p>Los Angeles</p>
                                   </div>
                                   <div class="testimonials-item__details">
-                                    <img src="img/svg/clock.svg" alt="clock">
+                                    <!-- <img src="img/svg/clock.svg" alt="clock">
+                                    <svg class="svg-icon_sm">
+                                      <use xlink:href="img/svg/sprite-svg/sprite.svg#clock">
+                                      </use>
+                                    </svg> -->
                                     <p>07 March at 22:03</p>
                                   </div>
                                 </div>

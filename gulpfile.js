@@ -167,8 +167,8 @@ gulp.task("svgSprite", function () {
     .pipe(
       cheerio({
         run: function ($) {
-          $("[fill]").removeAttr("fill");
-          $("[stroke]").removeAttr("stroke");
+          // $("[fill]").removeAttr("fill");
+          // $("[stroke]").removeAttr("stroke");
           $("[style]").removeAttr("style");
           $("[class]").removeAttr("class");
           $("[width]").removeAttr("width");

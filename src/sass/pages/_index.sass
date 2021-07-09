@@ -112,7 +112,8 @@
     &__header
       position: relative
       margin-bottom: 21px
-
+      .svg-icon
+        fill: $black
       &::before
         content: ""
         background-image: url(../img/svg/ellipse.svg)
@@ -225,6 +226,7 @@
       margin-left: 50px
       +d(575)
         margin-left: 30px
+        max-width: 100%
 
       h5, & .title-5
         margin-bottom: 10px

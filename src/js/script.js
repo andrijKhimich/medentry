@@ -24,7 +24,6 @@ function setStickyHeader() {
 function showStickyHeader() {
   header.addClass('show');
   console.log('show');
-
 }
 
 function hideStickyHeader() {
@@ -41,13 +40,21 @@ function destroyStickyHeader() {
 // const showOnLoadEl = $('.js-show-on-load');
 
 function showHero() {
-  $('.js-show-banner').removeClass('js-slide-top');
-  setTimeout(function () {
+  if ($(window).width() > 991) {
+    console.log('desctop')
+    $('.js-show-banner').removeClass('js-slide-top');
+    setTimeout(function () {
+      $('.js-show-title').removeClass('js-slide-top');
+    }, 400);
+    setTimeout(function () {
+      $('.js-show-header').removeClass('js-slide-down');
+    }, 800);
+
+  } else {
+    $('.js-show-banner').removeClass('js-slide-top');
     $('.js-show-title').removeClass('js-slide-top');
-  }, 400);
-  setTimeout(function () {
     $('.js-show-header').removeClass('js-slide-down');
-  }, 800);
+  }
 }
 
 function showOnScroll(scrollValue) {
@@ -82,6 +89,10 @@ $(document).ready(function () {
 
   // show all content when dociment ready
   // showContent();
+  // if ($(window).width() > 991) {
+  //   console.log('desctop')
+
+  // }
 
   showHero();
   // init odometer numbers on scroll
