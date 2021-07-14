@@ -68,8 +68,12 @@ h3
     color: $primary
 
 h4
-  font-size: 32px
-  line-height: 1em
+  font-size: 34px
+  line-height: 1.176em
+  margin-bottom: 20px
+  span
+    color: $primary
+    
 
 h5
   font-size: 24px
@@ -132,7 +136,7 @@ select::-ms-expand
 
 p,
 li
-  line-height: 1.625em
+  line-height: 1.750em
   margin: 0
 
 ul,
@@ -236,6 +240,8 @@ textarea
 
 .main
   padding-top: 128px
+  &_inner
+    padding-top: 110px
 
 .section
   position: relative
@@ -298,6 +304,25 @@ textarea
         opacity: 0
       &::before
         border-left: 9px solid $white
+  &_transparent
+    color: $white
+    &:hover
+      color: $white
+      .play-btn
+        border-color: $white
+        background-color: $white
+        &::before
+          border-left: 9px solid $primary
+        &::after
+          border-color: $white
+    .play-btn
+      border-color: $white
+      &::before
+        border-left: 9px solid $white
+      &::after
+        border-color: $white
+
+        
 
 .play-btn
   position: relative
@@ -429,14 +454,32 @@ textarea
       transform: rotate(-45deg)
 .navbar-brand
   max-width: 136px
-  // transition: max-width .4s ease
+
 .link
   color: $primary
   font-size: 14px
   font-weight: 600
   &:hover
     color: $primary
-
+  &_arrow
+    position: relative
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 105%
+      transform: translate(0, -25%)
+      background-image: url(../img/arrow.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: top center
+      width: 36px
+      height: 10px
+      transition: left .4s ease
+    &:hover
+      &::before
+        // transform: translate(5px, -25%6)
+        left: 107%
 .btn
   font-weight: 500
   padding: .775rem 3.5rem

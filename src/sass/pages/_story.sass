@@ -1,0 +1,59 @@
+.story
+  &-hero
+    padding-top: 20px
+    padding: 20px 0 138px 0
+
+    .title-1, h1
+      font-size: 80px
+      line-height: 1em
+      margin-bottom: 60px
+    &__content
+      margin: 34px 0px 30px 50px;
+    &__video
+      position: relative
+      min-height: 580px
+      margin-bottom: 140px
+    &__description
+      font-size: 18px
+      text-align: center
+      max-width: 830px
+      margin: 0 auto 
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.story-text
+  position: relative
+  padding-top: 127px
+  &::before
+    content: ""
+    width: 100%
+    height: 860px
+    background-color: $black
+    position: absolute
+    top: 0
+    left: 0
+
+  &__content
+    column-count: 2
+    column-gap: 120px 
+    margin: 0 60px 83px 60px
+
+    p
+      color: $white
+      &:not(:last-child)
+        margin-bottom: 15px
+        
+      span
+        color: $primary
+
+  &__img
+    max-height: 495px
+
+.timeline
+  position: relative
+  min-height: 475px
+  margin: 0 auto
+  max-width: 1330px
