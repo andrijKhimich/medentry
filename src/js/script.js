@@ -3,7 +3,6 @@ const header = $("#header");
 const logoImg = $("#logo img");
 const logoSource = $("#logo source");
 
-
 function setInnerHeader() {
   logoImg.attr("src", logoBlackUrl);
   header.addClass("header_inner");
@@ -32,12 +31,9 @@ function hideStickyHeader() {
 
 function destroyStickyHeader() {
   header.removeClass('fixed');
-  // header.removeClass('show');
   logoImg.attr("src", logoMainUrl);
   logoSource.attr("srcset", logoMainUrl);
 }
-
-// const showOnLoadEl = $('.js-show-on-load');
 
 function showHero() {
   if ($(window).width() > 991) {
@@ -87,6 +83,13 @@ function closeMenu() {
 
 $(document).ready(function () {
 
+  $('body').scrollspy({
+    target: '#doctorSpyList',
+    offset: 200
+  })
+
+  // $('.list-group-item.active').find()
+
   // show all content when dociment ready
   // showContent();
   // if ($(window).width() > 991) {
@@ -110,27 +113,29 @@ $(document).ready(function () {
     });
   }
 
-  // function setZindex() {
-
-  //   let startedBoxElem = $('.started-box');
-  //   let startedBoxes = $('.started-box').length;
-
-  //   // console.log(startedBoxes)
-  //   // for (let i = 0; i < startedBoxes; i++) {
-  //   //   console.log(i);
-  //   //   // startedBoxElem.css('z-index', i);
-  //   //   // return false;
-
-  //   // }
-  //   let i = startedBoxes;
-  //   startedBoxElem.each(function () {
-  //     $(this).css('z-index', i--);
-  //   })
-  // }
-  // setZindex();
   let startPosition = 0;
-
+  const scrollItemActive = $('.list-group-item.active');
+  const scrollItem = $('.list-group-item');
   $(window).scroll(function () {
+
+    // if (scrollItem.length > 0) {
+    //   // console.log($(this).find(scrollItem));
+    //   if (scrollItem.hasClass('active')) {
+    //     // scrollItemActive.find('.step-item__content').slideDown();
+    //     console.log($(this));
+    //   } else {
+    //     // scrollItem.find('.step-item__content').slideUp( );
+    //   }
+
+
+    //   // if (this.hasClass('.active')) {
+    //   //   // console.log(this);
+    //   //   $(this.find('.step-item__content').slideDown());
+    //   // } else {
+    //   //   $('step-item__content').slideUp();
+    //   // }
+    // }
+
     let scrollValue = $(this).scrollTop();
 
     showOnScroll(scrollValue);

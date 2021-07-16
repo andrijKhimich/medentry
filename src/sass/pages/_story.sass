@@ -38,7 +38,7 @@
 
   &__content
     column-count: 2
-    column-gap: 120px 
+    column-gap: 120px
     margin: 0 60px 83px 60px
 
     p
@@ -54,6 +54,171 @@
 
 .timeline
   position: relative
-  min-height: 475px
   margin: 0 auto
-  max-width: 1330px
+  max-width: 1340px
+  padding: 125px 0 180px
+  &__title
+    text-align: center
+    margin-bottom: 122px
+  &__content
+    min-height: 475px
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  &__line
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    height: 4px
+    background-color: $black
+
+    &::after, &::before
+      content: ""
+      position: absolute
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      top: 50%
+      transform: translate(0, -50%)
+      background-color: $black
+    &::before
+      left: 0
+    &::after
+      right: 0
+  &-box
+    text-align: center
+    max-width: 187px
+    flex: 0 0 187px
+    padding: 0 5px
+    position: relative
+    &::before,&::after
+      content: ""
+      position: absolute
+      background-color: $black
+    &::before
+      width: 4px
+      height: 100px
+    &::after
+      width: 12px
+      height: 12px
+      border-radius: 50%
+    &:nth-child(even)
+      margin-bottom: 255px
+
+      &::before
+        top: 125%
+      &::after
+        top: 120%
+        left: 50%
+        transform: translate(-30%, 0)
+    &:nth-child(odd)
+      order: 1
+      // max-width: 16.66%
+      &::before
+        bottom: 125%
+      &::after
+        bottom: 120%
+        left: 50%
+        transform: translate(-30%, 0)
+    span
+      font-weight: 900
+      color: $primary
+      font-size: 30px
+      text-align: center
+      display: block
+      margin-bottom: 10px
+    p
+      font-weight: 500
+
+.team
+  padding: 126px 0 150px 0
+  background-color: $grey
+  &__subtitle
+    max-width: 520px
+    margin-top: 20px
+  &__content
+    padding-top: 69px
+    max-width: 1120px
+
+  &-box 
+    display: flex
+    &:not(:last-child)
+      margin-bottom: 140px
+      
+    &__img
+      max-width: 420px
+      flex: 0 0 420px
+      margin-right: 60px
+    &__header
+      display: flex
+      margin: 28px 0 50px 0
+
+      h4, .title-4
+        font-size: 30px
+    &__name
+      max-width: 50%
+      flex: 0 0 50%
+      color: $primary
+    &__article
+      p
+        &:not(:last-child)
+          margin-bottom: 9px
+
+.support
+  padding: 110px 0 340px 0
+  &__title
+    text-align: center
+    margin-bottom: 80px
+    span
+      display: block
+
+  &__content
+    column-count: 2
+    column-gap: 120px
+    max-width: 1080px
+    margin: 0 auto 60px auto
+    span
+      color: $primary
+    p
+      &:not(:last-child)
+        margin-bottom: 16px
+  &__wrapper
+    max-width: 1320px
+    margin: 0 auto
+    position: relative
+    &:before
+      content: ""
+      width: 200vw
+      background-color: $black
+      position: absolute
+      left: -50vw
+      top: 120px
+      bottom: 120px
+  &-box
+    max-width: 410px
+    margin: 0 auto
+    &__img
+      margin-bottom: 35px
+    &__header
+      span
+        color: $primary
+        font-size: 18px
+        font-weight: 600
+        display: block
+        margin-bottom: 5px
+
+  &__subtitle
+    margin: 160px 0 160px 60px
+    color: $white
+
+  &__text
+    margin: 170px 0 114px -15px
+    color: $white
+    p
+      margin-bottom: 15px
+    span
+      color: $primary
+  
+        
+          
