@@ -1,0 +1,123 @@
+.compare
+  &-page
+    overflow: visible
+    .title-1, h1
+      font-size: 80px
+      line-height: 1em
+  &-hero
+    padding: 20px 0 115px 0
+    &__content
+      margin-top: 33px
+      .title-5, h5
+        color: $primary
+        margin-bottom: 20px
+      p
+        font-weight: 500
+  &-tables
+    padding: 125px 0 100px 0
+    background-color: $grey
+
+    &__content
+      margin: 12px 0 0 20px
+      .svg-icon_sm
+        margin: 0 5px
+    
+    &__box
+      margin: 24px 55px 85px 50px
+      max-width: 1200px
+  &-table
+    width: 100%
+    border-collapse: separate
+    border-spacing: 1px
+    background-color: $white
+    tr
+      &:first-child
+        th
+          color: $white
+          background-color: $black
+          font-weight: 400
+          padding: 22px 20px
+          &:first-child
+            font-family: $titleFont
+            font-size: 30px
+            padding-left: 50px
+            line-height: 1.5em
+            width: 320px
+          &:nth-child(2), &:nth-child(3)
+            text-align: center
+          &:last-child
+            width: 430px
+    tr
+      td
+        &:first-child
+          padding: 26px 42px
+        &:last-child
+          padding: 26px 20px
+
+
+        &:nth-child(2), &:nth-child(3)
+          text-align: center
+        .svg-icon_sm
+          width: 18px
+          height: 18px
+
+.unsure
+  padding: 95px 0 160px 0
+  &__img
+    max-width: 520px
+  &__content
+    max-width: 500px
+    @include d(991)
+      max-width: 100%
+    .title-2, h2
+      margin-bottom: 30px
+    p
+      margin-bottom: 16px
+      &:last-of-type
+        margin-bottom: 30px
+
+.compare-spy
+  position: relative
+  padding-left: 40px
+  position: sticky
+  top: 100px
+  margin: 20px 0 0 -40px
+  &::before
+    content: ""
+    width: 1px
+    height: 90%
+    background-color: $black
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(-50%, -50%)
+  .list-group-item
+    border: none
+    background-color: transparent
+    color: $greyDark
+    font-weight: 500
+    padding: 6px
+    position: relative
+    &::before
+      content: ""
+      width: 11px
+      height: 11px
+      background-color: $primary
+      border-radius: 50%
+      position: absolute
+      top: 50%
+      left: -45px
+      transform: translate(0, -50%)
+      opacity: 0
+      transition: opacity .4s ease
+    &.active
+      color: $black
+      background-color: transparent
+      &::before
+        opacity: 1
+
+    
+      
+
+
+

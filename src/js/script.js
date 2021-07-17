@@ -80,13 +80,26 @@ function closeMenu() {
 // function showContent() {
 //   $(".main-wrapper").removeClass("js-fadeIn");
 // }
+// var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+// var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+//   return new bootstrap.Tooltip(tooltipTriggerEl)
+// })
 
 $(document).ready(function () {
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  });
+
   $('body').scrollspy({
-    target: '#doctorSpyList',
+    target: '',
     offset: 200
-  })
+  });
+
+  // $('body').scrollspy({
+  //   target: '#compareSpyList',
+  //   offset: 200
+  // });
 
   // $('.list-group-item.active').find()
 
@@ -98,8 +111,8 @@ $(document).ready(function () {
   // }
 
   showHero();
-  // init odometer numbers on scroll
 
+  // init odometer numbers on scroll
   function numbersInit() {
     $('.odometer').each(function () {
       var counter = $(this);

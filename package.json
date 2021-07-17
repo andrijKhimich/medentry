@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "@popperjs/core": "^2.9.2",
     "bootstrap-4-grid": "^3.4.0",
     "bootstrap4": "0.0.1-security",
     "jquery": "^3.5.0",

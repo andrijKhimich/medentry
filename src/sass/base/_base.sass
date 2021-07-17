@@ -541,3 +541,19 @@ textarea
   display: none
   +d(991)
     display: block
+
+.tooltip-inner
+  background-color: $white
+  padding: 20px
+  border-radius: 10px
+  color: $black
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid $grey
+  min-width: 340px
+
+.tooltip.show
+  opacity: 1
+
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before
+  border-top-color: $white
