@@ -442,6 +442,44 @@ $('#testimonialsSlider').slick({
   // verticalSwiping: true,
 });
 
+$('#examSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: $('#examPrev'),
+  nextArrow: $('#examNext'),
+  fade: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  adaptiveHeight: true,
+});
+$('#partnerSlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  dots: true,
+  arrows: false,
+  fade: true,
+  speed: 1000,
+  cssEase: 'linear',
+  autoplaySpeed: 10000,
+  adaptiveHeight: true
+});
+$('#charitySlider').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  dots: true,
+  arrows: true,
+  prevArrow: $('#charityPrev'),
+  nextArrow: $('#charityNext'),
+  fade: true,
+  speed: 1000,
+  cssEase: 'linear',
+  autoplaySpeed: 10000,
+  adaptiveHeight: true
+});
+
 // Calculate the heighest slide and set a top/bottom margin for other children.
 // As variableHeight is not supported yet: https://github.com/kenwheeler/slick/issues/1803
 // var maxHeight = -1;

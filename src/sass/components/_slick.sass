@@ -42,8 +42,27 @@
 // .slick-arrow.slick-disabled
 
 // /* Точки */
-// .slick-dots
+.slick-dots
+  display: flex
+  align-items: center
+  justify-content: center
 
-// .slick-dots li
+.slick-dots li
+  flex: 0 0 8px
+  &.slick-active
+    button
+      background-color: $primary
 
-// .slick-dots button
+  &:not(:last-child)
+    margin-right: 15px
+    
+
+.slick-dots button
+  border: none
+  font-size: 0
+  width: 8px
+  height: 8px
+  background-color: $greyDark
+  border-radius: 50%
+  padding: 0
+  
