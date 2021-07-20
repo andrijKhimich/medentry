@@ -480,6 +480,22 @@ $('#charitySlider').slick({
   adaptiveHeight: true
 });
 
+$('#videoSlider').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: false,
+  dots: false,
+  arrows: true,
+  prevArrow: $('#videoPrev'),
+  nextArrow: $('#videoNext'),
+  fade: false,
+  speed: 1000,
+  cssEase: 'linear',
+  infinite: true
+  // autoplaySpeed: 10000,
+  // adaptiveHeight: true
+});
+
 // Calculate the heighest slide and set a top/bottom margin for other children.
 // As variableHeight is not supported yet: https://github.com/kenwheeler/slick/issues/1803
 // var maxHeight = -1;
