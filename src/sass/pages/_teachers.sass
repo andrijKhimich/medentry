@@ -1,0 +1,157 @@
+.teachers
+  &-hero
+    padding: 17px 0 50px 0
+    &__content
+      margin: 20px 0 0 50px
+  &__cta
+    background-color: $white
+
+.help
+  padding: 100px 0 65px 0
+  background-color: $grey
+  &__title
+    text-align: center
+    color: $primary
+    margin-bottom: 28px
+  &__items
+    padding: 0 80px
+  &-box
+    padding: 50px 40px 60px 40px
+    background-color: transparent
+    box-shadow: 0 0 0 $white
+    transition: background-color .4s ease, box-shadow .4s ease
+    .title-5, h5
+      margin-bottom: 15px
+    &:hover
+      background-color: #f7f7f7
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+      .title-5, h5
+        color: $primary
+
+.doctor
+  padding: 110px 0
+  &__content
+    margin-top: 50px
+    max-width: 100%
+    .title-2, h2
+      margin-bottom: 40px
+    +d(991)
+      max-width: 100%
+      max-width: 540px
+
+    p
+      margin-bottom: 15px
+      max-width: 540px
+    ul
+      column-count: 2
+      margin-bottom: 30px
+  &__img
+    max-width: 600px
+.understanding
+  padding: 33px 0 135px 0
+  &__content
+    max-width: 540px
+
+.portal
+  padding: 155px 0
+  color: $white
+  &::before
+    content: ""
+    width: 100%
+    height: 960px
+    background-color: $black
+    position: absolute
+    top: 0
+    left: 0
+  &__title
+    margin-bottom: 90px
+    text-align: center
+  &__content
+    max-width: 540px
+    margin-bottom: 90px
+    +d(991)
+      max-width: 100%
+    .title-5, h5
+      color: $primary
+
+  &__btn
+    text-align: center
+    margin-bottom: 70px
+  &__video
+    padding-bottom: 52%
+    position: relative
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    min-height: 400px
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.download
+  padding: 8px 0 50px 0
+  &__title
+    margin-bottom: 90px
+    text-align: center
+    p
+      font-weight: 500
+      max-width: 540px
+      margin: 0 auto
+  &-box
+    max-width: 370px
+    margin-bottom: 109px
+    display: flex
+    font-weight: 500
+    &__icon
+      margin-right: 40px
+      max-height: 55px
+      position: relative
+      &::before
+        content: ""
+        background-image: url(../img/svg/ellipse.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        background-position: top left
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        z-index: -1
+        opacity: .3
+
+    .title-6, h6
+      margin-bottom: 15px
+
+.presenatation-link
+  text-align: center
+  max-width: 220px
+  font-family: $titleFont
+  font-size: 18px
+  line-height: 27px
+  display: flex
+  flex-direction: column
+  .svg-icon
+    width: 50px
+    height: 50px
+    margin: 0 auto 15px auto
+
+.events
+  background-color: $grey
+  padding-bottom: 20px
+  &__img
+    margin-left: -15px
+    max-width: 730px
+  &__content
+    max-width: 540px
+    margin-left: 40px
+    margin-top: 100px
+    .link
+      margin-bottom: 15px
+  &__row
+    display: flex
+    align-items: center
+    .btn
+      margin-right: 40px

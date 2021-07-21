@@ -23,7 +23,8 @@ h6
   margin: 0
   font-weight: 600
   font-family: $titleFont
-
+  transition: color .4s ease
+  
 h1
   font-size: 96px
   line-height: 1.104em
@@ -46,6 +47,7 @@ h1
 h2
   font-size: 64px
   line-height: 1.250em
+  margin-bottom: 20px
   +d(1280)
     font-size: 60px
   +d(1024)
@@ -79,6 +81,7 @@ h4
 h5
   font-size: 24px
   line-height: 1.375em
+  margin-bottom: 15px
   +d(1280)
     font-size: 22px
   +d(575)
@@ -247,7 +250,7 @@ textarea
 .section
   position: relative
   &__content
-    max-width: 440px
+    // max-width: 440px
     p
       margin-bottom: 35px
     ul
