@@ -24,10 +24,15 @@
   &__content
     max-width: 540px
     margin: 50px 0
+    +d(991)
+      max-width: 100%
+      margin: 10px 0
     p
       margin-bottom: 15px
     h6, .title-6
       margin: 40px 0 15px
+      +d(991)
+        margin: 20px 0 10px
     ul
       margin-bottom: 35px
       li
@@ -43,7 +48,10 @@
           position: absolute
           left: 0
           top: 10px
-
+    span
+      color: $primary
+    h4, .title-4
+      font-size: 30px
 .require
   padding: 130px 0
   &__title
@@ -63,11 +71,11 @@
       column-count: 2
       margin-right: 40px
 
-
 .details
   padding-bottom: 150px
 
 .cost
+  padding-bottom: 100px
   &__title
     text-align: center
     margin-bottom: 100px
@@ -76,5 +84,72 @@
     span
       color: $primary
 
-  &__img
+.ucat-table
+  padding: 140px 0 100px 0
+  background-color: $grey
 
+  &__title
+    text-align: center
+    margin-bottom: 40px
+
+.table
+  p
+    text-align: center
+  table
+    width: 100%
+    border-collapse: collapse
+    border-spacing: 0
+    background-color: $white
+    margin-bottom: 50px
+
+    tr
+      &:first-child
+        th
+          color: $white
+          background-color: $black
+          font-weight: 400
+          padding: 26px 47px
+          width: 50%
+          font-weight: 500
+          border: 1px solid $greyLight
+    tr
+      td
+        padding: 26px 47px
+        vertical-align: middle
+        border: 1px solid $greyLight
+        &:first-child
+          font-weight: 600
+
+.hard
+  padding-top: 160px
+  &__img
+    position: relative
+    left: -60px
+    max-width: 540px
+    margin: 0 auto
+    +d(991)
+      left: 0
+
+.steps
+  padding: 100px 0
+.long
+  color: $white
+  padding: 140px 0 200px 0
+  &::before
+    content: ""
+    width: 100%
+    height: 800px
+    background-color: $black
+    position: absolute
+    top: 0
+    left: 0
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+  &__video
+    height: 430px
+    position: relative
+    left: -60px
+    top: 40px
