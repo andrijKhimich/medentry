@@ -2,17 +2,35 @@
   &-hero
     padding-top: 20px
     padding: 20px 0 138px 0
-
+    +d(1199)
+      padding: 0 0 100px 0
+    +d(767)
+      padding: 0 0 40px 0
     .title-1, h1
       font-size: 80px
       line-height: 1em
       margin-bottom: 60px
+      +d(991)
+        font-size: 60px
+      +d(575)
+        font-size: 50px
+      +d(360)
+        font-size: 47px
     &__content
       margin: 34px 0px 30px 50px;
+      +d(991)
+        margin: 0 0 50px 0
     &__video
       position: relative
       min-height: 580px
       margin-bottom: 140px
+      +d(991)
+        margin-bottom: 50px
+      img, picture
+        object-fit: cover
+        height: 100%
+        width: auto
+        object-position: center
     &__description
       font-size: 18px
       text-align: center
@@ -27,6 +45,8 @@
 .story-text
   position: relative
   padding-top: 127px
+  +d(1199)
+    padding-top: 80px
   &::before
     content: ""
     width: 100%
@@ -40,7 +60,9 @@
     column-count: 2
     column-gap: 120px
     margin: 0 60px 83px 60px
-
+    +d(991)
+      column-count: 1
+      margin: 0 0 50px 0
     p
       color: $white
       &:not(:last-child)
@@ -51,25 +73,36 @@
 
   &__img
     max-height: 495px
-
+    +d(991)
+      margin: 0 -15px
 .timeline
   position: relative
   margin: 0 auto
   max-width: 1340px
   padding: 125px 0 180px
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0
   &__title
     text-align: center
     margin-bottom: 122px
+    +d(1199)
+      margin-bottom: 60px
   &__content
     min-height: 475px
+    width: 1310px
+    position: relative
+    // overflow: auto
+    // margin-bottom: 20px
     display: flex
     flex-wrap: wrap
     justify-content: center
   &__line
     position: absolute
     top: 50%
-    left: 0
-    width: 100%
+    left: 15px
+    width: calc(100% - 30px)
     height: 4px
     background-color: $black
 
@@ -114,7 +147,6 @@
         transform: translate(-30%, 0)
     &:nth-child(odd)
       order: 1
-      // max-width: 16.66%
       &::before
         bottom: 125%
       &::after
@@ -128,32 +160,56 @@
       text-align: center
       display: block
       margin-bottom: 10px
+      +d(1199)
+        font-size: 24px
+      +d(991)
+        font-size: 20px
+      +d(767)
+        font-size: 18px
     p
       font-weight: 500
-
 .team
   padding: 126px 0 150px 0
   background-color: $grey
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 40px 0
   &__subtitle
     max-width: 520px
     margin-top: 20px
+    +d(991)
+      max-width: 100%
   &__content
     padding-top: 69px
     max-width: 1120px
 
   &-box 
     display: flex
+    +d(991)
+      flex-direction: column
     &:not(:last-child)
       margin-bottom: 140px
-      
+      +d(1199)
+        margin-bottom: 100px
+      +d(991)
+        margin-bottom: 50px
     &__img
       max-width: 420px
       flex: 0 0 420px
       margin-right: 60px
+      +d(991)
+        max-width: 360px
+        margin-right: 30px
+      +d(991)
+        margin: 0 auto
+      +d(767)
+        margin: 0 -15px
+        max-width: calc(100% + 30px)
     &__header
       display: flex
       margin: 28px 0 50px 0
-
+      flex-wrap: wrap
       h4, .title-4
         font-size: 30px
     &__name
@@ -170,6 +226,10 @@
   &__title
     text-align: center
     margin-bottom: 80px
+    +d(1199)
+      margin-bottom: 50px
+    +d(991)
+      margin-bottom: 40px
     span
       display: block
 
@@ -195,9 +255,20 @@
       left: -50vw
       top: 120px
       bottom: 120px
+      z-index: -1
+      +d(991)
+        bottom: 220px
+  &-slider
+    display: flex
+    justify-content: space-between
+    z-index: 1  
+    flex-wrap: wrap
+    .slick-dots
+      margin: 0 auto
   &-box
     max-width: 410px
     margin: 0 auto
+    flex: 0 0 30%
     &__img
       margin-bottom: 35px
     &__header
@@ -211,7 +282,10 @@
   &__subtitle
     margin: 160px 0 160px 60px
     color: $white
-
+    +d(1199)
+      margin: 100px 0
+    +d(991)
+      margin: 0
   &__text
     margin: 170px 0 114px -15px
     color: $white

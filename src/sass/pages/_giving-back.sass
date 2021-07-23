@@ -1,15 +1,30 @@
 .giving
   &-hero
     padding: 10px 0 50px 0
-
+    +d(1199)
+      padding: 0 0 40px 0
 .commit
   padding: 114px 0 80px 0
   background-color: $grey
+  +d(1199)
+    padding: 80px 0 60px 0
+  +d(991)
+    padding: 60px 0
+  +d(575)
+    padding: 50px 0
+
   &__content
     max-width: 480px
     margin-top: 40px
+    +d(991)
+      max-width: 100%
+      margin-bottom: 40px
+      margin-top: 0
   &__items
     margin-left: 40px
+    +d(1199)
+      margin-left: 0
+
     .title-5, h5
       margin-bottom: 30px
     .potential-box:not(:last-child)
@@ -17,11 +32,20 @@
 
 .partnership
   padding: 180px 0 120px 0
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0 0 0
   &-slider
     max-width: 480px
   &__content
     max-width: 480px
     margin: 18px 0 0 43px
+    +d(1199)
+      margin: 20px 0 0 0
+    +d(991)
+      max-width: 100%
+
     p
       font-weight: 500
       &:not(:last-child)
@@ -32,20 +56,41 @@
   padding: 125px 0 130px 0
   background-color: $black
   color: $white
+  +d(1199)
+    margin-top: 50px
+    padding: 80px 0
+  +d(991)
+    padding: 50px 0 0 0
   &__img
     max-width: 490px
     margin-top: -195px
+    +d(1199)
+      margin-top: -160px
+    +d(991)
+      margin: 0 auto
+      
+    +d(767)
+      max-width: calc(100% + 30px)
+      margin: 0 -15px
   &__content
     span
       color: $primary
 
 .charity
   padding: 210px 0
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0
   &__content
     max-width: 500px
     margin-bottom: 60px
+    +d(991)
+      max-width: 100%
 
   &-slider__nav
+    +d(991)
+      display: none
     .slider__btn
       width: 55px
       height: 55px
@@ -65,11 +110,16 @@
       justify-content: space-between
       flex-wrap: wrap
     &__box
-      flex: 0 0 240px
-      display: flex
-      flex-direction: column
-      justify-content: space-between
+      // flex: 0 0 240px
+      display: inline-block
+      max-width: 240px  
+      // display: flex
+      // flex-direction: column
+      // justify-content: space-between
       margin-bottom: 50px
+      margin-right: 40px
+      +d(991)
+        // margin-right: 40px
       img
         width: auto
         max-width: 100%
@@ -79,8 +129,17 @@
 
 .alumni
   padding-bottom: 190px
+  +d(1199)
+    padding-bottom: 100px
+  +d(991)
+    padding-bottom: 50px
   &__img
     max-width: 490px
+    +d(991)
+      margin: 0 auto 50px auto
+    +d(767)
+      max-width: calc(100% + 30px)
+      margin: 0 -15px 50px -15px
 
 
         

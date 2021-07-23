@@ -1,25 +1,37 @@
 .teachers
   &-hero
     padding: 17px 0 50px 0
+    +d(1199)
+      padding: 0 0 20px 0
     &__content
       margin: 20px 0 0 50px
+      +d(991)
+        margin: 0 0 30px 0
   &__cta
     background-color: $white
 
 .help
   padding: 100px 0 65px 0
   background-color: $grey
+  +d(1199)
+    padding: 60px 0
   &__title
     text-align: center
     color: $primary
     margin-bottom: 28px
+    +d(991)
+      margin-bottom: 15px
+
   &__items
     padding: 0 80px
+
   &-box
     padding: 50px 40px 60px 40px
     background-color: transparent
     box-shadow: 0 0 0 $white
     transition: background-color .4s ease, box-shadow .4s ease
+    +d(991)
+      padding: 30px 20px
     .title-5, h5
       margin-bottom: 15px
     &:hover
@@ -30,30 +42,51 @@
 
 .doctor
   padding: 110px 0
+  +d(1199)
+    padding: 40px 0
   &__content
     margin-top: 50px
-    max-width: 100%
+    max-width: 540px
+    +d(991)
+      max-width: 100%
     .title-2, h2
       margin-bottom: 40px
     +d(991)
       max-width: 100%
-      max-width: 540px
 
     p
       margin-bottom: 15px
       max-width: 540px
+      +d(991)
+        max-width: 100%
     ul
       column-count: 2
       margin-bottom: 30px
   &__img
     max-width: 600px
+    +d(991)
+      margin: 0 auto
+    +d(767)
+      max-width: calc( 100% + 30px )
+      margin: 0 -15px
 .understanding
   padding: 33px 0 135px 0
+  +d(1199)
+    padding: 30px 0 80px
+  +d(991)
+    padding: 30px 0 50px 0
   &__content
     max-width: 540px
-
+    +d(991)
+      max-width: 100%
 .portal
   padding: 155px 0
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0
+  +d(575)
+    padding: 40px 0
   color: $white
   &::before
     content: ""
@@ -66,6 +99,8 @@
   &__title
     margin-bottom: 90px
     text-align: center
+    +d(1199)
+      margin-bottom: 20px
   &__content
     max-width: 540px
     margin-bottom: 90px
@@ -84,6 +119,8 @@
     background-repeat: no-repeat
     background-position: center
     min-height: 400px
+    +d(767)
+    margin: 0 -15px
   &__play
     position: absolute
     top: 50%
@@ -95,6 +132,8 @@
   &__title
     margin-bottom: 90px
     text-align: center
+    +d(991)
+      margin-bottom: 60px
     p
       font-weight: 500
       max-width: 540px
@@ -104,10 +143,18 @@
     margin-bottom: 109px
     display: flex
     font-weight: 500
+    +d(991)
+      flex-direction: column
+      margin: 0 auto
+      max-width: 500px
+      margin-bottom: 60px
     &__icon
       margin-right: 40px
       max-height: 55px
       position: relative
+      +d(991)
+        margin-right: 0
+        margin-bottom: 30px
       &::before
         content: ""
         background-image: url(../img/svg/ellipse.svg)
@@ -144,14 +191,26 @@
   &__img
     margin-left: -15px
     max-width: 730px
+    +d(991)
+      margin: 0 -15px
+      max-width: calc(100%  + 30px )
   &__content
     max-width: 540px
     margin-left: 40px
     margin-top: 100px
+    +d(991)
+      max-width: 100%
+      margin-left: 0
+      margin-top: 40px
     .link
       margin-bottom: 15px
   &__row
     display: flex
     align-items: center
+    +d(767)
+    flex-direction: column
     .btn
       margin-right: 40px
+      +d(991)
+        order: 1
+        margin: 40px auto 0 auto

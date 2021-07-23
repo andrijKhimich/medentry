@@ -86,7 +86,8 @@ function closeMenu() {
 // })
 
 $(document).ready(function () {
-
+  initSupportSlider();
+  initSupportSliderDown();
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   });
@@ -111,6 +112,8 @@ $(document).ready(function () {
   // }
 
   showHero();
+
+
 
   // init odometer numbers on scroll
   function numbersInit() {
@@ -191,6 +194,12 @@ $(document).ready(function () {
     //   // logoImg.attr("src", logoColorUrl);
     // }
     numbersInit();
+
+
+    $(window).resize(function () {
+      initSupportSlider();
+      initSupportSliderDown();
+    });
   });
   // if ($('.inner-page').length > 0) {
   //   setInnerHeader();
@@ -439,6 +448,7 @@ $('#testimonialsSlider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   adaptiveHeight: true,
+
   // verticalSwiping: true,
 });
 
@@ -468,16 +478,47 @@ $('#partnerSlider').slick({
 $('#charitySlider').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  autoplay: true,
+  // autoplay: true,
   dots: true,
   arrows: true,
   prevArrow: $('#charityPrev'),
   nextArrow: $('#charityNext'),
-  fade: true,
+  fade: false,
   speed: 1000,
   cssEase: 'linear',
   autoplaySpeed: 10000,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  rows: 2,
+  slidesPerRow: 2,
+  responsive: [{
+      breakpoint: 991,
+      settings: {
+        rows: 1,
+        slidesPerRow: 1,
+        // slidesToShow: 3,
+        // slidesToScroll: 3,
+        // infinite: true,
+        // dots: true
+      }
+    },
+    // {
+    // breakpoint: 600,
+    // settings: {
+    // slidesToShow: 2,
+    // slidesToScroll: 2
+    // }
+    // },
+    // {
+    // breakpoint: 480,
+    // settings: {
+    // slidesToShow: 1,
+    // slidesToScroll: 1
+    // }
+    // }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
 });
 
 $('#videoSlider').slick({
@@ -489,12 +530,113 @@ $('#videoSlider').slick({
   prevArrow: $('#videoPrev'),
   nextArrow: $('#videoNext'),
   fade: false,
-  speed: 1000,
+  speed: 400,
   cssEase: 'linear',
-  infinite: true
-  // autoplaySpeed: 10000,
-  // adaptiveHeight: true
+  infinite: true,
+  responsive: [{
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 3,
+      },
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+      },
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+      }
+    },
+  ]
 });
+
+
+function initPartnersSlider() {
+  const partnerSlider = document.querySelector('#partnerSlider.slick-slider');
+  if ($(window).width() < 991 && !partnerSlider) {
+    $('#partnerSlider').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      infinite: false,
+      autoplaySpeed: 10000,
+      mobileFirst: true,
+      responsive: [{
+          breakpoint: 991,
+          settings: 'unslick'
+        },
+        {
+          breakpoint: 180,
+          settings: {
+            slidesToShow: 2,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4
+          }
+        }
+      ]
+    });
+  }
+}
+
+function initSupportSlider() {
+  const supportSlider = document.querySelector('#supportSlider.slick-slider');
+
+  if ($(window).width() < 767 && !supportSlider) {
+    $('#supportSlider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      // autoplay: false,
+      dots: true,
+      arrows: false,
+      // prevArrow: $('#videoPrev'),
+      // nextArrow: $('#videoNext'),
+      // fade: false,
+      // speed: 1000,
+      // cssEase: 'linear',
+      // infinite: true
+      // autoplaySpeed: 10000,
+      // adaptiveHeight: true
+    });
+  }
+}
+
+
+function initSupportSliderDown() {
+  const supportSlider = document.querySelector('#supportSliderDown.slick-slider');
+
+  if ($(window).width() < 767 && !supportSlider) {
+    $('#supportSliderDown').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      infinite: false,
+      // autoplay: false,
+      dots: true,
+      arrows: false,
+      // prevArrow: $('#videoPrev'),
+      // nextArrow: $('#videoNext'),
+      // fade: false,
+      // speed: 1000,
+      // cssEase: 'linear',
+      // infinite: true
+      // autoplaySpeed: 10000,
+      // adaptiveHeight: true
+    });
+  }
+}
 
 // Calculate the heighest slide and set a top/bottom margin for other children.
 // As variableHeight is not supported yet: https://github.com/kenwheeler/slick/issues/1803

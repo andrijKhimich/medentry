@@ -1,22 +1,67 @@
 .why
   &-hero
     min-height: 670px
-    padding-top: 120px
-    background-size: cover
-    background-position: top right
-    background-repeat: no-repeat
     padding-top: 175px
+    +d(1199)
+      padding-top: 100px
+    +d(991)
+      padding-top: 0
+    &__img
+        position: absolute
+        top: 0
+        right: 0
+        width: 100%
+        height: 100%
+        +d(991)
+          position: static
+        picture, img
+          height: 100%
+          object-fit: cover
+          object-position: top right
+          min-height: 290px
+    &__title
+      +d(991)
+      position: relative
+      padding: 20px 0 60px
+
+      &::before
+        content: ""
+        width: 150vw
+        height: 100%
+        background-color: #cfcfcf
+        position: absolute
+        top: 0
+        left: -20vw
+        z-index: -1
 
 .arguments
   padding: 150px 0 135px
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0
+  +d(575)
+    padding: 50px 0
+
   p
     margin-bottom: 5px
     font-weight: 500
     max-width: 360px
+  &-box
+    +d(991)
+      margin-bottom: 50px
 
 .dedicated
   padding-top: 170px
   color: $white
+  +d(1199)
+    padding-top: 100px
+  +d(991)
+    padding-top: 60px
+    background-color: $black
+  +d(575)
+    padding-top: 50px
+
   &::before
     content: ""
     width: 100%
@@ -25,9 +70,11 @@
     position: absolute
     top: 0
     left: 0
-
+    +d(991)
+      display: none
   &__content
     margin: 14px 0
+
     p
       margin-bottom: 20px
 
@@ -36,7 +83,14 @@
     max-height: 590px
     overflow: hidden
     position: relative
+    min-height: 100%
 
+    picture, img
+      min-height: 280px
+      object-position: center
+      object-fit: cover
+    +d(991)
+      margin: 50px -15px 0 -15px
   &__play
     position: absolute
     top: 50%
@@ -45,20 +99,37 @@
 
 .potential
   padding: 185px 0 216px
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 80px 0
+  +d(575)
+    padding: 60px 0
+
   &__title
     p
       max-width: 420px
   &__content
     margin: 17px 0 0 65px
+    +d(991)
+      margin: 20px 0 0 0
   &-box
     display: flex
     max-width: 505px
+    +d(991)
+      flex-direction: column
     &:not(:last-child)
       margin-bottom: 77px
+      +d(991)
+        margin-bottom: 60px
+      +d(575)
+        margin-bottom: 40px
     &__icon
       margin-top: 10px 
       margin-right: 55px
       position: relative
+      +d(991)
+        margin-bottom: 40px
       &::before
         content: ""
         background-image: url(../img/svg/ellipse.svg)

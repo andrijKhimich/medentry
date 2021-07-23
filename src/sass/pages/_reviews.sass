@@ -1,15 +1,33 @@
 .reviews
   &-page
     .testimonials
-      padding: 150px 0 30px 0
       background-color: $grey
+      padding: 150px 0 30px 0
+      +d(1199)
+        padding: 100px 0 30px 0
+      +d(991)
+        padding: 60px 0 30px 0
+      +d(767)
+        padding: 50px 0 30px 0
+    .testimonials__social
+      +d(991)
+        flex-wrap: wrap
 
   &-hero
     padding-bottom: 40px
     .title-1
       font-size: 80px
+      +d(991)
+        font-size: 60px
+      +d(575)
+        font-size: 50px
+      +d(360)
+        font-size: 47px
+
     &__content
       margin-top: 40px
+      +d(991)
+        margin-top: 0
       p
         font-weight: 500
         margin-bottom: 15px
@@ -17,8 +35,12 @@
   &__slider
     max-width: 600px
     margin: -10px 0 0 30px
-  &__item 
+  &__item
     padding: 47px 20px 45px 100px
+    +d(991)
+      padding: 40px
+    +d(767)
+      padding: 30px
   &-item__header
     display: flex
     flex-wrap: wrap
@@ -31,9 +53,11 @@
       border-radius: 10px
       border: 1px solid $greyLight
       padding: 26px 30px
-      max-width: 304px  
+      max-width: 304px
       text-align: center
       margin-bottom: 20px
+      +d(991)
+        margin: 0 auto 20px auto
     &__header
       display: flex
       align-items: center
@@ -67,24 +91,34 @@
     &:not(:last-child)
       margin-right: 5px
 .testimonials-video
-  padding: 130px 0 140px 
+  padding: 130px 0 140px
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0
   &__content
     margin: 70px 0 0 32px
     max-width: 540px
+    +d(991)
+      max-width: 100%
+      margin: 0 0 30px 0
 .video-slider
   display: flex
-  margin: 64px 0 106px 0
+  margin: 64px auto 106px auto
+  max-width: 1540px
   &__nav
     margin-top: 40px
+    +d(991)
+      margin-top: 0
     .slider__btn:first-child
       margin-right: 20px
 
     .arrow-icon
       fill: $white
-  &__item 
-    width: 368px
+  &__item
+    // max-width: 368px
     height: 230px
-    flex: 0 0 368px
+    // flex: 0 0 368px
     background-size: cover
     background-repeat: no-repeat
     background-position: center
@@ -99,25 +133,53 @@
   color: $white
   margin-top: 140px
   padding: 0 100px 100px 55px
-
+  +d(991)
+    padding: 50px 0 0 0
   &__img
     margin-top: -75px
     border-radius: 10px
     max-width: 450px
     overflow: hidden
+    +d(991)
+      margin: 0 auto
+
+    +d(767)
+     max-width: calc( 100% + 30px)
+     border-radius: 0
+     margin: 0 -15px
+
   &__content
     display: flex
     align-items: flex-start
     margin: 140px 0 0 0
+    +d(1199)
+      margin-top: 60px
+    +d(991)
+      flex-wrap: wrap
+      margin-top: 0
+      margin-bottom: 50px
   &__title
     max-width: 260px
     margin-right: 60px
+    +d(1199)
+      margin-right: 30px
+    +d(991)
+      margin-right: 0
+      margin-bottom: 20px
+      max-width: 100%
   &__text
     max-width: 420px
+    +d(991)
+      max-width: 100%
     span
       color: $primary
-      
 
 .reviews-cta
   .title-2, h2
     font-size: 58px
+    +d(1024)
+      font-size: 50px
+    +d(575)
+      font-size: 44px
+    +d(360)
+      font-size: 40px

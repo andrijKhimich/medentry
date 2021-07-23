@@ -1,14 +1,22 @@
 .seo
   &-hero
     padding: 20px 0 35px 0
+    +d(991)
+      padding-right: 0 0 30px 0
     &__title
       max-width: 640px
+      +d(991)
+        max-width: 100%
     &__content
       max-width: 430px
       font-weight: 500
       font-size: 18px
+      +d(991)
+        max-width: 100%
 .ucat
   padding-top: 70px
+  +d(991)
+    padding-top: 50px
   &::before
     content: ""
     width: 100%
@@ -19,7 +27,8 @@
     left: 0
   &__img
     margin: 80px 0
-
+    +d(991)
+      margin: 50px -15px
 .text
   &__content
     max-width: 540px
@@ -56,6 +65,11 @@
       margin-top: 20px
 .require
   padding: 130px 0
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 50px 0
+
   &__title
     text-align: center
     margin-bottom: 100px
@@ -67,17 +81,35 @@
     background-color: $black
     color: $white
     padding: 160px 0 90px
+    +d(1199)
+      padding: 100px 0
+    +d(991)
+      padding-right: 50px 0
     .text__content
       max-width: 100%
     ul
       column-count: 2
       margin-right: 40px
-
+      +d(991)
+        column-count: 1
+        margin: 40px 0
 .details
   padding-bottom: 150px
-
+  +d(1199)
+    padding-bottom: 100px
+  +d(991)
+    padding-bottom: 50px
 .cost
   padding-bottom: 100px
+  +d(991)
+    padding-bottom: 0
+  &__img
+    +d(991)
+      margin: 40px auto
+      max-width: 500px
+    +d(767)
+      max-width: calc( 100% + 30px )
+      margin: 0 -15px  
   &__title
     text-align: center
     margin-bottom: 100px
@@ -89,7 +121,10 @@
 .ucat-table
   padding: 140px 0 100px 0
   background-color: $grey
-
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 50px 0
   &__title
     text-align: center
     margin-bottom: 40px
@@ -124,6 +159,12 @@
 
 .hard
   padding-top: 160px
+  +d(1199)
+    padding-top: 100px
+  +d(991)
+    padding-top: 80px
+  +d(767)
+    padding-top: 40px
   &__img
     position: relative
     left: -60px
@@ -131,12 +172,22 @@
     margin: 0 auto
     +d(991)
       left: 0
-
+      margin: 40px auto
+    +d(767)
+      max-width: calc(100% + 30px)
+      margin: 40px -15px
 .steps
   padding: 100px 0
+  +d(1199)
+    padding: 60px 0
 .long
   color: $white
   padding: 140px 0 200px 0
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 50px 0
+
   &::before
     content: ""
     width: 100%
@@ -155,16 +206,32 @@
     position: relative
     left: -60px
     top: 40px
-
+    img, picture
+      object-fit: cover
+    +d(991)
+      left: 0
+      top: 0
+      margin: 0 -15px
+    +d(575)
+      height: 280px
 .score__title
   max-width: 50%
-
+  +d(1199)
+    max-width: 100%
 .good-score
   padding: 50px 0
   background-color: $grey
   &__img
     max-width: 540px
     margin-right: 110px
-
+    +d(991)
+      margin: 40px auto
+    +d(767)
+      max-width: calc( 100% + 30px)
+      margin: 40px -15px
 .interpret
   padding: 160px 0
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 50px 0

@@ -4,14 +4,17 @@
 
   &-hero
     padding-top: 32px
-
+    +d(1199)
+      padding-top: 0
   &__title
     margin-bottom: 30px
 
   &-tab
-    max-width: 50%
+    max-width: calc(50% - 15px )
     margin-bottom: 20px
-
+    +d(991)
+      max-width: 100%
+      margin-bottom: 30px
     .nav-item
       width: 50%
       margin-right: 0
@@ -20,14 +23,19 @@
         text-align: center
         border-radius: 0
         border: 1px solid $primary
-
+        +d(575)
+          font-size: 14px
+          font-weight: 400
   &-tab__video
     position: relative
     min-height: 350px
+    +d(991)
+      margin: 0 -15px
 
   &-tab__content
     margin: 4px 0 0 46px
-
+    +d(991)
+      margin: 0 0 40px 0
     p
       margin-bottom: 20px
 
@@ -40,13 +48,17 @@
   &-tabs
     padding: 80px 0
     background-color: $grey
-
+    +d(991)
+      padding: 40px 0 0 0
 // .doctor-steps
 
 
 .doctor-steps
   padding: 93px 0
-
+  +d(991)
+    padding: 80px 0
+  +d(575)
+    padding: 40px 0
   &__title
     text-align: center
 

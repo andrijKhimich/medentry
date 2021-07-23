@@ -251,6 +251,8 @@ textarea
   position: relative
   &__content
     // max-width: 440px
+    +d(991)
+      margin-bottom: 40px
     p
       margin-bottom: 35px
     ul
@@ -267,15 +269,17 @@ textarea
           left: 0
           top: 10px
           position: absolute
-    // a
-      // color: $primary
   &__img
     max-width: 650px
+    +d(767)
+      max-width: calc( 100% + 30px)
+      margin: 0 -15px
 
 
 .section__title
+  margin-bottom: 40px
   +d(991)
-    margin-bottom: 40px
+    margin-bottom: 20px
 
   h2, .title-2
     margin-bottom: 20px
@@ -399,7 +403,7 @@ textarea
 
 .navbar
   padding: 30px 45px
-  +d(1024)
+  +d(1199)
     padding: 20px 0
 
   &-nav
@@ -490,11 +494,13 @@ textarea
     color: $primary
   &_arrow
     position: relative
+    white-space: break-spaces
+    padding-right: 50px
     &::before
       content: ""
       position: absolute
       top: 50%
-      left: 105%
+      right: 0
       transform: translate(0, -25%)
       background-image: url(../img/arrow.svg)
       background-size: contain
@@ -505,13 +511,16 @@ textarea
       transition: left .4s ease
     &:hover
       &::before
-        // transform: translate(5px, -25%6)
         left: 107%
 .btn
   font-weight: 500
   padding: .775rem 3.5rem
   white-space: nowrap
-
+  +d(991)
+    font-size: 16px
+    max-width: 100%
+    text-align: center
+    padding: .775rem 3rem
   &-primary
     &:hover
       background-color: $black
@@ -576,10 +585,59 @@ textarea
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
   border: 1px solid $grey
   min-width: 340px
-
+.tooltip
+  z-index: 10
+  &::before
+    content: ""
+    width: 400vw
+    height: 400vh
+    background-color: rgba($black, .6)
+    opacity: 0
+    position: fixed
+    top: -100vw
+    left: -100vw
+    z-index: -1
+    transition: opacity .4s ease
+    pointer-events: none
 .tooltip.show
   opacity: 1
+  &::before
+    opacity: 1
+  
+
 
 
 .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before
   border-top-color: $white
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .bs-tooltip-bottom .arrow::before
+  border-top-color: $white
+
+.hide-on-mobile
+  +d(991)
+    display: none
+
+.hide-on-desctop
+  +m(992)
+    display: none
+
+.breadcrumb
+  +d(1199)
+    display: none
+
+.scroll 
+  // width: 1350px
+  overflow: auto
+  padding-bottom: 20px
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 1px $black
+    box-shadow: inset 0 0 1px $black
+
+  &::-webkit-scrollbar
+    width: 1px
+    height: 1px
+    background-color: transparent
+    border: none
+  &::-webkit-scrollbar-thumb
+    background-color: $primary
+    outline: 2px solid $primary
