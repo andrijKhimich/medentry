@@ -418,7 +418,7 @@ $('#partnerSlider').slick({
   adaptiveHeight: true
 });
 $('#charitySlider').slick({
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: 1,
   dots: true,
   arrows: true,
@@ -428,15 +428,24 @@ $('#charitySlider').slick({
   speed: 1000,
   cssEase: 'linear',
   adaptiveHeight: true,
-  rows: 2,
-  slidesPerRow: 2,
+  rows: 1,
+  slidesPerRow: 1,
+  mobileFirst: true,
   responsive: [{
-    breakpoint: 991,
-    settings: {
-      rows: 1,
-      slidesPerRow: 1,
-    }
-  },]
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        rows: 2,
+        slidesToShow: 2,
+        slidesPerRow: 2,
+      }
+    },
+  ]
 });
 
 $('#videoSlider').slick({

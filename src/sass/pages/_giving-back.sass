@@ -104,6 +104,18 @@
   &-slider
     height: 100%
     margin-bottom: 40px
+    .slick-slide div
+      +m(992)
+        display: flex
+        flex-direction: column
+        margin-bottom: 50px
+        margin-right: 40px
+      img
+        +m(992)
+          margin-bottom: 15px
+      p
+        +m(992)
+          width: 100% !important   
     &__item
       display: flex
       align-items: flex-start
