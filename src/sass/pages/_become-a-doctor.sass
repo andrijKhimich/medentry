@@ -6,6 +6,8 @@
     padding-top: 32px
     +d(1199)
       padding-top: 0
+    +d(991)
+      margin-bottom: 30px
   &__title
     margin-bottom: 30px
 
@@ -28,10 +30,10 @@
           font-weight: 400
   &-tab__video
     position: relative
-    min-height: 350px
+    // min-height: 350px
     +d(991)
       margin: 0 -15px
-
+      
   &-tab__content
     margin: 4px 0 0 46px
     +d(991)
@@ -58,11 +60,14 @@
   +d(991)
     padding: 40px 0
   +d(575)
-    padding: 20px 0
+    padding: 0
   &__title
     text-align: center
   .list-group__wrapper
     overflow: auto
+    position: sticky
+    top: 100px
+    left: 0
     +d(991)
       display: none
   .list-group
@@ -161,8 +166,11 @@
   &__wrapper
     margin-left: 30px
     max-width: 540px
+
     +d(991)
+      margin-left: 0
       max-width: 100%
+      margin-bottom: 40px
   &__content
     margin-bottom: 120px
     +d(991)

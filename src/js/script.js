@@ -68,10 +68,16 @@ function closeMenu() {
   headerMenu.removeClass("show");
 }
 
+function setLastWord(text) {
+  let n = text.split("");
+  return n[n.length - 1];
+}
+
 $(document).ready(function () {
   initSupportSlider();
   initSupportSliderDown();
   initStepsSlider();
+  slitText();
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -81,6 +87,7 @@ $(document).ready(function () {
     target: "",
     offset: 200,
   });
+
   showHero();
 
   // init odometer numbers on scroll
@@ -132,8 +139,55 @@ $(document).ready(function () {
       initSupportSlider();
       initSupportSliderDown();
       initStepsSlider();
+      slitText();
     });
   });
+
+  // SET POST DESCRIPTION LIMIT //
+  function slitText() {
+    if ($(window).width() < 991 && $(('.team-box').length > 0)) {
+      $(".team-box").each(function () {
+        const limit = 200;
+        let post = $(this);
+        let text = post.find(".team-box__article p").text();
+        let label = post.find(".team-box__article").attr("data-more-label");
+        let url = post.find(".team-box__article").attr("data-more-link");
+
+        if (text.length > limit) {
+          let newText = text.substr(0, limit);
+          var finalText =
+            newText.substr(0, limit - setLastWord(newText).length)+"... <br>" +
+            '<a class="link_arrow" href="' +
+            url +
+            '">' +
+            label +
+            "</a>";
+        }
+        // finalText.addClass(".link_arrow")
+        post.find(".team-box__article p").html(finalText);
+      });
+    }
+  }
+
+
+  // slow scroll to id
+  $('.list-group-item[href^="#"]').on("click", function () {
+    $("html, body").animate({
+        scrollTop: $($(this).attr("href")).offset().top - 90,
+      },
+      1400
+    );
+  });
+
+  if ($(".help-box").length > 0) {
+    $('.help-box[href^="#"]').on("click", function () {
+      $("html, body").animate({
+          scrollTop: $($(this).attr("href")).offset().top - 90,
+        },
+        1400
+      );
+    });
+  }
 });
 
 $("#testimonialsSlider").slick({
@@ -174,16 +228,13 @@ $("#charitySlider").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
   dots: true,
-  arrows: true,
-  prevArrow: $("#charityPrev"),
-  nextArrow: $("#charityNext"),
-  fade: false,
-  speed: 1000,
-  cssEase: "linear",
-  adaptiveHeight: true,
+  arrows: false,
   rows: 1,
   slidesPerRow: 1,
   mobileFirst: true,
+  arrows: true,
+  prevArrow: $("#charityPrev"),
+  nextArrow: $("#charityNext"),
   responsive: [{
       breakpoint: 767,
       settings: {
@@ -280,6 +331,12 @@ function initStepsSlider() {
       dots: true,
       arrows: false,
       adaptiveHeight: true,
+      mobileFirst: true,
+      // verticalSwiping: true,
+      responsive: [{
+        breakpoint: 991,
+        settings: "unslick",
+      }, ],
     });
   }
 }
@@ -297,7 +354,7 @@ function initSupportSlider() {
       mobileFirst: true,
       responsive: [{
         breakpoint: 768,
-        settings: "unslick"
+        settings: "unslick",
       }, ],
     });
   }

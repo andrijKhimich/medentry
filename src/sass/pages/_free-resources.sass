@@ -121,11 +121,18 @@
     padding: 100px 0 0 0
   +d(991)
     padding: 0
+  
   &__title
     margin-bottom: 40px
   &-slider
     +d(991)
       margin-bottom: 30px
+    &__item
+      max-height: 360px
+      img, picture 
+        object-fit: cover
+        object-position: center
+        height: 100%
     &__nav
       margin: 0 0 50px 50px
       +d(991)
