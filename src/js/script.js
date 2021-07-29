@@ -77,7 +77,7 @@ $(document).ready(function () {
   initSupportSlider();
   initSupportSliderDown();
   initStepsSlider();
-  slitText();
+  hideText();
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
@@ -139,15 +139,36 @@ $(document).ready(function () {
       initSupportSlider();
       initSupportSliderDown();
       initStepsSlider();
-      slitText();
+      hideText();
     });
+
+
+
+  });
+  $(".js-more-link").click(function (event) {
+    event.preventDefault();
+    if ($(this).hasClass("active")) {
+      console.log("has");
+      $(this).text("Read More").removeClass("active");
+      $(
+        ".story-text__content p"
+      ).hide();
+      $(
+        ".story-text__content p:nth-child(2), .story-text__content p:nth-child(1)"
+      ).show();
+    } else {
+      $(this).text("Read Less").addClass("active");
+      $(
+        ".story-text__content p"
+      ).show();
+    }
   });
 
   // SET POST DESCRIPTION LIMIT //
-  function slitText() {
-    if ($(window).width() < 991 && $(('.team-box').length > 0)) {
+  function hideText() {
+    if ($(window).width() < 991 && $(".team-box".length > 0)) {
       $(".team-box").each(function () {
-        const limit = 200;
+        const limit = 383;
         let post = $(this);
         let text = post.find(".team-box__article p").text();
         let label = post.find(".team-box__article").attr("data-more-label");
@@ -156,14 +177,14 @@ $(document).ready(function () {
         if (text.length > limit) {
           let newText = text.substr(0, limit);
           var finalText =
-            newText.substr(0, limit - setLastWord(newText).length)+"... <br>" +
+            newText.substr(0, limit - setLastWord(newText).length) +
+            "... <br>" +
             '<a class="link_arrow" href="' +
             url +
             '">' +
             label +
             "</a>";
         }
-        // finalText.addClass(".link_arrow")
         post.find(".team-box__article p").html(finalText);
       });
     }

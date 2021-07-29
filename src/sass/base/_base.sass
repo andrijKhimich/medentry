@@ -40,6 +40,7 @@ h1
     font-size: 60px
   +d(575)
     font-size: 50px
+    margin: 10px 0 20px
   +d(360)
     font-size: 47px
   span
@@ -242,7 +243,8 @@ textarea
 
 .container
   max-width: 1230px
-
+  +d(575)
+    padding: 0 30px
 .main
   padding-top: 128px
   &_inner
@@ -274,7 +276,7 @@ textarea
     max-width: 650px
     +d(767)
       max-width: calc( 100% + 30px)
-      margin: 0 -15px
+      margin: 0 -30px
 
 
 .section__title
@@ -627,18 +629,29 @@ textarea
     display: none
 
 .scroll 
-  // width: 1350px
   overflow: auto
-  padding-bottom: 20px
+  padd-bottom: 40px
+
   &::-webkit-scrollbar-track
-    -webkit-box-shadow: inset 0 0 5px $black
-    box-shadow: inset 0 0 5px $black
+    -webkit-box-shadow: inset 0 0 10px transparent
+    box-shadow: inset 0 0 10px transparent
 
   &::-webkit-scrollbar
-    width: 5px
-    height: 5px
+    height: 10px
     background-color: transparent
     border: none
+
   &::-webkit-scrollbar-thumb
     background-color: $primary
-    outline: 5px solid $primary
+
+  &::-webkit-scrollbar:horizontal
+    height: 15px
+
+  &::-webkit-scrollbar-thumb
+    background-color: $primary
+    border-radius: 10px
+    border: 2px solid $primary
+
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+    background-color: $white
