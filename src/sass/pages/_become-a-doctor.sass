@@ -63,6 +63,9 @@
     padding: 0
   &__title
     text-align: center
+    +d(991)
+      margin-bottom: 30px
+      
   .list-group__wrapper
     overflow: auto
     position: sticky
@@ -165,8 +168,14 @@
 .step
   &__wrapper
     margin-left: 30px
-    max-width: 540px
 
+    max-width: 540px
+    padding-top: 40px
+    .slick-dots 
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translate(-50%, -50%)
     +d(991)
       margin-left: 0
       max-width: 100%
