@@ -198,11 +198,17 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration
   -webkit-appearance: none
 
+// input[type="password"]
+//   background-image: url(../img/svg/eye.svg)
+//   background-size: 20px
+//   background-repeat: no-repeat
+//   background-position: 95% center
+
 textarea,
 input
   color: $textColor
-  width: 100%
-  border: none
+  // width: 100%
+  // border: none
   transition: border-color $timing $hover-duration, color $timing $hover-duration
 
   &:focus
@@ -606,7 +612,62 @@ textarea
   opacity: 1
   &::before
     opacity: 1
-  
+
+.form-group
+  margin-bottom: 30px
+  position: relative
+  label:not(.form-check-label)
+    margin-bottom: 0
+    background-color: $white
+    position: absolute
+    top: -12px
+    left: 30px
+    padding: 0 10px
+    color: $greyDark
+    transition: color .4s ease
+    font-size: 14px
+.form-control 
+  height: 50px
+  border-color: $greyDark
+  border-radius: 10px
+  outline: none
+  color: $black
+  font-weight: 500
+  &:focus
+    border-color: $black
+    box-shadow: none
+    &+label
+      color: $black
+
+  &:autofill
+    background-color: $white !important
+
+  &.is-invalid
+    border-color: $primary
+    color: $primary
+    &+label
+      color: $primary
+
+.contact-form
+  .title-6, h6 
+    margin-bottom: 40px
+  p
+    max-width: 450px
+    margin-bottom: 30px
+    color: $greyDark
+
+.form-row
+  margin: 0
+
+.form-check
+  margin-bottom: 0
+
+.form-control.is-invalid, .was-validated .form-control:invalid
+  outline: none
+  &:focus
+    background-color: $white
+    box-shadow: none
+
 
 
 

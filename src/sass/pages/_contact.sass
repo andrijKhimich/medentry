@@ -1,0 +1,70 @@
+.contact
+  padding: 40px 0 130px
+  &__title
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 110px
+    .title-2, h2
+      margin-bottom: 0
+    p 
+      font-weight: 600
+  &__img
+    position: absolute
+    bottom: 130px
+    left: 0
+    max-width: 560px
+.address
+  background-color: $black
+  color: $white
+  padding: 120px 0
+  .row
+    .col-lg-3:not(:last-child)
+      .address-box
+        &::before
+          content: ""
+          width: 1px
+          height: 100%
+          background-color: #494949
+          position: absolute
+          top: 0
+          right: 0 
+  &-box
+    position: relative
+    max-width: 240px
+     
+    &__header
+      color: $primary
+      display: flex
+      align-items: center
+      margin-bottom: 20px
+      .svg-icon_sm
+        width: 20px
+        height: 20px
+        fill: $primary
+        margin-right: 15px
+    &__list, ul 
+      margin-bottom: 20px
+    a
+      font-size: 12px
+      text-decoration: underline
+.feadback
+  padding: 80px 45px 220px 45px
+  +d(991)
+    padding: 0
+  &-row
+    max-width: 1320px
+    margin: 0 auto
+  &-box
+    max-width: 280px
+    &__header
+      color: $primary
+      margin-bottom: 15px
+      font-size: 18px
+      font-weight: 600
+    p
+      margin-bottom: 20px
+    a, .link
+      text-decoration: underline
+      margin-bottom: 5px
+      display: block

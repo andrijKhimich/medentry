@@ -1,0 +1,71 @@
+.register 
+  padding: 60px 0 180px
+  &__content
+    max-width: 430px
+
+  &-btn
+    height: 50px
+    border-radius: 5px
+    line-height: 50px
+    padding: 0 15px
+    max-width: 50%
+    display: inline-flex
+    align-items: center
+    border: 1px solid #F2F2F2
+    box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.1)
+    font-size: 14px
+    white-space: nowrap
+    margin-right: 10px
+    .svg-icon
+      width: 15px
+      height: 15px
+      margin-right: 10px
+      flex: 0 0 15px
+    &:hover
+      text-decoration: none 
+  &__img
+    margin-left: 45px
+    max-width: 720px
+    +d(1440)
+      max-width: 600px
+  &-form
+    p
+      font-size: 14px
+    .btn-row 
+      margin-top: 40px
+      
+.btn-row_social
+  margin: 45px 0 25px 0
+
+.or-row
+  position: relative
+  width: 100%
+  border-bottom: 1px solid rgba($greyDark, .6)
+  text-align: center
+  margin-bottom: 45px 
+
+  p
+    color: $greyDark
+    position: relative
+    font-size: 12px
+    padding: 0 5px
+    background-color: $white
+    top: 12px
+    display: inline-block
+
+.toggle-password
+  width: 20px
+  height: 14px
+  padding: 0
+  border:  none
+  position: absolute
+  top: 50%
+  right: 10px
+  transform: translate(-50%, -50%)
+  background-color: transparent
+  background-image: url(../img/svg/eye.svg)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  z-index: 1
+  // padding: 10px  

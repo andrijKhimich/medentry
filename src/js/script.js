@@ -141,26 +141,36 @@ $(document).ready(function () {
       initStepsSlider();
       hideText();
     });
-
-
-
   });
   $(".js-more-link").click(function (event) {
     event.preventDefault();
     if ($(this).hasClass("active")) {
       console.log("has");
       $(this).text("Read More").removeClass("active");
-      $(
-        ".story-text__content p"
-      ).hide();
+      $(".story-text__content p").hide();
       $(
         ".story-text__content p:nth-child(2), .story-text__content p:nth-child(1)"
       ).show();
     } else {
       $(this).text("Read Less").addClass("active");
-      $(
-        ".story-text__content p"
-      ).show();
+      $(".story-text__content p").show();
+    }
+  });
+
+  let toggleBtn = $(".toggle-password");
+
+  toggleBtn.on('click', function () {
+    let passwordElem = $(this).siblings("input");
+    let type = passwordElem.attr("type");
+
+    if (type == "password") {
+      type = "text";
+      passwordElem.attr("type", type);
+      $(this).css("background-image", 'url("../img/svg/eye-line.svg")');
+    } else {
+      type = "password";
+      passwordElem.attr("type", type);
+      $(this).css("background-image", 'url("../img/svg/eye.svg")');
     }
   });
 
@@ -189,7 +199,6 @@ $(document).ready(function () {
       });
     }
   }
-
 
   // slow scroll to id
   $('.list-group-item[href^="#"]').on("click", function () {

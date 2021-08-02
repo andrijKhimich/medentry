@@ -1,0 +1,33 @@
+.faq
+  &-title
+    &__content
+      max-width: 440px
+      +d(991)
+        max-width: 100%
+
+.filter
+  padding: 70px 0
+  background-color: $grey
+
+.tag
+  text-align: center
+  font-size: 14px
+  border: 1px solid rgba($black, .2)
+  padding: 0 25px
+  height: 37px
+  line-height: 37px
+  color: $black
+  border-radius: 10px
+  display: inline-block
+  margin: 8px 0
+  cursor: pointer
+  font-weight: 600
+  white-space: nowrap
+  transition: all .4s ease-in-out
+  &:not(:last-child)
+    margin-right: 15px
+  &.active
+    background-color: $primary
+    color: $white
+    border-color: $primary
+    
