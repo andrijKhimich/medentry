@@ -531,6 +531,7 @@ textarea
     text-align: center
     padding: .775rem 3rem
   &-primary
+    background-color: $primary
     &:hover
       background-color: $black
       border-color: $black
@@ -648,9 +649,27 @@ textarea
     &+label
       color: $primary
 
+.btn-search 
+  position: absolute
+  top: 50%
+  right: 10px
+  transform: translate(-50%, -50%)
+  padding: 0
+  border: none
+  background-color: transparent
+  background-image: url(../img/svg/search.svg)
+  cursor: pointer
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  width: 22px
+  height: 22px
+
 .contact-form
   .title-6, h6 
     margin-bottom: 40px
+    +d(991)
+      display: none
   p
     max-width: 450px
     margin-bottom: 30px
@@ -661,15 +680,61 @@ textarea
 
 .form-check
   margin-bottom: 0
-
+  +d(575)
+    margin-bottom: 20px
 .form-control.is-invalid, .was-validated .form-control:invalid
   outline: none
   &:focus
     background-color: $white
     box-shadow: none
 
+.card
+  border: none
+  &:nth-child(even)
+    background-color: #F8F8F8
+  &-header
+    background-color: transparent
+    border-bottom: none
+    font-weight: 600
+    padding-left: 0
+    .btn
+      color: $black
+      text-decoration: none
+      position: relative
+      &::before, &::after
+        content: ""
+        background-color: $primary
+        position: absolute
+        top: 50%
+        left: 20px
+        transform: translate(50%, -50%)
+        transition: all .4s ease
+        transform: translate(50%, -50%) rotate(45deg)
 
-
+      &::before
+        width: 12px
+        height: 1px
+      &::after
+        width: 1px
+        height: 12px
+        left: 31px
+      &.collapsed
+        &::before, &::after
+          background-color: $greyDark
+          transform: translate(50%, -50%) rotate(0deg)
+  &-body
+    padding: 0 0 0 100px
+    margin-bottom: 20px
+    position: relative
+    max-width: 670px
+    &:before
+      content: ""
+      width: 2px
+      height: 100%
+      background-color: $primary
+      position: absolute
+      top: 0
+      left: 80px
 
 .bs-tooltip-auto[x-placement^=top] .arrow::before, .bs-tooltip-top .arrow::before
   border-top-color: $white
@@ -686,6 +751,7 @@ textarea
     display: none
 
 .breadcrumb
+  background-color: transparent
   +d(1199)
     display: none
 
@@ -735,3 +801,62 @@ textarea
 
   &::-webkit-scrollbar-corner
     background-color: transparent
+
+.pagination
+  align-items: center
+  justify-content: center
+  +d(420)
+    flex-wrap: wrap
+  .page-item
+    display: flex
+    align-items: center
+    .btn
+      +d(420)
+        padding: .775rem 1rem
+        width: 100%
+    &:first-child
+      margin-right: 60px
+      +d(575)
+        margin-right: 10px
+      +d(420)
+        order: 2
+        flex: 0 0 120px
+        max-width: 120px
+        margin-top: 20px
+      .page-link
+        background-color: $primary
+        color: $white
+    &:nth-child(2)
+      +d(420)
+        margin-left: 80px
+    &:nth-child(4)
+      +d(420)
+        margin-right: 80px
+    &:last-child
+      margin-left: 60px
+      +d(575)
+        margin-left: 10px
+      +d(420)
+        order: 3
+        flex: 0 0 120px
+        max-width: 120px
+        margin-top: 20px
+      .page-link
+        border: 1px solid $primary
+  .page-link
+    border: none
+    color: $black
+    font-weight: 600
+      
+.overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 100vh
+  background-color: rgba($black, .4)
+  opacity: 0
+  pointer-events: none
+  z-index: 1
+  transition: opacity .4s ease
+  

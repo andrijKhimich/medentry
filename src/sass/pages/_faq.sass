@@ -1,13 +1,208 @@
 .faq
+  padding: 80px 0 160px
+  +d(1199)
+    padding: 60px 0 100px
+  .section__title
+    +d(991)
+      text-align: center
   &-title
     &__content
       max-width: 440px
       +d(991)
         max-width: 100%
+        margin-bottom: 40px
+  &__sidebar
+    margin-top: 20px
+    position: relative
+    max-width: 240px
+    +d(991)
+      max-width: 100%
+      overflow: auto
 
+    &::before
+      content: ""
+      width: 1px
+      height: 100%
+      background-color: $greyDark
+      position: absolute
+      top: 0
+      left: 3px
+      +d(991)
+        display: none
+    // &:after
+    //   content: ""
+    //   width: 50%
+    //   background-image: linear-gradient(90deg, transparent, white)
+    //   position: absolute
+    //   top: 7px
+    //   bottom: 7px
+    //   left: 100%
+    //   z-index: 1
+    ul
+      position: relative
+      +d(991)
+        display: flex
+        flex-wrap: nowrap
+
+      li
+        position: relative
+        padding-left: 40px
+        color: $greyDark
+        transition: color .4s ease
+        +d(991)
+          white-space: nowrap
+          margin: 0
+          padding: 20px 0 20px 20px
+          &::after
+            content: ""
+            width: 100%
+            height: 1px
+            background-color: $greyDark
+            position: absolute
+            top: 2px
+            z-index: -1
+            left: 0
+
+        &.active
+          color: $black
+          font-weight: 600
+          &:before
+            opacity: 1
+        &:not(:last-child)
+          margin-bottom: 8px          
+        &:before
+          content: ""
+          width: 6px
+          height: 6px
+          background-color: $primary
+          position: absolute
+          top: 8px
+          left: 0
+          border-radius: 50%
+          opacity: 0
+          transition: opacity .4s ease
+          +d(991)
+            top: 0
+            left: 0
+  &__cta
+    .btn-row
+      justify-content: center
+  &-btns
+    display: flex
+    align-items: center
+    +d(991)
+      margin: 0 auto
+      justify-content: center
+    .btn
+      margin: 0
+      +d(767) 
+        max-width: 180px
+        padding: .775rem 1rem
+        font-size: 14px
+      &:first-child
+        border-top-right-radius: 0
+        border-bottom-right-radius: 0
+      &:last-child
+        border-top-left-radius: 0
+        border-bottom-left-radius: 0
+  &__search
+    +d(991)
+      margin-bottom: 20px
+    .search-form
+      margin-right: 0
+      margin-left: auto
+      +d(991)
+        margin: 0 auto
 .filter
   padding: 70px 0
   background-color: $grey
+  z-index: 1
+  +d(1199)
+    padding: 50px 0
+  +d(991)
+    padding: 40px 0
+  &-row
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    +d(991)
+      justify-content: center
+  &-box
+    display: flex
+    align-items: center
+    font-weight: 600
+    transition: color .4s ease
+    cursor: pointer
+    &:last-child
+      +d(767) 
+        display: none     
+    img, picture
+      max-width: 20px
+      margin-right: 12px
+      position: relative
+    p
+      position: relative
+    &_arrow
+      padding-right: 30px
+      position: relative
+      &:before
+        content: ""
+        width: 11px
+        height: 6px
+        position: absolute
+        top: 50%
+        right: 5px
+        background-image: url(../img/svg/down.svg)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        transition: transform .4s ease
+    &:not(:last-child)
+      margin-right: 40px
+      +d(767)
+        margin-right: 20px
+    &:nth-child(2)
+      +d(767)
+        margin-right: 0
+    &:hover
+      color: $primary
+      &::before
+        transform: rotate(180deg)
+      .filter-dropdown
+        transform: translate(-50% - 0)
+        opacity: 1
+        z-index: 1
+        pointer-events: initial
+      .overlay
+        opacity: 1
+        z-index: 0
+      img, picture, p 
+        z-index: 1
+  &-dropdown
+    position: absolute
+    top: 100%
+    left: 50%
+    width: 640px
+    padding: 35px 60px 55px 45px
+    background-color: $white
+    border-radius: 10px
+    transform: translate(-50%, 10px)
+    z-index: 100
+    transition: transform .4s ease, opacity .4s ease
+    opacity: 0
+    pointer-events: none
+    span
+      color: $primary
+      display: block
+      font-weight: 600
+      margin-bottom: 15px
+    a
+      color: $black
+      margin-right: 15px
+      margin-bottom: 10px
+    .filter-box
+      margin-bottom: 15px
+      display: flex
 
 .tag
   text-align: center
@@ -24,10 +219,35 @@
   font-weight: 600
   white-space: nowrap
   transition: all .4s ease-in-out
+  &-row
+    margin-bottom: 35px
+    display: flex
+    flex-wrap: wrap
+    +d(1199)
+      margin-bottom: 20px
+  &_sm
+    height: 28px
+    padding: 0 10px
+    line-height: 28px
+    border-color: $primary
+    color: $primary
+    font-size: 12px
+    margin: 5px 10px 5px 0
   &:not(:last-child)
-    margin-right: 15px
+    margin-right: 10px
+    
   &.active
     background-color: $primary
     color: $white
     border-color: $primary
-    
+
+.popular
+  padding-top: 80px
+  .title-5, h6
+    color: $primary
+    display: inline-block
+    margin-right: 15px
+  a
+    font-weight: 600
+    display: inline
+    margin-right: 15px

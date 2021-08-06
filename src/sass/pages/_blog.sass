@@ -1,0 +1,242 @@
+.blog-page
+  .hero__title
+    padding-left: 0
+    .title-1, & h1
+      font-size: 80px
+      +d(991)
+        font-size: 60px
+      +d(575)
+        font-size: 50px
+        margin: 10px 0 20px
+      +d(360)
+        font-size: 47px
+
+.articles
+  padding-bottom: 100px
+  +d(991)
+    display: none
+.article
+  &-card
+    margin: 70px 0
+    padding: 70px 0
+    border-bottom: 1px solid $greyLight
+    display: flex
+    align-items: center
+    justify-content: center
+    +d(991)
+      margin: 40px 0
+      padding: 40px 0
+      flex-direction: column
+    &:not(:last-child)
+      border-top: 1px solid $greyLight
+    &:nth-child(even)
+      .article-card__img
+        order: 2
+        margin-left: 120px
+        margin-right: 0
+        +d(1199)
+          margin-left: 60px
+        +d(991)
+          margin-left: 0
+          order: 0
+    &__img
+      max-width: 480px
+      flex: 0 0 480px
+      margin-right: 120px
+      +d(1199)
+        margin-right: 60px
+        flex: 0 0 320px
+      +d(991)
+        margin-right: 0
+        margin-bottom: 40px
+    &__content
+      max-width: 450px
+      flex: 0 0 450px
+      +d(991)
+        flex: 0 0 100%
+        max-width: 100%
+    &__text
+      .title-4, h4
+        font-size: 30px
+      p
+        margin-bottom: 20px
+    &__details
+      display: flex
+      align-items: center
+      justify-content: space-between
+      margin-bottom: 35px
+      +d(1199)
+        margin-bottom: 20px
+      p
+        color: $greyDark
+      span
+        text-transform: uppercase
+        color: $primary
+        font-size: 14px
+    &_sm
+      display: flex
+      justify-content: center
+      margin-bottom: 90px
+      min-height: 260px
+      max-width: 540px
+      +d(991) 
+        max-width: 100%
+        flex: 0 0 100%
+        margin-bottom: 60px
+      +d(767)
+        flex-direction: column
+      .article-card__img
+        max-width: 230px
+        flex: 0 0 230px
+        margin-right: 30px 
+        background-color: $grey
+        padding: 15px
+        position: relative
+        +d(767)
+          flex: 0 0 100%
+          max-width: 100%
+          margin-right: 0
+          background-color: transparent
+        img, picture
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: calc(100% - 15px)
+          +d(767)
+            position: static
+            transform: translate(0,0)
+            top: 0
+            left: 
+      .article-card__content
+        max-width: 280px
+        flex: 0 0 280px
+        +d(767)
+          max-width: 100%
+          flex: 0 0 100%
+      .tag-row
+        padding-bottom: 10px
+        margin-bottom: 10px
+        border-bottom: 1px solid $greyLight
+      .article-card__details
+        margin-bottom: 5px
+      .title-5, h5
+        span
+          color: $primary
+      .article-card__text
+        p
+          margin-bottom: 5px
+.search-form
+  max-width: 320px
+  position: relative
+  +d(991)
+    margin: 0 auto 30px auto
+  .form-control
+    background-color: transparent
+    font-size: 14px
+    &::-webkit-input-placeholder
+      font-family: inherit
+      font-size: 14px
+      color: $greyDark
+
+    &::-moz-placeholder
+      font-family: inherit
+      font-size: 14px
+      color: $greyDark
+
+    &:-ms-input-placeholder
+      font-family: inherit
+      font-size: 14px
+      color: $greyDark
+
+    &::placeholder
+      font-family: inherit
+      font-size: 14px
+      color: $greyDark
+
+.blog
+  padding: 100px 0 180px
+  +d(991)
+    padding: 80px 0
+.article-section
+  padding: 100px 0 70px 0
+  +d(1199)
+    padding: 80px 0
+  +d(991)
+    padding: 40px 0
+.article
+  &-row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 30px 0 30px 0
+    padding-top: 30px
+    border-top: 1px solid $greyLight
+    +d(767)
+      flex-direction: column
+      align-items: flex-start
+  p
+    margin-bottom: 15px
+  h6, .title-6, h5, .title-5
+    color: $primary
+    margin-bottom: 25px
+    margin-top: 50px
+    +d(991)
+      margin-top: 25px
+      margin-bottom: 15px
+  img, picture
+    float: right
+    max-width: 480px
+    margin: 0 0 20px 60px
+    +d(991)
+      float: none
+      margin: 0 auto
+  &-details
+    display: flex
+    align-items: center
+    +d(767)
+      margin-bottom: 15px
+    p
+      margin-bottom: 0
+    .svg-icon
+      width: 20px
+      height: 20px
+      margin-right: 15px
+
+  &-footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin: 50px 0 100px
+    +d(991)
+      margin: 30px 0 60px
+      flex-direction: column
+      justify-content: flex-start
+      align-items: flex-start
+.share
+  display: flex
+  align-items: center
+  margin-right: auto
+  margin-left: 50px
+  +d(991)
+    margin: 20px 0 20px 0
+  p
+    margin-right: 15px
+    font-size: 18px
+    font-weight: 600
+.print
+  display: flex
+  align-items: center
+  font-weight: 600
+  font-size: 18px
+  .svg-icon
+    width: 25px
+    height: 25px
+    margin-right: 10px
+  
+.other
+  padding-bottom: 180px
+  +d(1199)
+    padding-bottom: 150px
+  +d(991)
+    padding-bottom: 100px

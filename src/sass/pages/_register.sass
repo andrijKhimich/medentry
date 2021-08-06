@@ -1,8 +1,13 @@
 .register 
   padding: 60px 0 180px
+  +d(1199)
+    padding: 40px 0 100px
+  +d(991)
+    padding: 0 0 60px 0
   &__content
     max-width: 430px
-
+    +d(991)
+      max-width: 100%
   &-btn
     height: 50px
     border-radius: 5px
@@ -16,6 +21,11 @@
     font-size: 14px
     white-space: nowrap
     margin-right: 10px
+    +d(991)
+      min-width: 300px
+      justify-content: center
+      &:first-child
+        margin-bottom: 20px
     .svg-icon
       width: 15px
       height: 15px
@@ -28,15 +38,28 @@
     max-width: 720px
     +d(1440)
       max-width: 600px
+    +d(991)
+      margin: 0 auto 40px auto
+    +d(767)
+      margin: 0 -15px 40px -15px
+      max-width: calc(100% + 30px)
   &-form
     p
       font-size: 14px
+      +d(767)
+        margin-bottom: 20px
     .btn-row 
       margin-top: 40px
-      
+      +d(767)
+        align-items: flex-start
+        flex-direction: column-reverse
 .btn-row_social
   margin: 45px 0 25px 0
-
+  +d(991)
+    justify-content: center
+  +d(767)
+    flex-direction: column
+    margin: 10px 0 20px 0    
 .or-row
   position: relative
   width: 100%
