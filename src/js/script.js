@@ -8,6 +8,7 @@ function setHomeHeader() {
   header.removeClass("header_inner");
 }
 
+// todo do
 function setStickyHeader() {
   header.addClass("fixed");
   logoImg.attr("src", logoSmallUrl);
@@ -121,7 +122,7 @@ $("#videoSlider").slick({
     settings: {
       slidesToShow: 1,
     },
-  }, ],
+  },],
 });
 
 function initPartnersSlider() {
@@ -179,13 +180,13 @@ function initStepsSlider() {
       responsive: [{
         breakpoint: 991,
         settings: "unslick",
-      }, ],
+      },],
     });
   }
 }
 
 function initSupportSlider() {
-  const supportSlider = document.querySelector("#supportSlider.slick-slider");
+  // const supportSlider = document.querySelector("#supportSlider.slick-slider");
   if ($(window).width() < 767) {
     $("#supportSlider").slick({
       slidesToShow: 1,
@@ -197,7 +198,7 @@ function initSupportSlider() {
       responsive: [{
         breakpoint: 768,
         settings: "unslick",
-      }, ],
+      },],
     });
   }
 }
@@ -218,7 +219,7 @@ function initSupportSliderDown() {
       responsive: [{
         breakpoint: 768,
         settings: "unslick",
-      }, ],
+      },],
     });
   }
 }
@@ -279,6 +280,7 @@ $(document).ready(function () {
       }
     });
   }
+
   let startPosition = 0;
   $(window).scroll(function () {
     let scrollValue = $(this).scrollTop();
@@ -354,16 +356,15 @@ $(document).ready(function () {
 
         if (text.length > limit) {
           let newText = text.substr(0, limit);
-          let finalText =
-            newText.substr(0, limit - setLastWord(newText).length) +
+          let finalText = newText.substr(0, limit - setLastWord(newText).length) +
             "... <br>" +
             '<a class="link_arrow" href="' +
             url +
             '">' +
             label +
             "</a>";
+          post.find(".team-box__article p").html(finalText);
         }
-        post.find(".team-box__article p").html(finalText);
       });
     }
   }
@@ -395,7 +396,6 @@ $(document).ready(function () {
   });
 
 });
-
 
 
 // $("#partnerSlider").slick({
