@@ -592,7 +592,7 @@ textarea
   padding: 20px
   border-radius: 10px
   color: $black
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
   border: 1px solid $grey
   min-width: 340px
 .tooltip
@@ -649,6 +649,8 @@ textarea
     &+label
       color: $primary
 
+.form-control.is-invalid, .was-validated .form-control:invalid
+  background-image: none
 .btn-search 
   position: absolute
   top: 50%
@@ -707,7 +709,6 @@ textarea
         position: absolute
         top: 50%
         left: 20px
-        transform: translate(50%, -50%)
         transition: all .4s ease
         transform: translate(50%, -50%) rotate(45deg)
 
@@ -760,11 +761,7 @@ textarea
   padding: 0 0 14px 0
   margin: 0 5px 5px 0
   &::-webkit-scrollbar
-    // width: 14px !important
     height: 14px !important
-
-  &::-webkit-scrollbar:vertical
-    // width: 14px !important
 
   &::-webkit-scrollbar:horizontal
     height: 14px !important
@@ -859,4 +856,6 @@ textarea
   pointer-events: none
   z-index: 1
   transition: opacity .4s ease
-  
+
+// .odometer-inside
+  // display: flex

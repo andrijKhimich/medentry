@@ -7,8 +7,7 @@ function setHomeHeader() {
   logoImg.attr("src", logoMainUrl);
   header.removeClass("header_inner");
 }
-
-// todo do
+// todo test togo plugin
 function setStickyHeader() {
   header.addClass("fixed");
   logoImg.attr("src", logoSmallUrl);
@@ -35,6 +34,8 @@ function showHero() {
     setTimeout(function () {
       $(".js-show-title").removeClass("js-slide-top");
     }, 400);
+    console.log('Hello');
+
     setTimeout(function () {
       $(".js-show-header").removeClass("js-slide-down");
     }, 800);
@@ -60,7 +61,7 @@ const burger = $("#burger");
 const headerMenu = $("#navbar");
 
 function closeMenu() {
-  burger.addClass("collapsed");
+  burger.addClass("collaps;ed");
   headerMenu.removeClass("show");
 }
 
@@ -81,11 +82,11 @@ $("#charitySlider").slick({
   prevArrow: $("#charityPrev"),
   nextArrow: $("#charityNext"),
   responsive: [{
-    breakpoint: 767,
-    settings: {
-      slidesToShow: 3,
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 3,
+      },
     },
-  },
     {
       breakpoint: 991,
       settings: {
@@ -122,7 +123,7 @@ $("#videoSlider").slick({
     settings: {
       slidesToShow: 1,
     },
-  },],
+  }, ],
 });
 
 function initPartnersSlider() {
@@ -138,9 +139,9 @@ function initPartnersSlider() {
       autoplaySpeed: 10000,
       mobileFirst: true,
       responsive: [{
-        breakpoint: 991,
-        settings: "unslick",
-      },
+          breakpoint: 991,
+          settings: "unslick",
+        },
         {
           breakpoint: 180,
           settings: {
@@ -180,7 +181,7 @@ function initStepsSlider() {
       responsive: [{
         breakpoint: 991,
         settings: "unslick",
-      },],
+      }, ],
     });
   }
 }
@@ -198,7 +199,7 @@ function initSupportSlider() {
       responsive: [{
         breakpoint: 768,
         settings: "unslick",
-      },],
+      }, ],
     });
   }
 }
@@ -219,7 +220,7 @@ function initSupportSliderDown() {
       responsive: [{
         breakpoint: 768,
         settings: "unslick",
-      },],
+      }, ],
     });
   }
 }
@@ -309,7 +310,6 @@ $(document).ready(function () {
     startPosition = scrollValue;
 
     numbersInit();
-
   });
 
   $(".js-more-link").click(function (event) {
@@ -329,7 +329,7 @@ $(document).ready(function () {
 
   let toggleBtn = $(".toggle-password");
 
-  toggleBtn.on('click', function () {
+  toggleBtn.on("click", function () {
     let passwordElem = $(this).siblings("input");
     let type = passwordElem.attr("type");
 
@@ -356,7 +356,8 @@ $(document).ready(function () {
 
         if (text.length > limit) {
           let newText = text.substr(0, limit);
-          let finalText = newText.substr(0, limit - setLastWord(newText).length) +
+          let finalText =
+            newText.substr(0, limit - setLastWord(newText).length) +
             "... <br>" +
             '<a class="link_arrow" href="' +
             url +
@@ -394,9 +395,7 @@ $(document).ready(function () {
     initStepsSlider();
     hideText();
   });
-
 });
-
 
 // $("#partnerSlider").slick({
 //   slidesToShow: 1,

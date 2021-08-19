@@ -2,6 +2,7 @@
   padding: 40px 0 130px
   +d(991)
     padding: 0 0 80px 0
+
   &__title
     display: flex
     justify-content: space-between
@@ -11,12 +12,15 @@
       margin-bottom: 80px
     +d(991)
       margin-bottom: 40px
+
     .title-2, h2
       margin-bottom: 0
-    p 
+
+    p
       font-weight: 600
       +d(991)
         display: none
+
   &__img
     position: absolute
     bottom: 130px
@@ -30,18 +34,20 @@
     +d(991)
       position: static
       transform: translate(0, 0)
-      max-width: 560px  
+      max-width: 560px
       margin: 0 auto 60px auto
       order: 1
     +d(767)
-      max-width: calc( 100% + 30px)
+      max-width: calc(100% + 30px)
       margin: 0 -15px 60px -15px
+
 .address
   background-color: $black
   color: $white
   padding: 120px 0
   +d(1199)
     padding: 70px 0
+
   .row
     .col-lg-3:not(:last-child)
       .address-box
@@ -67,42 +73,52 @@
       padding-bottom: 20px
     +d(575)
       max-width: 100%
+
     &__header
       color: $primary
       display: flex
       align-items: center
       margin-bottom: 20px
+
       .svg-icon_sm
         width: 20px
         height: 20px
         fill: $primary
         margin-right: 15px
-    &__list, ul 
+
+    &__list, ul
       margin-bottom: 20px
+
     a
       font-size: 12px
       text-decoration: underline
+
 .feadback
   padding: 80px 45px 220px 45px
   +d(1199)
     padding: 60px 0 120px 0
   +d(991)
     padding: 60px 0
+
   &-row
     max-width: 1320px
     margin: 0 auto
+
   &-box
     max-width: 280px
     +d(575)
       max-width: 100%
       margin-bottom: 40px
+
     &__header
       color: $primary
       margin-bottom: 15px
       font-size: 18px
       font-weight: 600
+
     p
       margin-bottom: 20px
+
     a, .link
       text-decoration: underline
       margin-bottom: 5px

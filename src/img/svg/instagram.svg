@@ -1,22 +1,14 @@
-<svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.8125 0H7.1875C3.21856 0 0 3.3585 0 7.5V16.5C0 20.6415 3.21856 24 7.1875 24H15.8125C19.7814 24 23 20.6415 23 16.5V7.5C23 3.3585 19.7814 0 15.8125 0ZM20.8438 16.5C20.8438 19.395 18.5869 21.75 15.8125 21.75H7.1875C4.41313 21.75 2.15625 19.395 2.15625 16.5V7.5C2.15625 4.605 4.41313 2.25 7.1875 2.25H15.8125C18.5869 2.25 20.8438 4.605 20.8438 7.5V16.5Z" fill="url(#paint0_linear)"/>
-<path d="M11.5 6C8.32456 6 5.75 8.6865 5.75 12C5.75 15.3135 8.32456 18 11.5 18C14.6754 18 17.25 15.3135 17.25 12C17.25 8.6865 14.6754 6 11.5 6ZM11.5 15.75C9.51912 15.75 7.90625 14.067 7.90625 12C7.90625 9.9315 9.51912 8.25 11.5 8.25C13.4809 8.25 15.0938 9.9315 15.0938 12C15.0938 14.067 13.4809 15.75 11.5 15.75Z" fill="url(#paint1_linear)"/>
-<path d="M17.6812 6.3493C18.1044 6.3493 18.4474 5.99136 18.4474 5.54981C18.4474 5.10825 18.1044 4.75031 17.6812 4.75031C17.2581 4.75031 16.915 5.10825 16.915 5.54981C16.915 5.99136 17.2581 6.3493 17.6812 6.3493Z" fill="url(#paint2_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="2.10543" y1="21.8032" x2="21.6938" y2="3.03075" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC107"/>
-<stop offset="0.507" stop-color="#F44336"/>
-<stop offset="0.99" stop-color="#9C27B0"/>
-</linearGradient>
-<linearGradient id="paint1_linear" x1="7.43425" y1="16.2425" x2="15.9116" y2="8.11838" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC107"/>
-<stop offset="0.507" stop-color="#F44336"/>
-<stop offset="0.99" stop-color="#9C27B0"/>
-</linearGradient>
-<linearGradient id="paint2_linear" x1="17.1395" y1="6.11523" x2="18.269" y2="5.03261" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFC107"/>
-<stop offset="0.507" stop-color="#F44336"/>
-<stop offset="0.99" stop-color="#9C27B0"/>
-</linearGradient>
-</defs>
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+
+ <title/>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path fill="#ff5132" id="svg_1" d="m83,23a22,22 0 0 1 22,22l0,38a22,22 0 0 1 -22,22l-38,0a22,22 0 0 1 -22,-22l0,-38a22,22 0 0 1 22,-22l38,0m0,-8l-38,0a30.09,30.09 0 0 0 -30,30l0,38a30.09,30.09 0 0 0 30,30l38,0a30.09,30.09 0 0 0 30,-30l0,-38a30.09,30.09 0 0 0 -30,-30z" class="cls-1"/>
+  <path fill="#ff5132" id="svg_2" d="m90.14,32a5.73,5.73 0 1 0 5.73,5.73a5.73,5.73 0 0 0 -5.73,-5.73z" class="cls-1"/>
+  <path fill="#f95234" id="svg_3" d="m64.27,46.47a17.68,17.68 0 1 1 -17.67,17.67a17.7,17.7 0 0 1 17.67,-17.67m0,-8a25.68,25.68 0 1 0 25.73,25.67a25.68,25.68 0 0 0 -25.73,-25.67z" class="cls-1"/>
+ </g>
 </svg>
