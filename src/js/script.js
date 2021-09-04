@@ -61,7 +61,7 @@ const burger = $("#burger");
 const headerMenu = $("#navbar");
 
 function closeMenu() {
-  burger.addClass("collaps;ed");
+  burger.addClass("collapsed");
   headerMenu.removeClass("show");
 }
 
@@ -396,19 +396,6 @@ $(document).ready(function () {
     hideText();
   });
 });
-
-// $("#partnerSlider").slick({
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   dots: true,
-//   arrows: false,
-//   fade: true,
-//   speed: 1000,
-//   cssEase: "linear",
-//   autoplaySpeed: 10000,
-//   adaptiveHeight: true,
-// });
 
 svg4everybody();
 
