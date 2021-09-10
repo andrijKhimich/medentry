@@ -1,0 +1,361 @@
+.interview
+
+  &-hero
+    background-color: $grey
+    padding: 50px 0 70px
+    +d(991)
+      padding: 35px 0 0 0
+
+    &__img
+      position: absolute
+      right: 0
+      top: 0
+      +d(991)
+        position: static
+    &__content
+      position: relative
+      z-index: 1
+      max-width: 600px
+      +d(991)
+        max-width: 100%
+      ul
+        padding: 20px 0 30px
+      .title-1, h2
+        margin-bottom: 30px
+        +d(767)
+          margin-bottom: 20px
+      p
+        margin-bottom: 8px
+
+.succeed
+  padding: 140px 0 100px 0
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0
+  &__title
+    text-align: center
+    margin-bottom: 60px
+
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+
+  &-slider
+    margin-bottom: 40px
+    &__wrapper
+      display: flex
+      flex-direction: column
+    +d(991)
+      margin-bottom: 10px
+    +d(767)
+      margin: 0 -15px 0 -15px
+
+    +d(575)
+      margin: 0 -30px 0 -30px
+    &_sm
+      display: flex
+      +d(767)
+        margin: 0 -15px
+      +d(575)
+        display: none
+    &__nav
+      text-align: center
+      margin: 20px 0
+      +d(991)
+        margin: 10px 0
+      +d(767)
+        margin: 20px 0
+        order: 2
+    &__item
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+
+      +d(767)
+        flex-direction: column-reverse
+        width: calc(100% + 30px)
+
+      +d(575)
+        width: calc(100% + 60px)
+
+      &_sm
+        margin-right: 20px
+        +d(991)
+          margin-right: 10px
+    &__img
+      max-width: 600px
+      max-height: 400px
+      width: 100%
+      border-radius: 10px
+      position: relative
+      overflow: hidden
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      margin-right: 60px
+      +d(991)
+        margin-right: 30px
+        max-width: 40%
+      +d(767)
+        margin-right: 0
+        max-width: 100%
+
+      &_sm
+        border-radius: 10px
+        position: relative
+        overflow: hidden
+        height: 200px
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+    &__content
+      max-width: 540px
+      +d(991)
+        max-width: 60%
+      +d(767)
+        max-width: 100%
+        padding: 0 30px
+      p
+        margin-bottom: 8px
+        &:last-of-type
+          margin-bottom: 30px
+
+.strategy
+  padding: 70px 0
+  +d(991)
+    padding: 0
+  &__img
+    max-width: 660px
+    position: relative
+    left: -60px
+    +d(1199)
+      left: 0
+    +d(991)
+      max-width: calc(100% + 30px)
+      margin: 0 -15px
+      display: none
+    +d(575)
+      max-width: calc(100% + 60px)
+      margin: 0 -30px
+  &__content
+    max-width: 500px
+    +d(991)
+      max-width: 100%
+    p
+      margin-bottom: 10px
+    .title-3, h3
+      margin-bottom: 20px
+      +d(767)
+        text-align: center
+    ul
+      max-width: 400px
+.practice
+  padding: 70px 0
+  +d(767)
+    padding: 0 0 70px 0
+  &__img
+    max-width: 720px
+    position: relative
+    right: -60px
+    +d(1199)
+      right: 0
+    +d(991)
+      max-width: calc(100% + 30px)
+      margin: 0 -15px
+    +d(575)
+      max-width: calc(100% + 60px)
+      margin: 0 -30px
+  &__content
+    max-width: 500px
+    +d(991)
+      max-width: 100%
+    p
+      margin-bottom: 10px
+      &:last-of-type
+        margin-bottom: 20px
+    .title-3, h3
+      margin-bottom: 20px
+      +d(767)
+        text-align: center
+.university
+  padding: 100px 0
+  color: $white
+  background-color: $black
+
+  +d(1199)
+    padding: 80px 0
+
+  +d(991)
+    padding: 60px 0
+
+  &__title
+    text-align: center
+
+  &-row
+    display: flex
+    justify-content: center
+    margin-bottom: 50px
+    +d(767)
+      flex-direction: column
+      align-items: center
+  &-card
+    background-color: $white
+    padding: 40px 70px
+    border-radius: 10px
+    color: $black
+    text-align: center
+    max-width: 360px
+    width: 100%
+    position: relative
+
+    &:not(:last-child)
+      margin-right: 64px
+      +d(767)
+        margin-right: 0
+        margin-bottom: 80px
+      &::before
+        content: ""
+        width: 27px
+        height: 27px
+        background-image: url(../img/svg/plus.svg)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        position: absolute
+        top: 50%
+        right: -45px
+        transform: translate(0, -50%)
+        +d(767)
+          top: auto
+          right: auto
+          left: 50%
+          bottom: -50px
+          transform: translate(-50%, 0)
+
+    &__img
+      max-width: 65px
+      margin: 0 auto 20px auto
+
+
+  &__footer
+    text-align: center
+
+    .btn
+      width: 270px
+      display: block
+      margin: 0 auto 35px auto
+
+    span
+      color: $greyDark
+      font-size: 14px
+
+  &__price
+    font-size: 46px
+    font-weight: 900
+    margin-bottom: 20px
+
+.personal
+  padding: 140px 0
+  +d(1199)
+    padding: 100px 0
+  +d(767)
+    padding: 60px 0
+.ultimate
+  padding: 10px 0 140px 0
+  +d(1199)
+    padding: 10px 0 80px 0
+  +d(991)
+    padding: 10px 0 60px 0
+  .title-2, h2
+    +d(767)
+      text-align: center
+  &__content
+    display: flex
+    justify-content: center
+    margin-bottom: 80px
+    +d(991)
+      display: block
+    p
+      margin-bottom: 20px
+  &__col
+    max-width: 360px
+    flex: 0 0 360px
+    +d(991)
+      max-width: 100%
+
+    &:not(:last-child)
+      margin-right: 60px
+  &__footer
+    text-align: center
+    span,
+      margin-bottom: 10px
+      font-size: 14px
+  &__price
+    font-size: 42px
+    font-weight: 900
+
+.track
+  background-color: $grey
+  +d(991)
+    padding: 60px 0
+  +d(767)
+    padding: 40px 0
+.interview
+  padding-bottom: 100px
+  &-row
+    display: flex
+    justify-content: center
+    position: relative
+    +d(991)
+      display: block
+    &::before
+      content: ""
+      width: 150vw
+
+      height: 222px
+      background-color: $grey
+      position: absolute
+      top: 0
+      left: -50vw
+      z-index: -1
+  &-card
+    flex: 0 0 354px
+    max-width: 354px
+    border-radius: 10px
+    border: 1px solid $greyLight
+    margin-bottom: 50px
+    overflow: hidden
+    +d(991)
+      margin: 0 auto 20px auto
+    &:not(:last-child)
+      margin-right: 37px
+      +d(991)
+        margin: 0 auto 20px auto
+    &__img
+      height: 222px
+    &__body
+      padding: 26px 40px 50px 40px
+      .title-6, h6
+        margin-bottom: 20px
+      ul
+        padding: 20px 0 0 0
+        border-top: 1px solid $greyLight
+        max-width: 250px
+        li
+          position: relative
+          padding-left: 20px
+          &::before
+            content: ""
+            width: 8px
+            height: 8px
+            background-color: $primary
+            border-radius: 50%
+            position: absolute
+            top: 9px
+            left: 0
+            font-size: 14px
+
+

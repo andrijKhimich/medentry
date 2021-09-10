@@ -87,6 +87,12 @@
   &__cta
     .btn-row
       justify-content: center
+      +d(575)
+        flex-wrap: wrap
+        align-items: center
+        .btn:first-child
+          margin-right: 0
+          margin-bottom: 10px
   &-btns
     display: flex
     align-items: center

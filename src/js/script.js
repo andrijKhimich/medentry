@@ -231,9 +231,55 @@ $("#testimonialsSlider").slick({
   arrows: true,
   prevArrow: $("#testimonialsPrev"),
   nextArrow: $("#testimonialsNext"),
+  adaptiveHeight: true,
+});
+
+$("#reviewsSlider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: true,
+  prevArrow: $("#reviewsPrev"),
+  nextArrow: $("#reviewsNext"),
+  adaptiveHeight: true,
+  centerMode: true,
+  centerPadding: 0,
+  responsive: [{
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 1,
+
+    },
+  }, ],
+});
+
+$("#succeedSlider").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
-  adaptiveHeight: true,
+  arrows: true,
+  prevArrow: $("#succeedPrev"),
+  nextArrow: $("#succeedNext"),
+  fade: true,
+  asNavFor: "#succeedSliderSm"
+});
+
+$("#succeedSliderSm").slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: false,
+  asNavFor: "#succeedSlider",
+  responsive: [{
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 575,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 });
 
 $("#examSlider").slick({
@@ -243,8 +289,6 @@ $("#examSlider").slick({
   prevArrow: $("#examPrev"),
   nextArrow: $("#examNext"),
   fade: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
   adaptiveHeight: true,
 });
 
@@ -358,12 +402,7 @@ $(document).ready(function () {
           let newText = text.substr(0, limit);
           let finalText =
             newText.substr(0, limit - setLastWord(newText).length) +
-            "... <br>" +
-            '<a class="link_arrow" href="' +
-            url +
-            '">' +
-            label +
-            "</a>";
+            "... <br>" + '<a class="link_arrow" href="' + url + '">' + label + "</a>";
           post.find(".team-box__article p").html(finalText);
         }
       });
@@ -388,6 +427,12 @@ $(document).ready(function () {
       );
     });
   }
+
+
+  $(".tool-wrapper .tool-tab").click(function () {
+    $(".tool-wrapper .tool-tab").removeClass("active").eq($(this).index()).addClass("active");
+    $(".tool-item").hide().eq($(this).index()).fadeIn()
+  }).eq(0).addClass("active");
 
   $(window).resize(function () {
     initSupportSlider();
