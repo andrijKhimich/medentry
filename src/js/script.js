@@ -7,7 +7,7 @@ function setHomeHeader() {
   logoImg.attr("src", logoMainUrl);
   header.removeClass("header_inner");
 }
-// todo test togo plugin
+
 function setStickyHeader() {
   header.addClass("fixed");
   logoImg.attr("src", logoSmallUrl);
@@ -34,7 +34,6 @@ function showHero() {
     setTimeout(function () {
       $(".js-show-title").removeClass("js-slide-top");
     }, 400);
-    console.log('Hello');
 
     setTimeout(function () {
       $(".js-show-header").removeClass("js-slide-down");
@@ -252,21 +251,22 @@ $("#reviewsSlider").slick({
   }, ],
 });
 
-$("#succeedSlider").slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: true,
-  prevArrow: $("#succeedPrev"),
-  nextArrow: $("#succeedNext"),
-  fade: true,
-  asNavFor: "#succeedSliderSm"
-});
+// $("#succeedSlider").slick({
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   arrows: true,
+//   prevArrow: $("#succeedPrev"),
+//   nextArrow: $("#succeedNext"),
+//   fade: true,
+//   asNavFor: "#succeedSliderSm"
+// });
 
 $("#succeedSliderSm").slick({
   slidesToShow: 4,
   slidesToScroll: 1,
-  arrows: false,
-  asNavFor: "#succeedSlider",
+  arrows: true,
+  prevArrow: $("#succeedPrev"),
+  nextArrow: $("#succeedNext"),
   responsive: [{
       breakpoint: 767,
       settings: {
