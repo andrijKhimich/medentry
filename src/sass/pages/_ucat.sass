@@ -1,38 +1,91 @@
+@import "../base/variables"
+@import "../base/mixins"
+
 .ucat
   &-page
     overflow: initial
+
+  &_bg
+    min-height: 575px
+
+    &::before
+      content: ''
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      background: linear-gradient(90deg, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 1) 60%, rgba(252, 176, 69, 0) 75%)
+      z-index: 1
+
+      @include d(991)
+        background: #f2f2f2
+        z-index: -1
+
   &-hero
     background-color: $grey
     padding: 50px 0 70px
     +d(991)
       padding: 35px 0 0 0
+
     &__img
       position: absolute
       right: 0
       bottom: 0
-      max-width: 50%
+      top: 0
+
+      //max-width: 50%
       +d(991)
         position: static
         max-width: 100%
+
     &__content
       position: relative
       z-index: 1
-      .title-1, h2
-        margin-bottom: 50px
-        +d(991)
-          margin-bottom: 30px
-        +d(767)
-          margin-bottom: 20px
+
+      @include d(991)
+        padding-bottom: 40px
+
       p
-        max-width: 480px
-        +d(991)
-          max-width: 100%
-        &:not(:last-of-type)
-          margin-bottom: 20px
-        &:last-of-type
-          margin-bottom: 40px
-          +d(991)
-            margin-bottom: 20px
+        margin-bottom: 30px
+
+      .doctor-tab
+        max-width: 600px
+
+        .nav-item
+          overflow: hidden
+
+          &:first-child
+            .nav-link, a
+              border-top-left-radius: 10px
+              border-bottom-left-radius: 10px
+
+          &:last-child
+            .nav-link, a
+              border-top-right-radius: 10px
+              border-bottom-right-radius: 10px
+
+  .title-1, h2
+    margin-bottom: 50px
+    +d(991)
+      margin-bottom: 30px
+    +d(767)
+      margin-bottom: 20px
+
+  p
+    max-width: 480px
+    +d(991)
+      max-width: 100%
+
+    &:not(:last-of-type)
+      margin-bottom: 20px
+
+    &:last-of-type
+      margin-bottom: 40px
+      +d(991)
+        margin-bottom: 20px
 
   &-statistic
     display: flex
@@ -44,6 +97,7 @@
       max-width: 50%
       flex: 0 0 50%
       margin-bottom: 20px
+
       i
         font-style: normal
         font-family: $titleFont
@@ -52,6 +106,7 @@
           font-size: 22px
         +d(575)
           font-size: 20px
+
       span
         font-size: 24px
         display: inline-block
@@ -62,6 +117,7 @@
           font-size: 22px
         +d(575)
           font-size: 20px
+
       p
         color: $greyDark
 
@@ -73,11 +129,14 @@
     padding: 80px 0
   +d(767)
     padding: 60px 0
+
   &__title
     text-align: center
+
     p
       max-width: 740px
       margin: 0 auto
+
   &-items
     display: flex
     flex-wrap: wrap
@@ -85,9 +144,11 @@
     margin: 80px -80px 0
     +d(991)
       margin: 40px 0
+
   &-box
     max-width: 50%
     display: inline-flex
+
     &:not(:last-child)
       margin-bottom: 35px
 
@@ -97,9 +158,11 @@
 
     +d(991)
       flex-direction: column
+
     &__img
       margin-right: 40px
       position: relative
+
       &::before
         content: ""
         width: 100%
@@ -115,10 +178,12 @@
       +d(991)
         margin-right: 0
         margin-bottom: 20px
+
     &__content
       max-width: 420px
       +d(767)
         max-width: 100%
+
       .title-5, h5
         margin-bottom: 18px
 
@@ -131,15 +196,18 @@
     padding: 80px 0
   +d(767)
     padding: 60px 0
+
   &__title
     +d(991)
       text-align: center
+
   &__content
     max-width: 540px
     margin: 30px 0 0 auto
     +d(991)
       max-width: 100%
       margin: 0
+
   &-wrapper
     margin-top: 80px
     display: flex
@@ -147,9 +215,11 @@
     +d(991)
       margin-top: 20px
       flex-direction: column
+
   &-tabs
     +d(991)
       margin-bottom: 35px
+
   &-tab
     width: 255px
     height: 37px
@@ -163,6 +233,7 @@
     transition: all $hover-duration $timing
     +d(991)
       margin: 0 auto
+
     &:not(:last-child)
       margin-bottom: 17px
       +d(767)
@@ -187,6 +258,7 @@
       color: $white
       background-color: $primary
       border-color: $primary
+
       &::before
         opacity: 1
 
@@ -199,24 +271,30 @@
       margin: 0 -15px
     +d(575)
       margin: 0 -30px
+
   &-item
     display: none
 
     &:first-child
       display: block
+
 .included
   font-size: 14px
   font-weight: 600
   text-transform: uppercase
+
   span
     color: $primary
     font-size: 20px
     +d(991)
       display: block
+
 .included_black
   color: $greyDark
+
   span
     color: $black
+
 .workshop
   padding: 80px 0 100px 0
   background-color: $black
@@ -225,8 +303,10 @@
     padding: 60px 0
   +d(991)
     padding: 60px 0 0 0
+
   .title-2, h2
     color: $white
+
   &__title
     text-align: center
     margin-bottom: 80px
@@ -234,6 +314,7 @@
       margin-bottom: 60px
     +d(991)
       margin-bottom: 40px
+
   &__content
     ul
       padding: 40px 0
@@ -241,8 +322,10 @@
       column-count: 2
       +d(991)
         column-count: 1
+
     .btn
       margin-bottom: 40px
+
   &__img
     max-width: 590px
     position: relative
@@ -250,11 +333,11 @@
     +d(1199)
       right: 0
     +d(991)
-      max-width: calc( 100% + 30px)
+      max-width: calc(100% + 30px)
       margin: 0 -15px
     +d(575)
       margin: 0 -30px
-      max-width: calc( 100% + 60px)
+      max-width: calc(100% + 60px)
 
 .coaching
   padding: 160px 0
@@ -287,14 +370,18 @@
     +d(991)
       max-width: 100%
       margin: 0 0 40px 0
+
     .included
       margin-left: 60px
       +d(1199)
         margin-left: 20px
+
       span
         display: block
+
     p
       margin-bottom: 10px
+
     ul
       column-count: 2
       padding: 30px 0
@@ -309,6 +396,7 @@
     padding: 80px 0
   +d(991)
     padding: 60px 0 0 0
+
   &__title
     text-align: center
     margin-bottom: 70px
@@ -316,6 +404,7 @@
       margin-bottom: 50px
     +d(991)
       margin-bottom: 30px
+
   &__img
     position: relative
     right: -60px
@@ -339,14 +428,18 @@
     +d(991)
       max-width: 100%
       margin: 0 0 40px 0
+
     .included
       margin-left: 60px
       +d(1199)
         margin-left: 20px
+
       span
         display: block
+
     p
       margin-bottom: 10px
+
     ul
       padding: 30px 0
       border-top: 1px solid $greyLight
@@ -359,8 +452,10 @@
     padding: 80px 0
   +d(767)
     padding: 60px 0
+
   &__title
     text-align: center
+
     p
       max-width: 690px
       margin: 0 auto
@@ -368,20 +463,24 @@
   &-slider
     max-width: 100%
     margin-left: 0
+
     &__wrap
       .testimonials-slider__nav
-        +d(991)
-          margin: 40px auto 0 auto
-          justify-content: center
-        +d(767)
-          margin: 0 auto
+      +d(991)
+        margin: 40px auto 0 auto
+        justify-content: center
+      +d(767)
+        margin: 0 auto
+
     .slick-list
       padding-top: 80px !important
       +d(767)
         padding-top: 0 !important
+
     .slick-slide
       opacity: .3
       transition: all $hover-duration $timing
+
     .slick-center
       width: 480px
       opacity: 1
@@ -390,10 +489,12 @@
       z-index: 1
       +d(767)
         transform: scale(1)
+
     .testimonials__col
       min-width: 480px
       +d(767)
         min-width: 100%
+
 .price
   font-size: 46px
   font-weight: 900
@@ -407,9 +508,11 @@
     margin-bottom: 10px
   +d(575)
     font-size: 38px
+
   sup
     font-size: 16px
     top: -1.2em
+
   &-row
     display: flex
     align-items: center
@@ -417,13 +520,16 @@
     margin-bottom: 25px
     +d(991)
       margin-bottom: 10px
+
     p
       font-size: 12px
       text-transform: uppercase
       color: $greyDark
+
     span
       color: $black
       font-weight: 900
+
   span
     display: block
     line-height: 18px
@@ -437,6 +543,7 @@
     padding: 80px 0
   +d(767)
     padding: 60px 0
+
   &__title
     text-align: center
     margin-bottom: 180px
@@ -446,12 +553,15 @@
       margin-bottom: 80px
     +d(991)
       margin-bottom: 60px
+
     p
       max-width: 780px
       margin: 0 auto
+
   &__subtitle
     text-align: center
     margin-bottom: 60px
+
   &-row
     display: flex
     align-items: center
@@ -463,6 +573,7 @@
       margin-bottom: 60px
     +d(767)
       flex-direction: column
+
   &-card
     max-width: 380px
     width: 100%
@@ -477,11 +588,13 @@
       padding: 35px 20px 20px 20px
     +d(767)
       margin-bottom: 30px
+
     &.most-popular
       padding: 35px 25px 35px 50px
       background-color: $grey
       +d(991)
         padding: 35px 20px 20px 20px
+
       &::before
         content: "\2605     Most Popular     \2605"
         position: absolute
@@ -494,13 +607,16 @@
         font-size: 12px
         line-height: 30px
         height: 30px
+
     &__header
       .title-3, h3
-        font-family: $textFont
-        font-weight: 600
-        margin-bottom: 20px
+      font-family: $textFont
+      font-weight: 600
+      margin-bottom: 20px
+
     &__body
       max-width: 285px
+
       .btn
         max-width: 277px
         margin: 0 auto
@@ -510,11 +626,13 @@
       ul
         padding: 20px 0 30px 0
         border-top: 1px solid $greyDark
+
         li
           position: relative
           padding-left: 20px
           font-size: 12px
           color: $greyDark
+
           &::before
             content: ""
             width: 8px
@@ -524,11 +642,13 @@
             position: absolute
             left: 0
             top: 6px
+
   &-table
     +d(767)
       margin: 0 -15px
     +d(575)
       margin: 0 -30px
+
     &__header
       background-color: $grey
       width: 100%
@@ -537,6 +657,7 @@
       top: 65px
       +d(767)
         margin-bottom: 0
+
       tr
         td
           font-size: 18px
@@ -547,6 +668,7 @@
           width: 185px
           +d(767)
             font-size: 11px
+
           .btn
             max-width: 100px
             padding: 11px 13px
@@ -559,14 +681,17 @@
               padding: 4px 6px
               bottom: -30%
               border-radius: 6px
+
           p
             color: $primary
             font-size: 14px
             margin-bottom: 12px
+
             span
               color: $greyDark
               +d(767)
                 display: none
+
           &:first-child
             width: 580px
             text-align: left
@@ -583,12 +708,15 @@
   background-color: #FCFCFC
   +d(767)
     font-size: 12px
+
   tr
     height: 82px
     +d(767)
       height: 62px
+
     &:nth-child(odd)
       background-color: #fff
+
   th
     background-color: #fff
     color: $primary
@@ -600,31 +728,38 @@
     +d(767)
       padding: 15px 7px
       font-size: 12px
-  th,td
+
+  th, td
     border-top: none
     border-bottom: 1px solid $grey
     padding: 20px 55px
     vertical-align: middle
     +d(767)
       padding: 15px 7px
+
     p
       text-align: left
       font-weight: 600
+
   td
     border: 1px solid $grey
+
     &:first-child
       text-align: left
       font-weight: 500
 
     &:not(:first-child)
       width: 185px
+
     &:nth-child(3)
       background-color: rgba($grey, .5)
+
     picture, img
       width: 18px
       margin: 0 auto
       +d(767)
         width: 12px
+
     .table-disable
       width: 12px
 
@@ -644,16 +779,20 @@
   margin-bottom: 120px
   +d(1199)
     margin-bottom: 60px
+
   &__content
     max-width: 435px
     +d(991)
       max-width: 100%
       text-align: center
+
     p
       &:not(:last-of-type)
         margin-bottom: 10px
+
       &:last-of-type
         margin-bottom: 35px
+
     picture, img
       +d(991)
         width: calc(100% + 30px)
@@ -661,21 +800,28 @@
       +d(575)
         width: calc(100% + 60px)
         margin: 0 -30px
+
   &-accordion
     .card
-      .btn
-        white-space: normal
-        padding: .975rem 4.5rem
-        +d(767)
-          padding: 20px
-        &::before
-          left: -10px
-        &:after
-          left: 2px
-          height: 11px
+    .btn
+      white-space: normal
+      padding: .975rem 4.5rem
+      +d(767)
+        padding: 20px
+
+      &::before
+        left: -5px
+
+      &:after
+        left: 6px
+        height: 11px
+
     .card-body
+      padding-top: 10px
       +d(767)
         padding-left: 40px
+
+
       &::before
         +d(767)
           left: 0
@@ -683,6 +829,7 @@
     .card-header
       +d(767)
         padding: 0
+
 .platform
   padding: 140px 0
   background-color: $black
@@ -693,6 +840,7 @@
     padding: 80px 0
   +d(767)
     padding: 60px 0
+
   &__img
     text-align: center
     max-width: 667px
@@ -705,11 +853,13 @@
 
     .btn
       margin-top: 50px
+
     +d(991)
       margin: 0
       max-width: 100%
       img
         display: none
+
   &__content
     width: 540px
 
@@ -717,10 +867,69 @@
       width: 100%
     +d(991)
       margin-bottom: 0
+
     .title-3, h3
       color: $white
+
     ul
       column-count: 2
       +d(991)
         column-count: 1
 
+.offer
+  background-color: #f2f2f2
+  padding: 100px 0
+  margin-bottom: 80px
+
+  &_sm
+    padding-top: 140px
+    @include d(991)
+      padding-top: 80px
+
+  &-card
+    background-color: #fff
+    border-radius: 10px
+    padding: 50px
+    border: 1px solid #F2F2F2
+    box-shadow: 0 7px 19px rgba(0, 0, 0, 0.03)
+
+    &:not(:last-child)
+      margin-bottom: 30px
+
+    @include d(991)
+      padding: 50px 30px
+
+    &__header
+      display: flex
+      align-items: center
+      justify-content: space-between
+      border-bottom: 1px solid $greyDark
+      @include d(991)
+        flex-direction: column
+        align-items: flex-start
+        .title-3, h3
+          margin-bottom: 20px
+        .price
+          color: $primary
+
+      span
+        text-transform: uppercase
+        color: $greyDark
+        font-size: 12px
+        margin-bottom: 10px
+
+    &__content
+      padding-top: 20px
+      display: flex
+      align-items: center
+      justify-content: space-between
+      @include d(991)
+        flex-wrap: wrap
+
+      p
+        max-width: 730px
+        @include d(991)
+          margin-bottom: 20px
+
+.ucat-table
+  position: static

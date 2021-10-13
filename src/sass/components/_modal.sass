@@ -1,0 +1,56 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+.modal-custom
+  .modal-xl
+    max-width: 1200px
+
+  .modal-header
+    display: block
+    text-align: center
+    border-bottom: none
+
+    .close
+      position: absolute
+      top: 40px
+      right: 40px
+      font-size: 12px
+      display: flex
+      align-items: center
+      span
+        font-size: 24px
+        padding-left: 10px
+    .modal-title
+      text-align: center
+      display: block
+      margin-bottom: 15px
+  .modal-content
+    padding: 50px 120px
+
+    .package-row
+      margin-bottom: 20px
+
+    .package-card
+      max-width: 260px
+
+      &__header
+        padding-top: 30px
+
+      .price
+        font-size: 24px
+
+        sup
+          top: -.7em
+      &__body
+        .title-4, h4
+          margin-bottom: 10px
+        p
+          color: $primary
+          font-weight: 700
+          margin-bottom: 20px
+  .modal-footer
+    padding: 20px .75rem 0 .75rem
+    justify-content: space-between
+    &__content
+      .title-4, h4
+        margin-bottom: 10px

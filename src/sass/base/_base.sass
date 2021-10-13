@@ -1,5 +1,6 @@
 // project main styles
-
+@import "variables"
+@import "mixins"
 body
   font-size: 16px
   font-weight: 500
@@ -43,6 +44,7 @@ h1
     margin: 10px 0 20px
   +d(360)
     font-size: 47px
+
   span
     color: $primary
 
@@ -58,6 +60,7 @@ h2
     font-size: 44px
   +d(360)
     font-size: 40px
+
   span
     color: $primary
 
@@ -71,6 +74,7 @@ h3
     font-size: 40px
   +d(575)
     font-size: 38px
+
   span
     color: $primary
 
@@ -78,6 +82,7 @@ h4
   font-size: 34px
   line-height: 1.176em
   margin-bottom: 20px
+
   span
     color: $primary
 
@@ -252,24 +257,30 @@ textarea
   max-width: 1230px
   +d(575)
     padding: 0 30px
+
 .main
   padding-top: 128px
+
   &_inner
     padding-top: 110px
 
 .section
   position: relative
+
   &__content
     // max-width: 440px
     +d(991)
       margin-bottom: 40px
+
     p
       margin-bottom: 35px
+
     ul
       li
         position: relative
         padding-left: 20px
         margin-bottom: 10px
+
         &::before
           content: ""
           width: 8px
@@ -279,10 +290,11 @@ textarea
           left: 0
           top: 10px
           position: absolute
+
   &__img
     max-width: 650px
     +d(767)
-      max-width: calc( 100% + 30px)
+      max-width: calc(100% + 30px)
       margin: 0 -30px
 
 .section__title
@@ -304,6 +316,7 @@ textarea
   letter-spacing: 0.03em
   +d(991)
     font-size: 16px
+
   span
     color: $primary
 
@@ -312,14 +325,17 @@ textarea
   width: 44px
   fill: $primary
   transition: fill .4s ease
+
   &_md
     width: 22px
     height: 22px
     margin-right: 10px
+
   &_sm
     width: 11px
     height: 11px
     margin-right: 16px
+
 .arrow-icon
   width: 38px
   height: 38px
@@ -333,32 +349,43 @@ textarea
   font-size: 14px
   font-weight: 600
   transition: color .4s ease
+
   &:hover
     color: $primary
     text-decoration: none
 
     .play-btn
       background-color: $primary
+
       &::after
         transform: scale(1.5)
         opacity: 0
+
       &::before
         border-left: 9px solid $white
+
   &_transparent
     color: $white
+
     &:hover
       color: $white
+
       .play-btn
         border-color: $white
         background-color: $white
+
         &::before
           border-left: 9px solid $primary
+
         &::after
           border-color: $white
+
     .play-btn
       border-color: $white
+
       &::before
         border-left: 9px solid $white
+
       &::after
         border-color: $white
 
@@ -453,12 +480,15 @@ textarea
   padding: 0
   position: relative
   border: none
+
   &.collapsed
     .navbar-toggler-icon
       width: 25px
+
       &:before
         top: -7px
         transform: rotate(0)
+
       &::after
         transform: rotate(0)
         bottom: -7px
@@ -490,6 +520,7 @@ textarea
     &::after
       bottom: 0
       transform: rotate(-45deg)
+
 .navbar-brand
   max-width: 136px
 
@@ -497,12 +528,15 @@ textarea
   color: $primary
   font-size: 14px
   font-weight: 600
+
   &:hover
     color: $primary
+
   &_arrow
     position: relative
     white-space: break-spaces
     padding-right: 50px
+
     &::before
       content: ""
       position: absolute
@@ -516,9 +550,11 @@ textarea
       width: 36px
       height: 10px
       transition: left .4s ease
+
     &:hover
       &::before
         left: 107%
+
 .btn
   font-weight: 500
   padding: .775rem 3.5rem
@@ -528,8 +564,10 @@ textarea
     max-width: 100%
     text-align: center
     padding: .775rem 3rem
+
   &-primary
     background-color: $primary
+
     &:hover
       background-color: $black
       border-color: $black
@@ -593,8 +631,10 @@ textarea
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1)
   border: 1px solid $grey
   min-width: 340px
+
 .tooltip
   z-index: 10
+
   &::before
     content: ""
     width: 400vw
@@ -607,14 +647,17 @@ textarea
     z-index: -1
     transition: opacity .4s ease
     pointer-events: none
+
 .tooltip.show
   opacity: 1
+
   &::before
     opacity: 1
 
 .form-group
   margin-bottom: 30px
   position: relative
+
   label:not(.form-check-label)
     margin-bottom: 0
     background-color: $white
@@ -625,6 +668,7 @@ textarea
     color: $greyDark
     transition: color .4s ease
     font-size: 14px
+
 .form-control
   height: 50px
   border-color: $greyDark
@@ -632,10 +676,12 @@ textarea
   outline: none
   color: $black
   font-weight: 500
+
   &:focus
     border-color: $black
     box-shadow: none
-    &+label
+
+    & + label
       color: $black
 
   &:autofill
@@ -644,11 +690,13 @@ textarea
   &.is-invalid
     border-color: $primary
     color: $primary
-    &+label
+
+    & + label
       color: $primary
 
 .form-control.is-invalid, .was-validated .form-control:invalid
   background-image: none
+
 .btn-search
   position: absolute
   top: 50%
@@ -670,6 +718,7 @@ textarea
     margin-bottom: 40px
     +d(991)
       display: none
+
   p
     max-width: 450px
     margin-bottom: 30px
@@ -682,8 +731,10 @@ textarea
   margin-bottom: 0
   +d(575)
     margin-bottom: 20px
+
 .form-control.is-invalid, .was-validated .form-control:invalid
   outline: none
+
   &:focus
     background-color: $white
     box-shadow: none
@@ -691,10 +742,12 @@ textarea
 .custom-accordion
   .card
     border: none
+
     &:nth-child(even)
       border-bottom: none
       font-weight: 600
       padding-left: 0
+
       & .card-header
         background-color: #F8F8F8
 
@@ -703,6 +756,7 @@ textarea
       text-decoration: none
       position: relative
       font-weight: 600
+
       &::before, &::after
         content: ""
         background-color: $primary
@@ -715,22 +769,27 @@ textarea
       &::before
         width: 12px
         height: 1px
+
       &::after
         width: 1px
         height: 12px
         left: 31px
+
       &.collapsed
         &::before, &::after
           background-color: $greyDark
           transform: translate(50%, -50%) rotate(0deg)
+
     &-header
       border-bottom: none
       background-color: transparent
+
     &-body
       padding: 0 0 0 100px
       margin-bottom: 20px
       position: relative
       max-width: 670px
+
       &:before
         content: ""
         width: 2px
@@ -763,11 +822,13 @@ textarea
   overflow: auto
   padding: 0 0 14px 0
   margin: 0 5px 5px 0
+
   &::-webkit-scrollbar
     height: 14px !important
 
   &::-webkit-scrollbar:horizontal
     height: 14px !important
+
   &::-webkit-scrollbar-track
     border-radius: 14px !important
     background-color: $white !important
@@ -807,13 +868,16 @@ textarea
   justify-content: center
   +d(420)
     flex-wrap: wrap
+
   .page-item
     display: flex
     align-items: center
+
     .btn
       +d(420)
         padding: .775rem 1rem
         width: 100%
+
     &:first-child
       margin-right: 60px
       +d(575)
@@ -823,15 +887,19 @@ textarea
         flex: 0 0 120px
         max-width: 120px
         margin-top: 20px
+
       .page-link
         background-color: $primary
         color: $white
+
     &:nth-child(2)
       +d(420)
         margin-left: 80px
+
     &:nth-child(4)
       +d(420)
         margin-right: 80px
+
     &:last-child
       margin-left: 60px
       +d(575)
@@ -841,8 +909,10 @@ textarea
         flex: 0 0 120px
         max-width: 120px
         margin-top: 20px
+
       .page-link
         border: 1px solid $primary
+
   .page-link
     border: none
     color: $black
