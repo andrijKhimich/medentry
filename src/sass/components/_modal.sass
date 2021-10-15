@@ -17,6 +17,9 @@
       font-size: 12px
       display: flex
       align-items: center
+      @include d(991)
+        top: 30px
+        right: 30px
       span
         font-size: 24px
         padding-left: 10px
@@ -26,13 +29,15 @@
       margin-bottom: 15px
   .modal-content
     padding: 50px 120px
-
+    @include d(1024)
+      padding: 30px
     .package-row
       margin-bottom: 20px
 
     .package-card
       max-width: 260px
-
+      @include d(1024)
+        max-width: 220px
       &__header
         padding-top: 30px
 
