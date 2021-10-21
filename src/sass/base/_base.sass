@@ -605,6 +605,10 @@ textarea
 
 .nav-item
   margin-right: 22px
+  +d(1400)
+    margin-right: 15px
+  +d(1375)
+    margin-right: 5px
   +d(1280)
     margin-right: 0
 
@@ -739,18 +743,6 @@ textarea
     background-color: $white
     box-shadow: none
 
-.accordion-clean
-  ol, ul
-    padding-left: 20px
-
-    li
-      list-style: initial
-      
-  .card:nth-child(even)
-    font-weight: 400
-
-  .card-body:before
-    display: none
 
 .custom-accordion
   .card
@@ -951,3 +943,16 @@ textarea
   width: 43px
   +d(1024)
     width: 33px
+
+.accordion-clean
+  ol, ul
+    padding-left: 20px
+
+    li
+      list-style: initial
+
+  .card:nth-child(even), .card:nth-child(odd)
+    font-weight: 400
+
+  .card-body:before
+    display: none
