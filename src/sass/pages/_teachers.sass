@@ -217,3 +217,186 @@
       +d(991)
         order: 1
         margin: 40px auto 0 auto
+
+
+.personal-links
+  padding: 20px 0
+  +d(991)
+    padding-left: 30px
+  a
+    text-decoration: underline
+    + a
+      margin-left: 30px
+
+.schedule-sec
+  padding: 70px 0
+  +m(992)
+    padding: 140px 0
+  .title-2
+    + p
+      max-width: 688px
+      margin: 0 auto
+      text-align: center
+
+.schedule-days
+  padding-top: 40px
+  padding-bottom: 120px
+  +m(992)
+    padding-top: 80px
+
+.schedule-day
+  margin-bottom: 24px
+  &__title
+    border-radius: 10px 10px 0 0
+    background: $black
+    padding: 20px 30px
+    display: flex
+    align-items: center
+    text-decoration: none
+    &:hover
+      text-decoration: none
+    +d(991)
+      position: relative
+      &:before
+        position: absolute
+        right: 20px
+        top: 50%
+        content: ''
+        width: 12px
+        height: 6px
+        background: url("../img/svg/ic_arrow_down.svg") no-repeat center
+        background-size: contain
+        transform: translateY(-50%) rotate(180deg)
+      &.collapsed
+        &:before
+          transform: translateY(-50%)
+
+      &.collapsed
+        border-radius: 10px
+
+    +m(992)
+      pointer-events: none
+
+    span
+      min-width: 72px
+      font-weight: bold
+      font-size: 24px
+      line-height: 1.45
+      color: $white
+    p
+      font-weight: 500
+      font-size: 12px
+      line-height: 1.5
+      color: $greyDark
+      margin-left: 20px
+
+  &__content
+    border-left: 1px solid #F2F2F2
+    border-right: 1px solid #F2F2F2
+    border-bottom: 1px solid #F2F2F2
+    border-radius: 0 0 10px 10px
+    padding: 30px
+    box-shadow: 0 7px 19px rgba(0, 0, 0, 0.03)
+    +m(992)
+      display: block !important
+    +d(991)
+      //display: none
+  &__row
+    display: flex
+    &:not(:last-child)
+      padding-bottom: 20px
+      margin-bottom: 20px
+      border-bottom: 1px solid #A0A0A0
+  &__time
+    font-weight: 500
+    font-size: 12px
+    line-height: 1.5
+    color: $greyDark
+    min-width: 70px
+    padding-right: 10px
+    border-right: 1px solid #E0E0E0
+    span
+      display: block
+      &:first-child
+        color: $primary
+  &__text
+    padding-left: 20px
+    font-size: 14px
+    line-height: 1.71
+
+.info-section
+  padding: 70px 0
+  +d(991)
+    .title-2, h2
+      font-size: 24px
+      margin-bottom: 0
+
+  +m(992)
+    padding: 90px 0
+    
+.info-block
+  margin: 0 auto
+  max-width: 955px
+  &__title
+    border-radius: 10px 10px 0 0
+    background: $black
+    padding: 20px 30px
+    display: flex
+    align-items: center
+    text-decoration: none
+    font-size: 24px
+    line-height: 1.45
+    color: $white
+  &__content
+    border-left: 1px solid #F2F2F2
+    border-right: 1px solid #F2F2F2
+    border-bottom: 1px solid #F2F2F2
+    border-radius: 0 0 10px 10px
+    padding: 30px
+    box-shadow: 0 7px 19px rgba(0, 0, 0, 0.03)
+    background: $white
+  &__row
+    display: flex
+    &:not(:last-child)
+      border-bottom: 1px solid #E0E0E0
+  &__left-col
+    font-weight: 500
+    font-size: 12px
+    line-height: 14px
+    color: $primary
+    border-right: 1px solid #E0E0E0
+    padding: 50px 20px 50px 0
+    flex-basis: 25%
+    min-width: 25%
+    +d(991)
+      flex-basis: 35%
+      min-width: 35%
+
+  &__right-col
+    padding: 50px 20px 50px 20px
+    font-size: 14px
+    line-height: 14px
+    flex-basis: 75%
+
+.text-block-icon
+  margin-bottom: 50px
+  &__title
+    font-family: $titleFont
+    font-size: 20px
+    line-height: 1.4
+    font-weight: 900
+    margin-bottom: 24px
+    +m(992)
+      font-size: 30px
+    span
+      color: $primary
+
+  .svg-icon
+    display: inline-block
+    margin-right: 20px
+    width: 37px
+    height: 37px
+    position: relative
+    top: -5px
+  p
+    margin-bottom: 20px

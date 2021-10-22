@@ -506,6 +506,7 @@
         width: 80px
         z-index: -1
         opacity: .3
+
 .cta
   background-color: $grey
   padding-top: 170px
@@ -513,11 +514,15 @@
   background-position: bottom center
   background-repeat: no-repeat
   padding-bottom: 28.5%
+  &_wh
+    background-color: $white
   &_inner
     max-width: 520px
     margin: 0 auto
     p
-      margin-bottom: 30px
+      margin: 0 auto 30px
+      max-width: 520px
+
   +d(768)
     background-size: 200%
     padding-top: 100px
@@ -525,9 +530,26 @@
 
   &__title
     text-align: center
+    sup
+      font-size: 16px
+      top: -1.5em
+    br
+      +d(991)
+        display: none
 
     h2, .title-2
       margin-bottom: 40px
+    p
+      span
+        color: $primary
 
   &__img
     margin-top: -40px
+    
+  &__description
+    color: $greyDark
+    margin-bottom: 30px
+    strong
+      color: $black
+  .btn
+    min-width: 200px
