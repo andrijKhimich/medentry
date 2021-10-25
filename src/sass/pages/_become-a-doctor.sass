@@ -17,6 +17,16 @@
   &-tab
     max-width: calc(50% - 15px )
     margin-bottom: 20px
+    .nav-item
+      overflow: hidden
+      &:first-child
+        .nav-link
+          border-top-left-radius: 10px
+          border-bottom-left-radius: 10px
+      &:last-child
+        .nav-link
+          border-top-right-radius: 10px
+          border-bottom-right-radius: 10px
     +d(991)
       max-width: 100%
       margin-bottom: 30px
@@ -36,7 +46,7 @@
     // min-height: 350px
     +d(991)
       margin: 0 -30px
-      
+
   &-tab__content
     margin: 4px 0 0 46px
     +d(991)
@@ -68,7 +78,7 @@
     text-align: center
     +d(991)
       margin-bottom: 30px
-      
+
   .list-group__wrapper
     overflow: auto
     position: sticky
@@ -100,7 +110,7 @@
       &:first-child
         &::after
           top: 8px
-          height: calc( 100% - 8px )  
+          height: calc( 100% - 8px )
           +d(991)
             height: 1px
             width: 100%
@@ -174,7 +184,7 @@
 
     max-width: 540px
     padding-top: 40px
-    .slick-dots 
+    .slick-dots
       position: absolute
       top: 0
       left: 50%
@@ -191,12 +201,12 @@
       margin-bottom: 20px
       span
         display: block
-    
+
     p
       margin-bottom: 15px
     a
       color: $primary
-      
+
     .title-6, h6
       margin-bottom: 15px
       font-size: 18px

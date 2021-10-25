@@ -47,6 +47,7 @@ function showHero() {
 
 function showOnScroll(scrollValue) {
   $(".js-scroll").each(function () {
+    console.log($(window).scrollTop());
     let elem = $(this);
     let sectionPos = elem.offset().top;
     let windowPos = $(window).scrollTop() + $(window).height() / 1.2;
@@ -303,7 +304,7 @@ $(document).ready(function () {
   });
 
   $("body").scrollspy({
-    target: "",
+    target: ".doctor-steps",
     offset: 200,
   });
 

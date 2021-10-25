@@ -7,7 +7,11 @@
 
   &_bg
     min-height: 575px
-
+    .ucat-hero__img
+      top: 0
+      img, picture
+        height: 100%
+        
     &::before
       content: ''
       width: 100%
@@ -35,7 +39,7 @@
       position: absolute
       right: 0
       bottom: 0
-      top: 0
+      max-width: 60%
 
       +d(991)
         position: static
@@ -47,8 +51,10 @@
 
       .title-1, h2
         margin-bottom: 50px
+
         +d(991)
           margin-bottom: 30px
+
         +d(767)
           margin-bottom: 20px
 
