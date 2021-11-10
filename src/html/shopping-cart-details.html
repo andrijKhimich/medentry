@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Medentry | Shopping cart details</title>
+		@@include('links/_head.html')
+	</head>
+
+	<body>
+		<div class="main-wrapper shopping-cart-page">
+			@@include('components/_header.html')
+			<main class="main_inner">
+				<div class="page-breadcrumb js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Shopping Cart
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="section shopping-cart js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-8">
+								<div class="shopping-cart__details">
+									<ol class="shopping-cart__steps">
+										<li class="active"><a href="#">Your Details</a></li>
+										<li><a href="#">Payment Method</a></li>
+										<li><a href="#">Confirmation</a></li>
+									</ol>
+									<div class="returning">
+										<h5 class="title-5">Are You returning customer?</h5>
+										<a href="#" class="btn btn-outline-primary">Log in</a>
+									</div>
+									<div class="payment-form">
+										<form action="#">
+											<p>Payment Details</p>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<input type="text" class="form-control" id="firstName">
+													<label for="firstName">First name</label>
+												</div>
+												<div class="form-group col-md-6">
+													<input type="text" class="form-control" id="lastName">
+													<label for="lastName">Last Name</label>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6">
+													<input type="text" class="form-control" id="emailAddress">
+													<label for="emailAddress">Email Address</label>
+												</div>
+												<div class="form-group col-md-6">
+													<input type="text" class="form-control" id="confirmEmailAddress">
+													<label for="confirmEmailAddress">Confirm Email Address</label>
+												</div>
+											</div>
+											<button type="submit" class="btn btn-primary">Next Payment Method</button>
+										</form>
+									</div>
+								</div>
+
+							</div>
+							<div class="col-lg-4">
+								<div class="order-summary">
+									<h5 class="title-5">Order Summary</h5>
+									<table>
+										<tr>
+											<td>Online Package 1</td>
+											<td>$ <span>295</span></td>
+											<td>
+												<button class="close">
+													<svg class="svg-icon_md">
+														<use xlink:href="img/svg/sprite-svg/sprite.svg#close-black">
+														</use>
+													</svg>
+												</button>
+											</td>
+										</tr>
+										<tr>
+											<td>Online Package 2</td>
+											<td>$ <span>295</span></td>
+											<td>
+												<button class="close">
+													<svg class="svg-icon_md">
+														<use xlink:href="img/svg/sprite-svg/sprite.svg#close-black">
+														</use>
+													</svg>
+												</button>
+											</td>
+										</tr>
+									</table>
+									<div class="discount">
+										<p>Discount</p>
+										<p><span>-54</span>$</p>
+									</div>
+									<div class="total">Total: <span>345</span> $</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('components/_footer.html')
+		</div>
+		@@include('links/_scripts.html')
+	</body>
+
+</html>

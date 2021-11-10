@@ -735,7 +735,11 @@ textarea
     color: $greyDark
 
 .form-row
-  margin: 0
+  margin-bottom: 0
+  margin-right: -8px
+  margin-left: -8px
+  justify-content: space-between
+
 
 .form-check
   margin-bottom: 0
@@ -959,3 +963,33 @@ textarea
 
   .card-body:before
     display: none
+
+
+.form-row>.col, .form-row>[class*=col-]
+  padding-left: 8px
+  padding-right: 8px
+
+.form-select
+  margin-top: 30px
+  margin-bottom: 50px
+  display: block
+  width: 100%
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem
+  -moz-padding-start: calc(0.75rem - 3px)
+  font-size: 1rem
+  font-weight: 400
+  line-height: 1.5
+  height: 50px
+  background-color: #fff
+  background-repeat: no-repeat
+  background-image: url(../img/svg/arrow-select.svg)
+  background-position: right 0.75rem center
+  background-size: 16px 7px
+  border: 1px solid #ced4da
+  border-radius: 10px
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  font-size: 14px
+  color: $greyDark

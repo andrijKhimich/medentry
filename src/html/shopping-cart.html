@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Medentry | Shopping cart </title>
+		@@include('links/_head.html')
+	</head>
+
+	<body>
+		<div class="main-wrapper shopping-cart-page">
+			@@include('components/_header.html')
+			<main class="main_inner">
+				<div class="page-breadcrumb js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Shopping Cart
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="section shopping-cart js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="shopping-cart__content">
+									<div class="section__title">
+										<h3 class="title-3"><span>Shopping cart</span></h3>
+										<p>You have <span>2</span> items in your cart.</p>
+									</div>
+									<div class="shopping-cart__box">
+										<button class="close">
+											<svg class="svg-icon_md">
+												<use xlink:href="img/svg/sprite-svg/sprite.svg#close-black">
+												</use>
+											</svg>
+										</button>
+										<div class="shopping-cart__box-content">
+											<h5 class="title-5">Online Package</h5>
+											<p>The most powerful UCAT preparation software available</p>
+										</div>
+										<div class="shopping-cart__box-price">
+											<p>$ <span>295</span></p>
+										</div>
+									</div>
+									<div class="shopping-cart__box">
+										<button class="close">
+											<svg class="svg-icon_md">
+												<use xlink:href="img/svg/sprite-svg/sprite.svg#close-black">
+												</use>
+											</svg>
+										</button>
+										<div class="shopping-cart__box-content">
+											<h5 class="title-5">Weekly UCAT Classes</h5>
+											<p>Enjoy interactive classes?</p>
+										</div>
+										<div class="shopping-cart__box-price">
+											<p>$ <span>890</span></p>
+										</div>
+									</div>
+									<div class="coupon">
+										<h6 class="title-6">Discount coupon</h6>
+										<div class="coupon-form">
+											<form action="#">
+												<div class="coupon-form__row">
+													<div class="form-group">
+														<input type="text" class="form-control" id="coupon">
+														<label for="coupon">Coupon Number</label>
+													</div>
+													<button type="submit" class="btn btn-md btn-outline-primary">Apply</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="shopping-cart__total">
+										<p>Total: <span>1356</span>$</p>
+										<button class="btn btn-primary btn-md">Checkout</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="special-offer">
+									<h4 class="title-4"><span>Special Offer -</span> <br>
+										Add These Services and Save</h4>
+									<div class="special-offer__cart">
+										<div class="special-offer__cart-content">
+											<h5 class="title-5">
+												Weekly UCAT Classes
+											</h5>
+											<p>12 x 2.5-hour live sessions with expert trainers who achieved the 99th percentile in the UCAT.
+												Nominate difficult questions for discussion and learn in a fun, interactive environment. All
+												sessions are recorded for future revision. </p>
+										</div>
+										<div class="special-offer__cart-price">
+											<p class="price_old">$ <span>400</span></p>
+											<p class="price_new">$ <span>890</span></p>
+											<button class="btn btn-md btn-outline-primary">Add to Cart</button>
+										</div>
+									</div>
+									<div class="special-offer__cart">
+										<div class="special-offer__cart-content">
+											<h5 class="title-5">
+												Weekly UCAT Classes
+											</h5>
+											<p>12 x 2.5-hour live sessions with expert trainers who achieved the 99th percentile in the UCAT.
+												Nominate difficult questions for discussion and learn in a fun, interactive environment. All
+												sessions are recorded for future revision. </p>
+										</div>
+										<div class="special-offer__cart-price">
+											<p class="price_old">$ <span>400</span></p>
+											<p class="price_new">$ <span>890</span></p>
+											<button class="btn btn-md btn-outline-primary">Add to Cart</button>
+										</div>
+									</div>
+									<div class="special-offer__cart">
+										<div class="special-offer__cart-content">
+											<h5 class="title-5">
+												Weekly UCAT Classes
+											</h5>
+											<p>12 x 2.5-hour live sessions with expert trainers who achieved the 99th percentile in the UCAT.
+												Nominate difficult questions for discussion and learn in a fun, interactive environment. All
+												sessions are recorded for future revision. </p>
+										</div>
+										<div class="special-offer__cart-price">
+											<p class="price_old">$ <span>400</span></p>
+											<p class="price_new">$ <span>890</span></p>
+											<button class="btn btn-md btn-outline-primary">Add to Cart</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('components/_footer.html')
+		</div>
+		@@include('links/_scripts.html')
+	</body>
+
+</html>

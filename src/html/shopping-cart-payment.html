@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Medentry | Shopping cart </title>
+		@@include('links/_head.html')
+	</head>
+
+	<body>
+		<div class="main-wrapper shopping-cart-page">
+			@@include('components/_header.html')
+			<main class="main_inner">
+				<div class="page-breadcrumb js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Shopping Cart
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="section shopping-cart js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<ol class="shopping-cart__steps">
+									<li><a href="#">Your Details</a></li>
+									<li class="active"><a href="#">Payment Method</a></li>
+									<li><a href="#">Confirmation</a></li>
+								</ol>
+							</div>
+							<div class="col-lg-7">
+								<div class="shopping-cart__content">
+									<div class="section__title">
+										<p>You have <span>2</span> items in your cart.</p>
+									</div>
+									<div class="shopping-cart__box">
+										<button class="close">
+											<svg class="svg-icon_md">
+												<use xlink:href="img/svg/sprite-svg/sprite.svg#close-black">
+												</use>
+											</svg>
+										</button>
+										<div class="shopping-cart__box-content">
+											<h5 class="title-5">Online Package</h5>
+											<p>The most powerful UCAT preparation software available</p>
+										</div>
+										<div class="shopping-cart__box-price">
+											<p>$ <span>295</span></p>
+										</div>
+									</div>
+									<div class="shopping-cart__box">
+										<button class="close">
+											<svg class="svg-icon_md">
+												<use xlink:href="img/svg/sprite-svg/sprite.svg#close-black">
+												</use>
+											</svg>
+										</button>
+										<div class="shopping-cart__box-content">
+											<h5 class="title-5">Weekly UCAT Classes</h5>
+											<p>Enjoy interactive classes?</p>
+										</div>
+										<div class="shopping-cart__box-price">
+											<p>$ <span>890</span></p>
+										</div>
+									</div>
+									<div class="coupon">
+										<h6 class="title-6">Discount coupon</h6>
+										<div class="coupon-form">
+											<form action="#">
+												<div class="coupon-form__row">
+													<div class="form-group">
+														<input type="text" class="form-control" id="coupon">
+														<label for="coupon">Coupon Number</label>
+													</div>
+													<button type="submit" class="btn btn-md btn-outline-primary">Apply</button>
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="shopping-cart__total">
+										<p>Total: <span>1356</span>$</p>
+										<button class="btn btn-primary btn-md">Checkout</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-5">
+								<div class="payment-details">
+									<form>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck1">
+											<label class="form-check-label" for="exampleCheck1">I have read and accept the Terms and
+												Conditions</label>
+										</div>
+										<div class="form-check">
+											<input type="checkbox" class="form-check-input" id="exampleCheck2">
+											<label class="form-check-label" for="exampleCheck2">Make a donation to WHO COVID-19 Solidarity
+												Response Fund (matched by
+												MedEntry)</label>
+										</div>
+										<div class="form-group">
+											<label for="disabledSelect" class="form-label">Disabled select menu</label>
+											<select id="disabledSelect" class="form-select">
+												<option value="5">$ 5 AUD</option>
+												<option value="10">$ 10 AUD</option>
+												<option value="15">$ 15 AUD</option>
+											</select>
+										</div>
+										<p>Payment Details</p>
+										<div class="payment-card-row">
+											<div class="payment-card" style="background-image: url(img/payment/mastercard.png);">
+												<input id="card1" type="radio" name="card">
+												<label for="card1"></label>
+
+											</div>
+											<div class="payment-card" style="background-image: url(img/payment/paypal.png);">
+												<input id="card2" type="radio" name="card">
+												<label for="card2"></label>
+											</div>
+											<div class="payment-card" style="background-image: url(img/payment/instant.png);">
+												<input id="card3" type="radio" name="card">
+												<label for="card3"></label>
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="cardNumber">
+											<label for="cardNumber">Card Number</label>
+										</div>
+										<div class="form-row">
+											<div class="form-group col-md-6">
+												<input type="number" class="form-control" id="expiryDate">
+												<label for="expiryDate">Expiry Date</label>
+											</div>
+											<div class="form-group col-md-6">
+												<input type="number" class="form-control" id="CVV">
+												<label for="CVV">CVV</label>
+											</div>
+										</div>
+										<div class="form-group">
+											<input type="text" class="form-control" id="cardholderName">
+											<label for="cardholderName">Cardholder Name</label>
+										</div>
+										<button type="submit" class="btn btn-primary">Place Order</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('components/_footer.html')
+		</div>
+		@@include('links/_scripts.html')
+	</body>
+
+</html>

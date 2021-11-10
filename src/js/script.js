@@ -47,7 +47,7 @@ function showHero() {
 
 function showOnScroll(scrollValue) {
   $(".js-scroll").each(function () {
-    console.log($(window).scrollTop());
+    // console.log($(window).scrollTop());
     let elem = $(this);
     let sectionPos = elem.offset().top;
     let windowPos = $(window).scrollTop() + $(window).height() / 1.2;
@@ -360,7 +360,7 @@ $(document).ready(function () {
   $(".js-more-link").click(function (event) {
     event.preventDefault();
     if ($(this).hasClass("active")) {
-      console.log("has");
+      // console.log("has");
       $(this).text("Read More").removeClass("active");
       $(".story-text__content p").hide();
       $(

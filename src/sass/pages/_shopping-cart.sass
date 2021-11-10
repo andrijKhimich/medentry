@@ -1,0 +1,286 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+.shopping-cart-page
+  .breadcrumb
+    margin-bottom: 60px
+.shopping-cart
+  padding-bottom: 200px
+  &__content
+    max-width: 560px
+  .section__title
+    margin-bottom: 50px
+    .title-3, h3
+      margin-bottom: 20px
+
+  &__box
+    background-color: $grey
+    box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.03);
+    border-radius: 10px
+    max-width: 560px
+    position: relative
+    padding: 20px 20px 30px 20px
+    display: flex
+    justify-content: space-between
+    &:not(:last-child)
+      margin-bottom: 30px
+    &:last-child
+      margin-bottom: 32px
+    .title-5, h5
+      margin-bottom: 5px
+    .close
+      position: absolute
+      top: 14px
+      right: 14px
+      opacity: 1
+    &-content
+      max-width: 280px
+      p
+        color: $greyDark
+        font-size: 12px
+        line-height: 18px
+    &-price
+      padding-right: 60px
+      font-size: 24px
+      font-weight: 900
+      font-family: $titleFont
+  &__total
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    .btn
+      width: 180px
+    p
+      font-family: $titleFont
+      font-size: 30px
+      font-weight: 900
+  &__steps
+    display: flex
+    flex-wrap: wrap
+    font-family: $titleFont
+    font-size: 24px
+    list-style: decimal
+    margin-bottom: 65px
+    li
+      list-style: decimal
+      list-style-position: inside
+      color: $greyDark
+      &.active
+        color: $black
+      &:not(:last-child)
+        margin-right: 17px
+  &__details
+    max-width: 690px
+.coupon
+  &-form
+    margin: 28px 0 35px
+    &__row
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      .btn
+        margin-left: 20px
+        color: $primary
+        width: 180px
+      .form-group
+        width: 360px
+
+.special-offer
+  padding: 50px 0 0 45px
+  position: relative
+  top: -40px
+  &::before
+    content: ""
+    height: 200vh
+    position: absolute
+    top: 0
+    left: 0
+    width: 50vw
+    background-color: $grey
+    z-index: -1
+  .title-4, h4
+    font-size: 30px
+    margin-bottom: 70px
+  &__cart
+    box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.03);
+    border-radius: 10px
+    background-color: $white
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    align-items: stretch
+    padding: 24px 30px
+    margin-bottom: 20px
+
+    &-content
+      max-width: 290px
+      p
+        color: $greyDark
+        font-size: 12px
+        line-height: 18px
+    &-price
+      text-align: right
+      display: flex
+      flex-direction: column
+      .btn
+        max-width: 126px
+        height: 44px
+        padding: 0 20px
+        text-align: center
+        font-size: 14px
+        color: $primary
+        margin-bottom: 0
+        margin-top: auto
+
+.price_old
+  font-size: 14px
+  line-height: 1em
+  color: $greyDark
+  font-family: $titleFont
+  text-decoration: line-through
+
+.price_new
+  font-size: 30px
+  line-height: 1em
+  color: $primary
+  font-family: $titleFont
+
+.returning
+  display: flex
+  align-items: center
+  justify-content: space-between
+  background-color: $grey
+  padding: 30px 40px 30px 30px
+  margin-bottom: 42px
+
+  .title-5, h5
+    color: $primary
+    margin-bottom: 0
+  .btn
+    width: 190px
+    color: $primary
+
+.payment-form
+  .form-row
+    &:last-of-type
+      margin-bottom: 10px
+
+  .btn
+    width: calc( 50% -  8px)
+    font-size: 14px
+
+  p
+    font-size: 18px
+    line-height: 27px
+    margin-bottom: 37px
+    font-weight: 600
+
+.order-summary
+  position: relative
+  top: -40px
+  padding: 60px 0 0 50px
+  &::before
+    content: ""
+    width: 50vw
+    height: 200vh
+    background-color: $grey
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+
+  .title-5, h5
+    margin-bottom: 55px
+
+  table
+    width: 100%
+    font-weight: 600
+    border-bottom: 1px solid $greyLight
+    border-top: 1px solid $greyLight
+    tr
+      td
+        padding: 14px 0
+        &:nth-last-child(2)
+          text-align: center
+
+        &:last-child
+          text-align: right
+    .close
+      opacity: 1
+      float: none
+      .svg-icon_md
+        margin-right: 0
+
+.discount
+  display: flex
+  justify-content: space-between
+  padding: 20px 0 34px 0
+  p
+    color: $primary
+
+.total
+  font-size: 24px
+  font-family: $titleFont
+  font-weight: 900px
+
+.payment-details
+  margin-top: 95px
+  max-width: 396px
+
+  form
+    .form-check
+      margin-bottom: 20px
+    .form-check-input
+      &:checked
+        background-color: $primary
+    .form-check-label
+      font-size: 12px
+      font-weight: 600
+      color: $black
+    p
+      font-size: 18px
+      font-weight: 600
+      margin-bottom: 35px
+    .btn
+      width: 100%
+      font-size: 14px
+
+.payment-card-row
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  margin-bottom: 37px
+
+.payment-card
+  width: 92px
+  height: 56px
+  display: block
+  background-size: 70%
+  background-position: center
+  background-repeat: no-repeat
+  position: relative
+  border-radius: 10px
+  &:not(:last-child)
+    margin-right: 20px
+
+  label
+    position: absolute
+    width: 100%
+    height: 100%
+    border-radius: 10px
+    border: 1px solid $black
+  input
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+  input:checked ~ label
+    border: 1px solid $primary
+
+
+
+
