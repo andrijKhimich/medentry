@@ -6,8 +6,15 @@
     margin-bottom: 60px
 .shopping-cart
   padding-bottom: 200px
+  +d(1199)
+    padding-bottom: 120px
+  +d(991)
+    padding-bottom: 80px
   &__content
     max-width: 560px
+    +d(991)
+      max-width: 100%
+      margin-bottom: 70px
   .section__title
     margin-bottom: 50px
     .title-3, h3
@@ -17,17 +24,21 @@
     background-color: $grey
     box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.03);
     border-radius: 10px
-    max-width: 560px
+    // max-width: 560px
     position: relative
     padding: 20px 20px 30px 20px
     display: flex
     justify-content: space-between
+    +d(575)
+      display: block
+      padding: 20px
     &:not(:last-child)
       margin-bottom: 30px
     &:last-child
       margin-bottom: 32px
     .title-5, h5
       margin-bottom: 5px
+      padding-right: 40px
     .close
       position: absolute
       top: 14px
@@ -35,6 +46,11 @@
       opacity: 1
     &-content
       max-width: 280px
+      +d(991)
+        max-width: 70%
+      +d(575)
+        max-width: 100%
+
       p
         color: $greyDark
         font-size: 12px
@@ -48,12 +64,20 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
+    +d(575)
+      display: block
+      text-align: center
     .btn
       width: 180px
+      +d(575)
+        width: 100%
     p
       font-family: $titleFont
       font-size: 30px
       font-weight: 900
+      +d(575)
+        margin-bottom: 20px
+
   &__steps
     display: flex
     flex-wrap: wrap
@@ -61,6 +85,12 @@
     font-size: 24px
     list-style: decimal
     margin-bottom: 65px
+    +d(767)
+      font-size: 20px
+      // flex-wrap: nowrap
+    +d(575)
+      margin-bottom: 40px
+      font-size: 12px
     li
       list-style: decimal
       list-style-position: inside
@@ -69,8 +99,29 @@
         color: $black
       &:not(:last-child)
         margin-right: 17px
+        +d(767)
+          margin-right: 10px
+        +d(575)
+          margin-right: 5px
   &__details
     max-width: 690px
+    position: relative
+
+    +d(991)
+      max-width: 100%
+      margin-bottom: 60px
+
+      &::before
+        content: ""
+        width: 150vw
+        height: 100vh
+        position: absolute
+        top: 0
+        left: -20vw
+        bottom: 0
+        right: 0
+        background-color: $white
+        z-index: -1
 .coupon
   &-form
     margin: 28px 0 35px
@@ -78,17 +129,27 @@
       display: flex
       justify-content: space-between
       align-items: flex-start
+      +d(575)
+        display: block
       .btn
         margin-left: 20px
         color: $primary
         width: 180px
+        +d(575)
+          width: 100%
+          margin-left: 0
       .form-group
         width: 360px
-
+        +d(575)
+          margin-bottom: 20px
+          width: 100%
 .special-offer
   padding: 50px 0 0 45px
   position: relative
   top: -40px
+  +d(991)
+    top: 0
+    padding: 50px 0
   &::before
     content: ""
     height: 200vh
@@ -97,10 +158,18 @@
     left: 0
     width: 50vw
     background-color: $grey
-    z-index: -1
+    z-index: -2
+    +d(991)
+      width: 150vw
+      left: -30vw
   .title-4, h4
     font-size: 30px
     margin-bottom: 70px
+    +d(991)
+      margin-bottom: 30px
+      font-size: 24px
+    +d(575)
+      font-size: 20px
   &__cart
     box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.03);
     border-radius: 10px
@@ -111,17 +180,36 @@
     align-items: stretch
     padding: 24px 30px
     margin-bottom: 20px
-
+    +d(767)
+      padding: 20px
+    +d(575)
+      display: block
     &-content
       max-width: 290px
+      +d(991)
+        max-width: 70%
+      +d(575)
+        max-width: 100%
+
       p
         color: $greyDark
         font-size: 12px
         line-height: 18px
+    &-cost
+      margin-bottom: 20px
+      +d(575)
+        text-align: left
     &-price
       text-align: right
       display: flex
       flex-direction: column
+      +d(575)
+        flex-direction: row
+        margin-top: 15px
+        justify-content: space-between
+      +d(360)
+        flex-direction: column
+
       .btn
         max-width: 126px
         height: 44px
@@ -131,7 +219,8 @@
         color: $primary
         margin-bottom: 0
         margin-top: auto
-
+        +d(360)
+          max-width: 100%
 .price_old
   font-size: 14px
   line-height: 1em
@@ -152,10 +241,15 @@
   background-color: $grey
   padding: 30px 40px 30px 30px
   margin-bottom: 42px
+  +d(767)
+    padding: 20px 30px
+    flex-direction: column
 
   .title-5, h5
     color: $primary
     margin-bottom: 0
+    +d(767)
+      margin-bottom: 20px
   .btn
     width: 190px
     color: $primary
@@ -168,7 +262,8 @@
   .btn
     width: calc( 50% -  8px)
     font-size: 14px
-
+    +d(767)
+      width: 100%
   p
     font-size: 18px
     line-height: 27px
@@ -177,8 +272,12 @@
 
 .order-summary
   position: relative
-  top: -40px
+  // top: -40px
   padding: 60px 0 0 50px
+  margin-bottom: 40px
+  +d(991)
+    // top: 0
+    padding: 60px 0 70px 0
   &::before
     content: ""
     width: 50vw
@@ -187,11 +286,15 @@
     position: absolute
     top: 0
     left: 0
-    z-index: -1
-
+    z-index: -2
+    +d(991)
+      width: 150vw
+      left: -20vw
+      height: 100%
   .title-5, h5
     margin-bottom: 55px
-
+    +d(991)
+      margin-bottom: 30px
   table
     width: 100%
     font-weight: 600
@@ -215,6 +318,9 @@
   display: flex
   justify-content: space-between
   padding: 20px 0 34px 0
+
+  +d(991)
+    padding: 15px 0
   p
     color: $primary
 
@@ -226,7 +332,9 @@
 .payment-details
   margin-top: 95px
   max-width: 396px
-
+  +d(991)
+    margin-top: 0
+    max-width: 100%
   form
     .form-check
       margin-bottom: 20px
@@ -303,10 +411,12 @@
   padding: 20px
   margin: 20px auto
   text-align: center
+
   &__img
     max-width: 50px
     margin: 0 auto 25px
-
+  .btn
+    min-width: 190px
   h2, .title-2
     margin-bottom: 20px
     color: $primary
