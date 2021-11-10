@@ -281,6 +281,36 @@
   input:checked ~ label
     border: 1px solid $primary
 
+.total-table
+  table
+    width: 100%
+    font-family: $titleFont
+    font-size: 18px
+    tr
+      &:nth-child(2)
+        color: $primary
+      &:last-child
+        font-size: 24px
+        td
+          padding: 15px 0
+      td
+        padding: 2px 0
+        &:last-child
+          text-align: right
 
+.payment-confirm
+  max-width: 480px
+  padding: 20px
+  margin: 20px auto
+  text-align: center
+  &__img
+    max-width: 50px
+    margin: 0 auto 25px
+
+  h2, .title-2
+    margin-bottom: 20px
+    color: $primary
+  p
+    margin-bottom: 30px
 
 

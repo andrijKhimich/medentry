@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Medentry | Shopping cart confirm</title>
+		@@include('links/_head.html')
+	</head>
+
+	<body>
+		<div class="main-wrapper shopping-cart-page">
+			@@include('components/_header.html')
+			<main class="main_inner">
+				<div class="page-breadcrumb js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Shopping Cart
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="section shopping-cart js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<ol class="shopping-cart__steps">
+									<li><a href="#">Your Details</a></li>
+									<li><a href="#">Payment Method</a></li>
+									<li class="active"><a href="#">Confirmation</a></li>
+								</ol>
+							</div>
+							<div class="payment-confirm">
+								<div class="payment-confirm__img">
+									<img src="img/svg/check-confirm.svg" alt="confirm">
+								</div>
+								<h2 class="title-2">Thank You!</h2>
+								<p>At the end we need an page to update the users that the order was
+									successfully and that they get an email.</p>
+								<a href="#" class="btn btn-primary">ok</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('components/_footer.html')
+		</div>
+		@@include('links/_scripts.html')
+	</body>
+
+</html>
