@@ -1,0 +1,305 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+.sidebar
+  +d(1199)
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+    background-color: $white
+    z-index: 1
+.sidenav
+  +d(1199)
+    display: flex
+    align-items: center
+    justify-content: space-around
+  +d(767)
+    font-size: 10px
+    text-align: center
+  +d(575)
+    font-size: 8px
+  li
+    margin-bottom: 26px
+    +d(1199)
+      margin-bottom: 0
+    &:nth-last-child(2)
+      margin-bottom: 100px
+      +d(1199)
+        display: none
+    &:last-child
+      +d(1199)
+        display: none
+    &.active
+      a
+        color: $primary
+        text-decoration: none
+      .svg-icon_md
+        fill: $primary
+    a
+      +d(1199)
+        display: flex
+        align-items: center
+        flex-direction: column
+        justify-content: center
+        padding: 12px
+      .svg-icon_md
+        margin-right: 20px
+        width: 30px
+        height: 30px
+        fill: $black
+        +d(991)
+          margin-right: 0
+          margin-bottom: 5px
+      &:hover
+        color: $primary
+        text-decoration: none
+        .svg-icon_md
+          fill: $primary
+.dashboard
+  padding: 100px 45px 200px 45px
+  +d(1199)
+    padding: 0 0 60px 0
+.my-medentry
+  &>.btn
+    height: 50px
+    margin-bottom: 70px
+    font-size: 14px
+  &__row
+    margin-bottom: 60px
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+  &__video
+    min-height: 100%
+    margin-right: 16px
+    flex: 0 0 65%
+    position: relative
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: top center
+    &::before
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background-color: $greyDark
+      opacity: .4
+  &__img
+    width: 360px
+    flex: 0 0 35%
+    img, picture
+      object-fit: cover
+      height: 100%
+  nav
+    border-bottom: 1px solid $grey
+    margin-bottom: 50px
+.notifications
+  &__title
+    margin-bottom: 44px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    img, picture
+      width: 34px
+      margin-right: 15px
+
+  &-card
+    max-width: 840px
+    margin-bottom: 60px
+    +d(1199)
+      max-width: 100%
+    img
+      max-width: 30px
+      margin-bottom: 5px
+    &__title
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      +d(767)
+        flex-direction: column
+    &__content
+      margin-bottom: 7px
+      max-width: 640px
+      padding-right: 15px
+      .title-6, h6
+        color: $primary
+        margin-bottom: 5px
+    .btn
+      width: 140px
+
+    p
+      margin-bottom: 20px
+
+.nav-tabs
+  border: none
+
+.nav-tabs .nav-link
+  border: none
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+  border: none
+  position: relative
+  &::before
+    content: ""
+    width: 100%
+    height: 6px
+    background-color: $primary
+    border-radius: 5px
+    position: absolute
+    bottom: -3px
+    left: 0
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover
+  color: $black
+  border: none
+
+.tab-pane
+  &>p
+    margin-bottom: 20px
+
+.tab-package
+  display: flex
+  +d(991)
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: baseline
+
+.purchases-card
+  text-align: center
+  max-width: 240px
+  border: 1px solid $primary
+  padding: 30px 40px 20px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 380px
+  border-radius: 10px
+  position: relative
+  overflow: hidden
+  +d(1199)
+    max-width: 23%
+    flex: 0 0 23%
+  +d(991)
+    max-width: 49%
+    flex: 0 0 49%
+  +d(767)
+    max-width: 100%
+    flex: 0 0 100%
+    
+  &.active
+    &::before
+      content: "Active"
+      position: absolute
+      bottom: 0
+      left: 0
+      line-height: 30px
+      height: 30px
+      background-color: $primary
+      text-align: center
+      color: $white
+      width: 100%
+      font-size: 12px
+
+    .purchases-card__img
+      visibility: hidden
+    .btn
+      visibility: hidden
+      pointer-events: none
+  &:not(:last-child)
+    margin-right: 20px
+    +d(991)
+      margin-right: 0
+      margin-bottom: 20px
+  .title-5, h5
+    margin-bottom: 34px
+  .link
+    margin-bottom: 10px
+    font-weight: 500
+  .btn
+    font-size: 14px
+  &__footer
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .btn
+      width: 160px
+
+  &__img
+    width: 30px
+    height: 30px
+    position: relative
+    margin: 0 auto 26px auto
+    ::before
+      content: ""
+      background-image: url(../img/svg/ellipse.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: top left
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      height: 50px
+      width: 80px
+      z-index: -1
+      opacity: .5
+
+.tab-history
+  +d(1199)
+    overflow-x: auto
+  //style default scrollbar
+  &::-webkit-scrollbar
+    height: 4px
+    background-color: $white
+
+
+  &::-webkit-scrollbar-track
+    -webkit-box-shadow: inset 0 0 4px $white
+    box-shadow: inset 0 0 4px $white
+
+
+  &::-webkit-scrollbar-thumb
+    background-color: $primary
+    outline: 1px solid $primary
+    border-radius: 10px
+    transition: background-color 0.4s ease
+
+.inactive-orders
+  position: relative
+  width: 100%
+  +d(1199)
+    width: 900px
+  th
+    text-transform: none
+    font-size: 16px
+    color: $black
+    padding: 20px
+
+  tr
+    height: 82px
+    &:not(:first-child)
+      td:first-child
+        &::before
+          content: ""
+          height: 103%
+          width: 5px
+          background-color: $primary
+          position: absolute
+          top: 0
+          left: 0
+
+    td
+      padding: 20px
+      position: relative
+
+      &:nth-child(3)
+        width: 100%
+        background-color: transparent
+      &:first-child, &:nth-child(4), &:nth-child(5)
+        min-width: 140px
+      &:nth-child(2)
+        min-width: 110px

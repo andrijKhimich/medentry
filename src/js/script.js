@@ -29,6 +29,7 @@ function destroyStickyHeader() {
 }
 
 function showHero() {
+
   if ($(window).width() > 991) {
     $(".js-show-banner").removeClass("js-slide-top");
     setTimeout(function () {
@@ -251,16 +252,6 @@ $("#reviewsSlider").slick({
     },
   }, ],
 });
-
-// $("#succeedSlider").slick({
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   arrows: true,
-//   prevArrow: $("#succeedPrev"),
-//   nextArrow: $("#succeedNext"),
-//   fade: true,
-//   asNavFor: "#succeedSliderSm"
-// });
 
 $("#succeedSliderSm").slick({
   slidesToShow: 4,

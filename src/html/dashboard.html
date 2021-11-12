@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Medentry | Dashboard</title>
+    @@include('links/_head.html')
+  </head>
+
+  <body>
+    <div class="main-wrapper rdashboard-page">
+      @@include('components/_header.html')
+      <main class="main">
+        <section class="section">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="dashboard">
+                  <div class="row">
+                    <div class="col-xl-3">
+                      <aside class="sidebar">
+                        <ul class="sidenav">
+                          <li class="active">
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#myMedentry">
+                                </use>
+                              </svg>
+                              My MedEntry
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#myPurchases">
+                                </use>
+                              </svg>
+                              My Purchases
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#myBooking">
+                                </use>
+                              </svg>
+                              My Bookings
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#group">
+                                </use>
+                              </svg>
+                              My Group
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#info">
+                                </use>
+                              </svg>
+                              Personal Info
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#password">
+                                </use>
+                              </svg>
+                              Change Password
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#logOut">
+                                </use>
+                              </svg>
+                              Log Out
+                            </a>
+                          </li>
+                        </ul>
+                      </aside>
+                    </div>
+                    <div class="col-xl-9">
+                      <div class="my-medentry">
+                        <button class="btn btn-primary btn-lg">Launch Online Learning Platform</button>
+                        <div class="notifications">
+                          <div class="notifications__title">
+                            <img src="img/svg/bell.svg" alt="bell">
+                            <h4 class="title-4">Notifications</h4>
+                          </div>
+                          <div class="notifications-card">
+                            <img src="img/svg/user.svg" alt="user">
+                            <div class="notifications-card__title">
+                              <div class="notifications-card__content">
+                                <h6 class="title-6">You have a Group Platinum package, but have yet created or joined a
+                                  group.</h6>
+                                <p>You will not be able to block your place In one of the UCAT preparation workshops
+                                  until
+                                  you have a complete group.</p>
+                              </div>
+                              <button class="btn btn-primary btn-sm">Groups</button>
+                            </div>
+                          </div>
+                          <div class="notifications-card">
+                            <img src="img/svg/bell-fill.svg" alt="bell">
+                            <div class="notifications-card__title">
+                              <div class="notifications-card__content">
+                                <h6 class="title-6">New to MedEntry?</h6>
+                                <p>Find your way around with our Orientation pages.</p>
+                              </div>
+                              <button class="btn btn-primary btn-sm">Start</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('components/_footer.html')
+    </div>
+    @@include('links/_scripts.html')
+  </body>
+
+</html>

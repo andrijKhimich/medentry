@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Medentry | Dashboard</title>
+    @@include('links/_head.html')
+  </head>
+
+  <body>
+    <div class="main-wrapper dashboard-page">
+      @@include('components/_header.html')
+      <main class="main">
+        <section class="section">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="dashboard">
+                  <div class="row">
+                    <div class="col-xl-3">
+                      <aside class="sidebar">
+                        <ul class="sidenav">
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#myMedentry">
+                                </use>
+                              </svg>
+                              My MedEntry
+                            </a>
+                          </li>
+                          <li class="active">
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#myPurchases">
+                                </use>
+                              </svg>
+                              My Purchases
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#myBooking">
+                                </use>
+                              </svg>
+                              My Bookings
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#group">
+                                </use>
+                              </svg>
+                              My Group
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#info">
+                                </use>
+                              </svg>
+                              Personal Info
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#password">
+                                </use>
+                              </svg>
+                              Change Password
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <svg class="svg-icon_md">
+                                <use xlink:href="img/svg/sprite-svg/sprite.svg#logOut">
+                                </use>
+                              </svg>
+                              Log Out
+                            </a>
+                          </li>
+                        </ul>
+                      </aside>
+                    </div>
+                    <div class="col-xl-9">
+                      <div class="my-medentry">
+                        <h3 class="title-3">My Purchases</h3>
+                        <nav>
+                          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-link active" id="nav-active-tab" data-toggle="tab" href="#nav-active"
+                              role="tab" aria-controls="nav-home" aria-selected="true">Active Orders</a>
+                            <a class="nav-link" id="nav-history-tab" data-toggle="tab" href="#nav-history" role="tab"
+                              aria-controls="nav-profile" aria-selected="false">Orders History</a>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade show active" id="nav-active" role="tabpanel"
+                            aria-labelledby="nav-active-tab">
+                            <p>Packages</p>
+                            <div class="tab-package">
+                              <div class="purchases-card active">
+                                <div class="purchases-card__title">
+                                  <div class="purchases-card__img">
+                                    <img src="img/svg/email.svg" alt="Online">
+                                  </div>
+                                  <h5 class="title">Free Trial</h5>
+                                  <p>Free Trial Text</p>
+                                </div>
+                                <div class="purchases-card__footer">
+                                  <a href="#" class="link">Read more</a>
+                                  <button class="btn btn-primary btn-sm">Upgrade</button>
+                                </div>
+                              </div>
+                              <div class="purchases-card">
+                                <div class="purchases-card__title">
+                                  <div class="purchases-card__img">
+                                    <img src="img/svg/email.svg" alt="Online">
+                                  </div>
+                                  <h5 class="title">Online</h5>
+                                  <p>UCAT Preparation Package</p>
+                                </div>
+                                <div class="purchases-card__footer">
+                                  <a href="#" class="link">Read more</a>
+                                  <button class="btn btn-primary btn-sm">Upgrade</button>
+                                </div>
+                              </div>
+                              <div class="purchases-card">
+                                <div class="purchases-card__title">
+                                  <div class="purchases-card__img">
+                                    <img src="img/svg/star-big.svg" alt="Online">
+                                  </div>
+                                  <h5 class="title">Platinum</h5>
+                                  <p>Online Package
+                                    +
+                                    Attend a UCAT
+                                    Workshop</p>
+                                </div>
+                                <div class="purchases-card__footer">
+                                  <a href="#" class="link">Read more</a>
+                                  <button class="btn btn-primary btn-sm">Upgrade</button>
+                                </div>
+                              </div>
+                              <div class="purchases-card">
+                                <div class="purchases-card__title">
+                                  <div class="purchases-card__img">
+                                    <img src="img/svg/diamond.svg" alt="Online">
+                                  </div>
+                                  <h5 class="title">Diamond</h5>
+                                  <p>Platinum Package
+                                    +
+                                    Tutoring Interview
+                                    Training and more</p>
+                                </div>
+                                <div class="purchases-card__footer">
+                                  <a href="#" class="link">Read more</a>
+                                  <button class="btn btn-primary btn-sm">Upgrade</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="nav-history" role="tabpanel" aria-labelledby="nav-history-tab">
+                            <p>Inactive Orders</p>
+                            <div class="tab-history">
+                              <table class="table inactive-orders">
+                                <tbody>
+                                  <tr>
+                                    <th>Order#</th>
+                                    <th>Status</th>
+                                    <th>Items</th>
+                                    <th>Fee</th>
+                                    <th>View</th>
+                                  </tr>
+                                  <tr>
+                                    <td>ME153621</td>
+                                    <td>Active</td>
+                                    <td>1x2021 Interview Training Bundle(Strategy Day+Mock Interview</td>
+                                    <td><span>445.00 </span>AUD</td>
+                                    <td><a href="#" class="link">View Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>ME153621</td>
+                                    <td>Expired</td>
+                                    <td>1x2021 Online UCAT preparation course</td>
+                                    <td><span>0.00 </span>AUD</td>
+                                    <td><a href="#" class="link">View Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <td>ME153621</td>
+                                    <td>Active</td>
+                                    <td>1x2021 Interview Training Bundle(Strategy Day+Mock Interview</td>
+                                    <td><span>795.00 </span>AUD</td>
+                                    <td><a href="#" class="link">View Details</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('components/_footer.html')
+    </div>
+    @@include('links/_scripts.html')
+  </body>
+
+</html>
