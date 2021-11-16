@@ -564,6 +564,28 @@ textarea
       &::before
         left: 107%
 
+  &_arrow-reverce
+    position: relative
+    white-space: break-spaces
+    padding-left: 50px
+
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate(0, -50%) scale(-1)
+      background-image: url(../img/arrow.svg)
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: top center
+      width: 36px
+      height: 10px
+      transition: left .4s ease
+
+    &:hover
+      &::before
+        right: 107%
 .btn
   font-weight: 500
   padding: .775rem 3.5rem

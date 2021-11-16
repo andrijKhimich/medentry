@@ -1,0 +1,140 @@
+@import "../base/variables"
+@import "../base/mixins"
+
+.widening-page
+  overflow: initial
+  +d(991)
+    overflow: hidden
+  .cta
+    background-color: transparent
+    z-index: 10
+.widening
+  &-hero
+    min-height: 535px
+    overflow: hidden
+    z-index: 11
+    +d(991)
+      min-height: auto
+    &__content
+      max-width: 750px
+      position: relative
+      z-index: 1
+      +d(991)
+        max-width: 100%
+        margin-bottom: 50px
+      p
+        margin-bottom: 30px
+      .title-5
+        span
+          color: $primary
+    &__img
+      bottom: 0
+      top: 0
+
+  &-form
+    .form-select
+      margin-top: 0
+      margin-bottom: 0
+      border: 1px solid $greyDark
+    &__sidebar
+      position: relatice
+      +d(991)
+        margin-bottom: 60px
+      .title-5, h5
+        margin-bottom: 20px
+      ul
+        li
+          position: relative
+          padding-left: 20px
+          margin-bottom: 13px
+          font-size: 14px
+          line-height: 24px
+          &::before
+            content: ""
+            width: 8px
+            height: 8px
+            position: absolute
+            top: 8px
+            left: 0
+            background-color: $primary
+            border-radius: 50%
+          strong
+            display: block
+          a
+            color: $primary
+.access
+  padding: 180px 0 100px
+  +d(1199)
+    padding: 100px 0
+  +d(991)
+    padding: 60px 0 20px 0
+  &__img
+    max-width: 540px
+    +d(991)
+      margin: 0 auto
+    +d(575)
+      max-width: calc( 100% +  60px)
+      width: calc( 100% +  60px)
+      margin-left: -30px
+  &__content
+    max-width: 500px
+    +d(991)
+      max-width: 100%
+
+.widening-contact
+  padding: 80px 0
+  +d(991)
+    padding: 20px 0
+  .btn
+    +d(991)
+      display: block
+      margin: 0 auto
+    +d(575)
+      width: 100%
+.load-file.form-group
+  width: 100%
+  height: 85px
+  border: 1px solid $greyDark
+  background-color: #f8f8f8
+  border-radius: 10px
+  position: relative
+  padding: 35px 30px
+  font-size: 14px
+  line-height: 24px
+  &::before
+    content: ""
+    width: 17px
+    height: 16px
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url(../img/svg/download.svg)
+    position: absolute
+    top: 50%
+    left: 35px
+    transform: translate(0, -50%)
+  input
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    width: 1px
+    height: 1px
+    margin: -1px
+    padding: 0
+    border: 0
+    clip: rect(0 0 0 0)
+
+  .form-label
+    position: absolute
+    top: 50%
+    left: 35px
+    padding-left: 30px
+    font-size: 14px
+    color: $black
+    line-height: 24px
+    transform: translate(0, -50%)
+    background-color: transparent
+
+

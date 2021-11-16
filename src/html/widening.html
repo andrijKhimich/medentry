@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Medentry | Widening Access</title>
+		@@include('links/_head.html')
+	</head>
+
+	<body>
+		<div class="main-wrapper widening-page">
+			@@include('components/_header.html')
+			<main class="main_inner">
+				<div class="page-breadcrumb js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col">
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="#">Home</a></li>
+										<li class="breadcrumb-item active" aria-current="page">
+											Widening Access
+										</li>
+									</ol>
+								</nav>
+							</div>
+						</div>
+					</div>
+				</div>
+				<section class="section ucat-hero widening-hero  js-show-title js-slide-top">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-10">
+								<div class="widening-hero__content">
+									<h2 class="title-2">
+										<span>Widening Access </span> <br>
+										to Medicine
+									</h2>
+									<h5 class="title-5"><span>How MedEntry can help</span></h5>
+									<p>
+										MedEntry has a strong commitment to the community and we are passionate about widening access to
+										education to those from disadvantaged and under-serviced groups.
+									</p>
+									<p>We are pleased to offer 50% off our online and platinum packages for students who can provide
+										suitable supporting evidence. </p>
+									<h5 class="title-5">Please apply below:</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ucat-hero__img">
+						<img src="img/widening/hero.png" alt="hero" width="100%" />
+					</div>
+				</section>
+				<section class="section js-scroll js-show-on-scroll js-fadeIn access">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-6 mb-5 order-lg-2">
+								<div class="access__content section__content">
+									<h3 class="title-3">
+										Widening
+										<span>access/participation
+											in medicine.</span>
+									</h3>
+									<p><strong>In the UK, medicine and being a doctor has traditionally been seen as a career for the
+											elite or privileged in society.</strong>
+									</p>
+									<p>Despite efforts to increase gender parity and ethnic diversity among UK doctors, the lack of people
+										from lower socio-economic backgrounds entering the profession is still a reality. Widening
+										participation (WP) is a UK government initiative offering opportunities to groups of people who are
+										under-represented in higher education.</p>
+									<p>Some under-represented groups include people:</p>
+									<ul>
+										<li>who are the first generation to consider higher education.</li>
+										<li>from low socio-economic groups.</li>
+										<li>attending schools with low progression into higher education.</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-6 mb-5  order-lg-1">
+								<div class="access__img">
+									<img src="img/widening/access.jpg" alt="man">
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section js-scroll js-show-on-scroll js-fadeIn widening-contact">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7 order-1">
+								<div class="widening-form">
+									<form>
+										<div class="form-row">
+											<div class="form-group col-md-6">
+												<input type="text" class="form-control" id="firstName">
+												<label for="firstName">First Name</label>
+											</div>
+											<div class="form-group col-md-6">
+												<input type="text" class="form-control" id="lastName">
+												<label for="lastName">Last Name</label>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="form-group col-md-6">
+												<input type="email" class="form-control" id="email">
+												<label for="email">Email Address</label>
+											</div>
+											<div class="form-group col-md-6">
+												<label for="preferSelect" class="form-label">Preferred Package</label>
+												<select id="preferSelect" class="form-select">
+													<option value="platinumPackage">Platinum Package (Recommended)</option>
+													<option value="onlinePackage">Online Package</option>
+													<option value="diamondPackage">Diamond Package</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="form-group col-12">
+												<textarea rows="5" class="form-control" id="message"></textarea>
+												<label for="message">Message</label>
+											</div>
+										</div>
+										<div class="form-group load-file">
+											<label for="file" class="form-label js-file-name">Choose file</label>
+											<input id="file" type="file" class="form-file" onchange="showFile(this)">
+										</div>
+										<button type="submit" class="btn btn-primary">Send Details</button>
+									</form>
+								</div>
+							</div>
+							<div class="col-lg-5 order-0 order-lg-1">
+								<div class="widening-form__sidebar">
+									<h5 class="title-5">Suitable Supporting Evidence</h5>
+									<ul>
+										<li>
+											<strong>Free school meals</strong>
+											A letter from the student's school/college, or local council confirming that they are eligible
+											to/or receive free
+										</li>
+										<li>
+											<strong>6-19 bursary (England) or Education Maintenance Allowance (EMA) (Scotland, Wales or
+												NI)</strong>
+											An official award letter for this academic year.
+										</li>
+										<li>
+											<strong>Universal credit</strong>
+											If the student or their parent/guardians receive Universal Credit, then they can provide a recent
+											statement. There is an example of this on the UCAT website:
+											<a
+												href="https://www.ucat.ac.uk/media/1295/universal-credit-example-2019.pdf" target="_black">https://www.ucat.ac.uk/media/1295/universal-credit-example-2019.pdf</a>
+										</li>
+										<li>
+											<strong>Income Support/Job Seeker's Allowance or Employment and Support Allowance (ESA)</strong>
+											If the student or their parent/guardian receives this, then they can provide a letter from the UK
+											Jobcentre Plus, dated in 2021.
+										</li>
+										<li>
+											<strong>Asylum Support</strong>
+											If the student or a parent/guardian receives this support, then they can provide a 2021 dated
+											letter.
+										</li>
+										<li>
+											<strong>Working or Child Tax Credit</strong>
+											If the student or a family member is in receipt of Tax Credits, then they can provide a letter
+											dated from 2020/21 or 2021/22. The student must be named on the award.
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="section js-scroll js-show-on-scroll js-fadeIn cta"
+					style="background-image: url(img/home/cta-buildings.png)">
+					<div class="container text-center">
+						<div class="section__title cta__title cta_inner mw-100">
+							<h2 class="title-2">Still Have <br> <span>Questions?</span></h2>
+							<a href="#" class="btn btn-primary btn-sm">Book Consultation</a>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('components/_footer.html')
+		</div>
+		@@include('links/_scripts.html')
+	</body>
+
+</html>

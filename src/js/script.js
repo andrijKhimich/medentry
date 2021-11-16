@@ -71,6 +71,14 @@ function setLastWord(text) {
   return n[n.length - 1];
 }
 
+
+function showFile(input) {
+  let file = input.files[0];
+  let fileLabel = document.querySelector('.js-file-name');
+  // alert(`File name: ${file.name}`);
+  fileLabel.innerText = file.name;
+}
+
 $("#charitySlider").slick({
   slidesToShow: 2,
   slidesToScroll: 1,
@@ -294,10 +302,20 @@ $(document).ready(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
 
-  $("body").scrollspy({
-    target: ".doctor-steps",
-    offset: 200,
-  });
+  if ($('.doctor-page').length > 0) {
+    $("body").scrollspy({
+      target: ".doctor-steps",
+      offset: 200,
+    });
+  }
+
+  if ($('.widening-page').length > 0) {
+    console.log('know')
+    $("body").scrollspy({
+      target: ".know-wrapper",
+      offset: 200,
+    });
+  }
 
   showHero();
 
