@@ -1,4 +1,4 @@
-<header class="header js-show-header js-slide-down" id="header">
+<header class="header logined js-show-header js-slide-down" id="header">
   <div class="container-fluid">
     <div class="row">
       <div class="col">
@@ -6,8 +6,8 @@
           <a class="navbar-brand" href="#" id="logo">
             <img src="img/logo.svg" alt="medentry">
           </a>
-          <button class="navbar-toggler collapsed" id="burger" type="button" data-toggle="collapse" data-target="#navbar"
-            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler collapsed" id="burger" type="button" data-toggle="collapse"
+            data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbar">
@@ -38,6 +38,33 @@
               <a href="#" class="link header__link">Try free</a>
               <a href="#" class="btn btn-outline-primary">Login</a>
             </div>
+            <div class="navbar-user">
+              <p>Sandra Milton</p>
+              <div class="navbar-user__img">
+                <img src="img/dashboard/user.png" alt="user">
+              </div>
+            </div>
+            <ul class="sidenav">
+              <li>
+                <a href="#">
+                  <svg class="svg-icon_md">
+                    <use xlink:href="img/svg/sprite-svg/sprite.svg#password">
+                    </use>
+                  </svg>
+                  <span> Change Password</span>
+
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg class="svg-icon_md">
+                    <use xlink:href="img/svg/sprite-svg/sprite.svg#logOut">
+                    </use>
+                  </svg>
+                  <span> Log Out</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>
