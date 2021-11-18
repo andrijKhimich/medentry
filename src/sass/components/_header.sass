@@ -9,6 +9,8 @@
   z-index: 10
   background-color: $white
   transition: transform .8s ease
+  .sidenav, .navbar-user
+    display: none
 
   &.fixed
     position: fixed
@@ -39,7 +41,7 @@
     max-width: 120px
 
 .header
-  &.logined
+  &.logged
     .navbar-text
       display: none
     .navbar-user
