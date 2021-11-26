@@ -467,21 +467,21 @@ textarea
         top: 0
         z-index: -1
 
-  &-text
-    +d(1199)
-      position: relative
-      width: 100%
-      margin-top: 40px
-      padding: 15px 0
-      &::before
-        content: ""
-        width: 200%
-        height: 100%
-        background-color: $grey
-        position: absolute
-        top: 0
-        left: -50vw
-        z-index: -1
+  // &-text
+  //   +d(1199)
+  //     position: relative
+  //     width: 100%
+  //     margin-top: 40px
+  //     padding: 15px 0
+  //     &::before
+  //       content: ""
+  //       width: 200%
+  //       height: 100%
+  //       background-color: $grey
+  //       position: absolute
+  //       top: 0
+  //       left: -50vw
+  //       z-index: -1
 
 .navbar-toggler
   width: 25px
@@ -1007,12 +1007,13 @@ textarea
   font-weight: 400
   line-height: 1.5
   height: 50px
+  border: 1px solid $black
+  color: $black
   background-color: #fff
   background-repeat: no-repeat
   background-image: url(../img/svg/arrow-select.svg)
   background-position: right 0.75rem center
   background-size: 16px 7px
-  border: 1px solid #ced4da
   border-radius: 10px
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
   -webkit-appearance: none
@@ -1020,3 +1021,7 @@ textarea
   appearance: none
   font-size: 14px
   color: $greyDark
+  &.disabled
+    pointer-events: none
+    border: 1px solid #ced4da
+    color: #ced4da
