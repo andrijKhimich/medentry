@@ -91,19 +91,19 @@ $("#charitySlider").slick({
   prevArrow: $("#charityPrev"),
   nextArrow: $("#charityNext"),
   responsive: [{
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 3,
-      },
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 3,
     },
-    {
-      breakpoint: 991,
-      settings: {
-        rows: 2,
-        slidesToShow: 2,
-        slidesPerRow: 2,
-      },
+  },
+  {
+    breakpoint: 991,
+    settings: {
+      rows: 2,
+      slidesToShow: 2,
+      slidesPerRow: 2,
     },
+  },
   ],
 });
 
@@ -132,7 +132,7 @@ $("#videoSlider").slick({
     settings: {
       slidesToShow: 1,
     },
-  }, ],
+  },],
 });
 
 function initPartnersSlider() {
@@ -148,28 +148,28 @@ function initPartnersSlider() {
       autoplaySpeed: 10000,
       mobileFirst: true,
       responsive: [{
-          breakpoint: 991,
-          settings: "unslick",
+        breakpoint: 991,
+        settings: "unslick",
+      },
+      {
+        breakpoint: 180,
+        settings: {
+          slidesToShow: 2,
+          dots: true,
         },
-        {
-          breakpoint: 180,
-          settings: {
-            slidesToShow: 2,
-            dots: true,
-          },
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 3,
         },
-        {
-          breakpoint: 575,
-          settings: {
-            slidesToShow: 3,
-          },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4,
         },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 4,
-          },
-        },
+      },
       ],
     });
   }
@@ -190,7 +190,7 @@ function initStepsSlider() {
       responsive: [{
         breakpoint: 991,
         settings: "unslick",
-      }, ],
+      },],
     });
   }
 }
@@ -208,7 +208,7 @@ function initSupportSlider() {
       responsive: [{
         breakpoint: 768,
         settings: "unslick",
-      }, ],
+      },],
     });
   }
 }
@@ -229,7 +229,7 @@ function initSupportSliderDown() {
       responsive: [{
         breakpoint: 768,
         settings: "unslick",
-      }, ],
+      },],
     });
   }
 }
@@ -258,7 +258,7 @@ $("#reviewsSlider").slick({
       slidesToShow: 1,
 
     },
-  }, ],
+  },],
 });
 
 $("#succeedSliderSm").slick({
@@ -268,17 +268,17 @@ $("#succeedSliderSm").slick({
   prevArrow: $("#succeedPrev"),
   nextArrow: $("#succeedNext"),
   responsive: [{
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 2,
-      },
+    breakpoint: 767,
+    settings: {
+      slidesToShow: 2,
     },
-    {
-      breakpoint: 575,
-      settings: {
-        slidesToShow: 1,
-      },
+  },
+  {
+    breakpoint: 575,
+    settings: {
+      slidesToShow: 1,
     },
+  },
   ],
 });
 
@@ -298,6 +298,21 @@ $(document).ready(function () {
   initStepsSlider();
   hideText();
 
+  if ($("#needKnowSpy").length > 0) {
+    console.log('Start');
+    const stickySidebar = new StickySidebar('#needKnowSpy', {
+      topSpacing: 100,
+      bottomSpacing: 0,
+      containerSelector: false,
+      innerWrapperSelector: '.list-group',
+      resizeSensor: true,
+      stickyClass: 'is-affixed',
+      minWidth: 0
+
+    });
+  }
+
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
   });
@@ -310,7 +325,6 @@ $(document).ready(function () {
   }
 
   if ($('.widening-page').length > 0) {
-    console.log('know')
     $("body").scrollspy({
       target: ".know-wrapper",
       offset: 200,
@@ -422,8 +436,8 @@ $(document).ready(function () {
   // slow scroll to id
   $('.list-group-item[href^="#"]').on("click", function () {
     $("html, body").animate({
-        scrollTop: $($(this).attr("href")).offset().top - 90,
-      },
+      scrollTop: $($(this).attr("href")).offset().top - 90,
+    },
       1400
     );
   });
@@ -431,8 +445,8 @@ $(document).ready(function () {
   if ($(".help-box").length > 0) {
     $('.help-box[href^="#"]').on("click", function () {
       $("html, body").animate({
-          scrollTop: $($(this).attr("href")).offset().top - 90,
-        },
+        scrollTop: $($(this).attr("href")).offset().top - 90,
+      },
         1400
       );
     });

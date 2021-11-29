@@ -90,7 +90,7 @@ gulp.task("js", function () {
       // "node_modules/jquery-nice-select/js/jquery.nice-select.min.js",
       // "src/libs/datepicker/dist/js/datepicker-full.min.js",
       "src/libs/bootstrap-4.6.0/dist/js/bootstrap.bundle.min.js",
-      // "src/libs/popper/popper.min.js",
+      "src/libs/sticky-sidebar/dist/sticky-sidebar.min.js",
 
       // "src/libs/bootstrap-4.6.0/dist/js/bootstrap.min.js",
 
